@@ -1,0 +1,52 @@
+@import "colors.css";
+@import "spacings.css";
+
+:root {
+  /* Fonts */
+  --font-family-primary: "Noto Sans Display", sans-serif;
+
+  /* Spacing (4px steps) */
+  --spacing-1x: 0.4rem;
+  --spacing-2x: 0.8rem;
+  --spacing-3x: 1.2rem;
+  --spacing-4x: 1.6rem;
+  --spacing-5x: 2rem;
+  --spacing-6x: 2.4rem;
+  --spacing-7x: 2.8rem;
+  --spacing-8x: 3.2rem;
+  --spacing-9x: 3.6rem;
+  --spacing-10x: 4rem;
+  --spacing-11x: 4.4rem;
+  --spacing-12x: 4.8rem;
+  --spacing-13x: 5.2rem;
+  --spacing-14x: 5.6rem;
+  --spacing-15x: 6rem;
+  --spacing-16x: 6.4rem;
+  --spacing-17x: 6.8rem;
+  --spacing-18x: 7.2rem;
+  --spacing-19x: 7.6rem;
+  --spacing-20x: 8rem;
+  --spacing-24x: 9.6rem;
+  --spacing-30x: 12rem;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  font-family: var(--font-family-primary);
+  background-color: var(--color-off-white);
+  color: var(--text-color);
+  overflow-x: hidden;
+}
+
+body {
+  font-size: 1.6rem;
+  position: relative;
+  max-width: 100%;
+  margin: 0;
+}
