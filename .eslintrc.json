@@ -6,7 +6,6 @@
       "plugin:react-hooks/recommended"
     ],
     "rules": {
-      "@typescript-eslint/strict-boolean-expressions": "off"
     },
     "parserOptions": {
       "project": "./tsconfig.json"

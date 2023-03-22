@@ -1,5 +1,5 @@
-@import "colors.css";
-@import "spacings.css";
+@import url("colors.css");
+@import url("spacings.css");
 
 :root {
   /* Fonts */
