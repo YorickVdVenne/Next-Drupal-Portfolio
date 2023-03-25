@@ -1,0 +1,9 @@
+body,
+p,
+.paragraph {
+  font-size: 1.6rem;
+  line-height: 1.875;
+  color: var(--color-text-light);
+  margin-block-start: 0;
+  margin-block-end: 0;
+}

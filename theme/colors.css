@@ -1,0 +1,14 @@
+:root {
+    /* Primary */
+    --color-primary-dark-green: #61892F;
+    --color-primary-green: #86C232;
+    --color-primary-black: #222629;
+    --color-primary-dark-gray: #474B4F;
+    --color-primary-gray: #6B6E70;
+  
+    /* Basics */
+    --color-white: #fff;
+    --color-black: #000;
+    --color-gray: #767165;
+    --color-light-gray: #e3ded1;
+  }

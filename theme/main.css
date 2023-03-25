@@ -1,9 +1,10 @@
 @import url("colors.css");
-@import url("spacings.css");
+@import url("typography.css");
+@import url("fonts.css");
 
 :root {
   /* Fonts */
-  --font-family-primary: "Noto Sans Display", sans-serif;
+  --font-family-primary: "Acumin Pro" , "Helvetica", "Arial", sans-serif;
 
   /* Spacing (4px steps) */
   --spacing-1x: 0.4rem;
@@ -39,8 +40,8 @@ html {
 html,
 body {
   font-family: var(--font-family-primary);
-  background-color: var(--color-off-white);
-  color: var(--text-color);
+  background-color: var(--color-primary-black);
+  color: var(--color-white);
   overflow-x: hidden;
 }
 

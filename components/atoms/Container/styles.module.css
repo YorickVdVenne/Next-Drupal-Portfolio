@@ -1,0 +1,15 @@
+.container {
+  margin-inline: var(--spacing-5x);
+}   
+
+@media (min-width: 768px) {
+  .container {
+    margin-inline: var(--spacing-10x);
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    margin-inline: var(--spacing-12x);
+  }
+}
