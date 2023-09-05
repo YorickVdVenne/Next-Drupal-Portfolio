@@ -1,0 +1,33 @@
+schema {
+  query: Query
+}
+
+type Query {
+  project(id: Int!): Project
+  projects(
+    offset: Int = 0
+    limit: Int = 10
+  ): ProjectConnection!
+}
+
+type Project {
+  id: Int!
+  title: String!
+  brand: String!
+  description: String!
+  period: String!
+
+  roles: [String!]!
+  technologies: [String!]!
+
+  codeLink: String
+  siteLink: String
+
+  featured: Boolean!
+}
+
+type ProjectConnection {
+  total: Int!
+  items: [Project!]
+}
+

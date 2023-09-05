@@ -1,0 +1,8 @@
+name: GraphQL content
+type: module
+description: Adds content queries to GQL
+package: GraphQL
+dependencies:
+  - graphql:graphql
+  - node:node
+core_version_requirement: ^9.3 || ^10
