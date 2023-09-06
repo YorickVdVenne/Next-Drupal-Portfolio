@@ -1,0 +1,4 @@
+type Breadcrumb {
+  url: Url!
+  title: String!
+}

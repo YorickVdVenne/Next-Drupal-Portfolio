@@ -1,0 +1,9 @@
+extend type Query {
+  # Resolves the messenger messages for the current session.
+  messengerMessages: MessengerMessage
+}
+
+extend type Mutation {
+  # Resolves the messenger messages for the current session.
+  messengerMessages: MessengerMessage
+}

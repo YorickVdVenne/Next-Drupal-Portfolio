@@ -1,0 +1,16 @@
+query {
+  entityById(entityType: VIEW, id: "content") {
+    ... on View {
+      executable(displayId: "default") {
+        ... on ViewExecutableContentDefault {
+          execute(title: "apotheke") {
+            rows {
+              id
+              label
+            }
+          }
+        }
+      }
+    }
+  }
+}

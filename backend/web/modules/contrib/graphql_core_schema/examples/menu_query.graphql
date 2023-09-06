@@ -1,0 +1,28 @@
+query store {
+  entityById(entityType: MENU, id: "main") {
+    ...menu
+  }
+}
+
+fragment menu on Menu {
+  links {
+    ...menuLinkFields
+    subtree {
+      ...menuLinkFields
+      subtree {
+        ...menuLinkFields
+      }
+    }
+  }
+}
+
+fragment menuLinkFields on MenuLinkTreeElement {
+  link {
+    label
+    description
+    attribute(name: "target")
+    url {
+      path
+    }
+  }
+}

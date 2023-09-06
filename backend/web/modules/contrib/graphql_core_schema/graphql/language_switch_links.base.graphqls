@@ -1,0 +1,6 @@
+type LanguageSwitchLink {
+  active: Boolean!
+  title: String!
+  url: Url!
+  language: ConfigurableLanguage!
+}

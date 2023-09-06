@@ -21,6 +21,7 @@
         "drupal/core-project-message": "^10.1",
         "drupal/core-recommended": "^10.1",
         "drupal/graphql": "4.5.0",
+        "drupal/graphql_core_schema": "1.x@beta",
         "drupal/typed_data": "1.x-dev",
         "drush/drush": "^12.1"
     },

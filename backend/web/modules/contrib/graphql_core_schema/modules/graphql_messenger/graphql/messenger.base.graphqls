@@ -1,0 +1,3 @@
+# Custom scalar for messenger messages.
+# Resolves to an untyped object.
+scalar MessengerMessage

@@ -1,0 +1,7 @@
+graphql.schema.core_composable:
+  type: mapping
+  label: 'Core Composable Schema'
+  mapping:
+    core_composable:
+      label: Todo
+      type: ignore

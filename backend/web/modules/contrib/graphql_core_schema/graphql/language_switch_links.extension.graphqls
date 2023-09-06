@@ -1,0 +1,19 @@
+extend interface InternalUrl {
+  languageSwitchLinks: [LanguageSwitchLink!]!
+}
+
+extend interface EntityUrl {
+  languageSwitchLinks: [LanguageSwitchLink!]!
+}
+
+extend type DefaultInternalUrl {
+  languageSwitchLinks: [LanguageSwitchLink!]!
+}
+
+extend type DefaultEntityUrl {
+  languageSwitchLinks: [LanguageSwitchLink!]!
+}
+
+extend type EntityCanonicalUrl {
+  languageSwitchLinks: [LanguageSwitchLink!]!
+}

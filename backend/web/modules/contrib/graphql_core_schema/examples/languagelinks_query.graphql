@@ -1,0 +1,29 @@
+{
+  route(path: "/node/163/") {
+    ... on EntityUrl {
+      languageSwitchLinks {
+        title
+        url {
+          path
+        }
+        language {
+          id
+        }
+      }
+    }
+  }
+  internal: route(path: "/user") {
+    ... on InternalUrl {
+      path
+      languageSwitchLinks {
+        title
+        url {
+          path
+        }
+        language {
+          id
+        }
+      }
+    }
+  }
+}

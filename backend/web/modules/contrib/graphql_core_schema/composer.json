@@ -1,0 +1,12 @@
+{
+    "name": "drupal/graphql_core_schema",
+    "description": "Provides an schema generator for Drupal GraphQL 4.0.",
+    "type": "drupal-module",
+    "license": "GPL-2.0-or-later",
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=8.1",
+        "drupal/graphql": "^4",
+        "symfony/string": "^5.4 || ^6"
+    }
+}

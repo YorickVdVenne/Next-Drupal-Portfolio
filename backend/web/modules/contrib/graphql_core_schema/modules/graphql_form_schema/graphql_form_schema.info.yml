@@ -1,0 +1,12 @@
+name: GraphQL Form API Schema
+type: module
+description: Support for Form API rendering and submitting.
+package: GraphQL
+core_version_requirement: ^9.3 || ^10
+dependencies:
+  - graphql_core_schema:graphql_core_schema
+
+# Information added by Drupal.org packaging script on 2023-08-20
+version: '1.0.0-beta6'
+project: 'graphql_core_schema'
+datestamp: 1692541849

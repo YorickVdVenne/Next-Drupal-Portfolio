@@ -1,0 +1,4 @@
+extend type FieldItemTypeDaterange {
+  startDate(format: String, drupalDateFormat: DrupalDateFormat): String!
+  endDate(format: String, drupalDateFormat: DrupalDateFormat): String!
+}

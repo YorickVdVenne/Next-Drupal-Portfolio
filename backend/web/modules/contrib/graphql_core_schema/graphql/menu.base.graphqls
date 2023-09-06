@@ -1,0 +1,13 @@
+type MenuLinkTreeElement {
+  link: MenuLink!
+  subtree: [MenuLinkTreeElement!]!
+}
+
+type MenuLink {
+  url: Url
+  label: String!
+  description: String
+  expanded: Boolean!
+  content: MenuLinkContent
+  attribute(name: String!): String
+}

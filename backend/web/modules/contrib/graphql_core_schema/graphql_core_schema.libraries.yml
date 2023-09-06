@@ -1,0 +1,5 @@
+tweaks:
+  version: VERSION
+  css:
+    theme:
+      css/graphql_core_schema.tweaks.css: {}

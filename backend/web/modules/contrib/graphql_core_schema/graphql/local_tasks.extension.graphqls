@@ -1,0 +1,19 @@
+extend interface InternalUrl {
+  localTasks: [LocalTask!]!
+}
+
+extend interface EntityUrl {
+  localTasks: [LocalTask!]!
+}
+
+extend type DefaultInternalUrl {
+  localTasks: [LocalTask!]!
+}
+
+extend type DefaultEntityUrl {
+  localTasks: [LocalTask!]!
+}
+
+extend type EntityCanonicalUrl {
+  localTasks: [LocalTask!]!
+}

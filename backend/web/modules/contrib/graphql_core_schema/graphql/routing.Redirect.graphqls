@@ -1,0 +1,3 @@
+extend type RedirectUrl {
+  redirect: Redirect!
+}

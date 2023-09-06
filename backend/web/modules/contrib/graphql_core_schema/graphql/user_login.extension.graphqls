@@ -1,0 +1,36 @@
+extend type Mutation {
+  """
+  Login with a username or password.
+  """
+  userLogin(username: String!, password: String!): UserLoginResponse
+
+  """
+  Logout current user.
+  """
+  userLogout(
+    """
+    The logoutToken from the UserLoginResponse.
+    """
+    logoutToken: String!
+
+    """
+    The csrfToken from the UserLoginResponse.
+    """
+    csrfToken: String!
+  ): UserLogoutResponse
+
+  """
+  Send a password reset email. Email is used if username is not set.
+  """
+  userPasswordReset(username: String, email: String): UserPasswordResetResponse
+
+  """
+  Login with a timestamp and hash from the password reset email.
+  """
+  userPasswordResetLogin(id: ID!, timestamp: Int!, hash: String!): UserPasswordResetLoginResponse
+
+  """
+  Change the password for a given user.
+  """
+  userPasswordChange(id: ID!, newPassword: String!, currentPassword: String, passResetToken: String): UserPasswordChangeResponse
+}

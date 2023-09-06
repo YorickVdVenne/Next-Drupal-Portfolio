@@ -1,0 +1,11 @@
+query routing_redirect_example {
+  route(path: "/myredirect") {
+    __typename
+    ... on RedirectUrl {
+      path
+      redirect {
+        statusCode
+      }
+    }
+  }
+}

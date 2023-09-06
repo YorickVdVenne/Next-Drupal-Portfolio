@@ -1,0 +1,16 @@
+extend type Menu {
+  links: [MenuLinkTreeElement!]!
+}
+
+extend type Query {
+  """
+  Load a menu by its name. The menu is loaded automatically in the
+  current language.
+  """
+  menuByName(
+    """
+    The name of the menu.
+    """
+    name: MenuName!
+  ): Menu
+}

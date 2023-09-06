@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "941d4d6a5c49b16eca8d6e67ddad9a9f",
+    "content-hash": "7e54b107862150b2f1c9ed51d93f5129",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1605,6 +1605,66 @@
             "homepage": "http://drupal.org/project/graphql",
             "support": {
                 "source": "https://git.drupalcode.org/project/graphql"
+            }
+        },
+        {
+            "name": "drupal/graphql_core_schema",
+            "version": "1.0.0-beta6",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/graphql_core_schema.git",
+                "reference": "1.0.0-beta6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/graphql_core_schema-1.0.0-beta6.zip",
+                "reference": "1.0.0-beta6",
+                "shasum": "46af2b362af490100bb919b9012f4d193e5cecda"
+            },
+            "require": {
+                "drupal/core": "^9.3 || ^10",
+                "drupal/graphql": "^4",
+                "php": ">=8.1",
+                "symfony/string": "^5.4 || ^6"
+            },
+            "require-dev": {
+                "drupal/environment_indicator": "*",
+                "drupal/graphql": "*",
+                "drupal/masquerade": "*",
+                "drupal/metatag": "*",
+                "drupal/rokka": "*",
+                "drupal/tablefield": "*",
+                "drupal/telephone_validation": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "1.0.0-beta6",
+                    "datestamp": "1692541846",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "ayalon",
+                    "homepage": "https://www.drupal.org/user/419226"
+                },
+                {
+                    "name": "dulnan",
+                    "homepage": "https://www.drupal.org/user/3652792"
+                }
+            ],
+            "description": "Provides an schema generator for Drupal GraphQL 4.0.",
+            "homepage": "https://www.drupal.org/project/graphql_core_schema",
+            "support": {
+                "source": "https://git.drupalcode.org/project/graphql_core_schema"
             }
         },
         {
@@ -6266,6 +6326,7 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
+        "drupal/graphql_core_schema": 10,
         "drupal/typed_data": 20
     },
     "prefer-stable": true,

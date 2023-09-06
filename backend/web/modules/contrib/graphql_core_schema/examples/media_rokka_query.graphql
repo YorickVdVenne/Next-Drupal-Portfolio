@@ -1,0 +1,21 @@
+query {
+  route(path: "/node/163/") {
+    ... on EntityUrl {
+      entity {
+        ... on NodeTest {
+          fieldMediaImageRef {
+            fieldImage {
+              uri
+              filesizeRawField {
+                getString
+              }
+              rokkaMetadata {
+                hash
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

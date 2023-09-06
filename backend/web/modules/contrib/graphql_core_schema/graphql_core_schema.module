@@ -1,0 +1,78 @@
+<?php
+
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\graphql\Entity\Server;
+
+/**
+ * Implements hook_form_FORM_ID-alter.
+ */
+function graphql_core_schema_form_graphql_server_edit_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  // Add custom validation to avoid AJAX errors.
+  $form['#validate'][] = 'graphql_core_schema_form_graphql_server_validate';
+}
+
+/**
+ * Custom server form validation.
+ *
+ * @param $form
+ * @param \Drupal\Core\Form\FormStateInterface $form_state
+ *
+ * @return void
+ */
+function graphql_core_schema_form_graphql_server_validate(&$form, FormStateInterface $form_state) {
+  $entity = $form_state->getFormObject()->getEntity();
+  $entity->set('debug_flag', FALSE);
+}
+
+/**
+ * Clean up schema configuration for core_composable server configuration.
+ *
+ * Removes empty/unchecked checkboxes and sorts the configuration arrays.
+ */
+function graphql_core_schema_graphql_server_presave(Server $entity) {
+  $field = $entity->get('schema_configuration');
+
+  if ($entity->schema !== 'core_composable') {
+    return;
+  }
+
+  if (empty($field['core_composable'])) {
+    return;
+  }
+
+  $configuration = $field['core_composable'];
+
+  if (!empty($configuration['entity_base_fields']['fields'])) {
+    ksort($configuration['entity_base_fields']['fields']);
+  }
+
+  if (!empty($configuration['extensions'])) {
+    $configuration['extensions'] = array_filter($configuration['extensions']);
+    ksort($configuration['extensions']);
+  }
+
+  if (!empty($configuration['enabled_entity_types'])) {
+    $configuration['enabled_entity_types'] = array_filter($configuration['enabled_entity_types']);
+    ksort($configuration['enabled_entity_types']);
+  }
+
+  if (!empty($configuration['extension_views']['enabled_views'])) {
+    $configuration['extension_views']['enabled_views'] = array_filter($configuration['extension_views']['enabled_views']);
+    ksort($configuration['extension_views']['enabled_views']);
+  }
+
+  if (!empty($configuration['entity_base_fields']['fields'])) {
+    $configuration['entity_base_fields']['fields'] = array_filter($configuration['entity_base_fields']['fields']);
+    ksort($configuration['entity_base_fields']['fields']);
+  }
+
+  if (!empty($configuration['fields'])) {
+    foreach (array_keys($configuration['fields']) as $key) {
+      $configuration['fields'][$key] = array_filter($configuration['fields'][$key]);
+      ksort($configuration['fields'][$key]);
+    }
+  }
+
+  $field['core_composable'] = $configuration;
+  $entity->set('schema_configuration', $field);
+}

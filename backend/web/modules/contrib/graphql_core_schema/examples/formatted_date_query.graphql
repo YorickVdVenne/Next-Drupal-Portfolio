@@ -1,0 +1,13 @@
+{
+  route(path: "/node/163/") {
+    ... on EntityUrl {
+      entity {
+        ... on NodeTest {
+          fieldDate {
+            formatted(drupalDateFormat: HTML_YEARLESS_DATE)
+          }
+        }
+      }
+    }
+  }
+}

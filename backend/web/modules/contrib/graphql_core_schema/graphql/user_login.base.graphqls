@@ -1,0 +1,104 @@
+"""
+The response for the userLogin mutation.
+"""
+type UserLoginResponse {
+  """
+  Error message.
+  """
+  error: String
+
+  """
+  Login was successful.
+  """
+  success: Boolean
+
+  """
+  The user ID if login was successfull.
+  """
+  uid: String
+
+  """
+  The user name if login was successfull.
+  """
+  name: String
+
+  """
+  The CSRF token to be used for logging out.
+  """
+  csrfToken: String
+
+  """
+  The token to use for logging out.
+  """
+  logoutToken: String
+}
+
+"""
+The response for the userLogout mutation.
+"""
+type UserLogoutResponse {
+  """
+  Error message if logout was not successfull.
+  """
+  error: String
+
+  """
+  Logout was successful.
+  """
+  success: Boolean
+}
+
+"""
+The response for the userPasswordReset mutation.
+"""
+type UserPasswordResetResponse {
+  """
+  Error message if password reset was not successfull.
+  """
+  error: String
+
+  """
+  Password reset was successful.
+  """
+  success: Boolean
+}
+
+"""
+The response for the userPasswordChange mutation.
+"""
+type UserPasswordChangeResponse {
+  """
+  Error message if password change was not successfull.
+  """
+  error: String
+
+  """
+  Password change was successful.
+  """
+  success: Boolean
+}
+
+"""
+The response for the userPasswordResetLogin mutation.
+"""
+type UserPasswordResetLoginResponse {
+  """
+  Error message if password reset was not successfull.
+  """
+  error: String
+
+  """
+  Password reset was successful.
+  """
+  success: Boolean
+
+  """
+  The password reset token for the edit form.
+  """
+  token: String
+
+  """
+  The logged in user entity.
+  """
+  user: User
+}

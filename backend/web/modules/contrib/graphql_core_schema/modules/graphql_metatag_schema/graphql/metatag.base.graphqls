@@ -1,0 +1,10 @@
+type Metatag {
+  id: String!
+  tag: String!
+  attributes: [MetatagAttribute!]!
+}
+
+type MetatagAttribute {
+  key: String!
+  value: String!
+}

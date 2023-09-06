@@ -1,0 +1,15 @@
+{
+  entityQuery(
+    entityType: NODE
+    filter: {conditions: {field: "type", value: "press_release"}}
+    sort: {field: "created", direction: DESC}
+    limit: 10
+  ) {
+    total
+    items {
+      ... on NodePressRelease {
+        title
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+extend interface InternalUrl {
+  breadcrumb: [Breadcrumb!]!
+}
+
+extend interface EntityUrl {
+  breadcrumb: [Breadcrumb!]!
+}
+
+extend type DefaultInternalUrl {
+  breadcrumb: [Breadcrumb!]!
+}
+
+extend type DefaultEntityUrl {
+  breadcrumb: [Breadcrumb!]!
+}
+
+extend type EntityCanonicalUrl {
+  breadcrumb: [Breadcrumb!]!
+}

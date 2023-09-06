@@ -1,0 +1,18 @@
+query {
+  route(path: "/node/163/") {
+    ... on EntityUrl {
+      entity {
+        ... on NodeTest {
+          fieldMetatags {
+            title
+            description
+            keywords
+            geoPosition
+            canonicalUrl
+            robots
+          }
+        }
+      }
+    }
+  }
+}
