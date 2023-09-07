@@ -17,8 +17,8 @@ type Project {
   description: String!
   period: String!
 
-  roles: [String!]!
-  technologies: [String!]!
+  roles: [Role!]!
+  technologies: [Technology!]!
 
   codeLink: String
   siteLink: String
@@ -28,6 +28,16 @@ type Project {
 
 type ProjectConnection {
   total: Int!
-  items: [Project!]
+  items: [Project!]!
+}
+
+type Role {
+  id: Int!
+  name: String!
+}
+
+type Technology {
+  id: Int!
+  name: String!
 }
 

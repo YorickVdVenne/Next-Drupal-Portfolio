@@ -71,6 +71,18 @@ class ContentSchema extends SdlSchemaPluginBase {
       ->map('path', $builder->fromValue('body.value'))
     );
 
+    $registry->addFieldResolver('Project', 'roles',
+    $builder->produce('entity_reference')
+      ->map('entity', $builder->fromParent())
+      ->map('field', $builder->fromValue('field_roles'))
+  );
+
+  $registry->addFieldResolver('Project', 'technologies',
+  $builder->produce('entity_reference')
+    ->map('entity', $builder->fromParent())
+    ->map('field', $builder->fromValue('field_technologies'))
+);
+
     $registry->addFieldResolver('Project', 'code',
     $builder->produce('property_path')
       ->map('type', $builder->fromValue('entity:node'))
@@ -90,6 +102,26 @@ class ContentSchema extends SdlSchemaPluginBase {
       ->map('type', $builder->fromValue('entity:node'))
       ->map('value', $builder->fromParent())
       ->map('path', $builder->fromValue('field_featured_project.value'))
+    );
+
+    $registry->addFieldResolver('Role', 'id',
+    $builder->produce('entity_id')
+      ->map('entity', $builder->fromParent())
+    );
+
+    $registry->addFieldResolver('Role', 'name',
+      $builder->produce('entity_label')
+        ->map('entity', $builder->fromParent())
+    );
+
+    $registry->addFieldResolver('Technology', 'id',
+    $builder->produce('entity_id')
+      ->map('entity', $builder->fromParent())
+    );
+
+    $registry->addFieldResolver('Technology', 'name',
+      $builder->produce('entity_label')
+        ->map('entity', $builder->fromParent())
     );
   }
 
