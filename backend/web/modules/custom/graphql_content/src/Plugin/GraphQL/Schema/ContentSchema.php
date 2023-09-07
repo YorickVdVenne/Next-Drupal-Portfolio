@@ -45,8 +45,6 @@ class ContentSchema extends SdlSchemaPluginBase {
       $builder->compose(
         $builder->produce('entity_label')
           ->map('entity', $builder->fromParent()),
-        $builder->produce('uppercase')
-          ->map('string', $builder->fromParent())
       )
     );
 
@@ -75,22 +73,22 @@ class ContentSchema extends SdlSchemaPluginBase {
     $builder->produce('entity_reference')
       ->map('entity', $builder->fromParent())
       ->map('field', $builder->fromValue('field_roles'))
-  );
+    );
 
-  $registry->addFieldResolver('Project', 'technologies',
-  $builder->produce('entity_reference')
-    ->map('entity', $builder->fromParent())
-    ->map('field', $builder->fromValue('field_technologies'))
-);
+    $registry->addFieldResolver('Project', 'technologies',
+    $builder->produce('entity_reference')
+      ->map('entity', $builder->fromParent())
+      ->map('field', $builder->fromValue('field_technologies'))
+    );
 
-    $registry->addFieldResolver('Project', 'code',
+    $registry->addFieldResolver('Project', 'codeLink',
     $builder->produce('property_path')
       ->map('type', $builder->fromValue('entity:node'))
       ->map('value', $builder->fromParent())
       ->map('path', $builder->fromValue('field_code_link.value'))
     );
 
-    $registry->addFieldResolver('Project', 'site',
+    $registry->addFieldResolver('Project', 'siteLink',
     $builder->produce('property_path')
       ->map('type', $builder->fromValue('entity:node'))
       ->map('value', $builder->fromParent())
