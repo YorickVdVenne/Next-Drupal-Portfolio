@@ -17,6 +17,8 @@ type Project {
   description: String!
   period: String!
 
+  image: String!
+
   roles: [Role!]!
   technologies: [Technology!]!
 

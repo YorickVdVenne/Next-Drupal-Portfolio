@@ -69,6 +69,18 @@ class ContentSchema extends SdlSchemaPluginBase {
       ->map('path', $builder->fromValue('body.value'))
     );
 
+    $registry->addFieldResolver('Project', 'image',
+      $builder->compose(
+        $builder->produce('property_path')
+          ->map('type', $builder->fromValue('entity:node'))
+          ->map('value', $builder->fromParent())
+          ->map('path', $builder->fromValue('field_project_image.entity')),            
+        $builder->produce("image_url")
+          ->map('entity',$builder->fromParent()
+        )
+      )
+    );
+
     $registry->addFieldResolver('Project', 'roles',
     $builder->produce('entity_reference')
       ->map('entity', $builder->fromParent())
