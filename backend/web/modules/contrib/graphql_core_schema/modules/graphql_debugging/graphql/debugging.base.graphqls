@@ -1,4 +1,0 @@
-type RequestHeader {
-  key: String!
-  value: [String!]
-}

@@ -1,3 +1,0 @@
-extend type View {
-  executable(displayId: String): ViewExecutable
-}

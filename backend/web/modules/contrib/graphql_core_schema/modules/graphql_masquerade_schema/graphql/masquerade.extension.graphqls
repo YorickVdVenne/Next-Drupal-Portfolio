@@ -1,7 +1,0 @@
-extend type Query {
-  masqueradeContext: MasqueradeContext
-}
-
-extend type Mutation {
-  masqueradeSwitchBack: Boolean!
-}

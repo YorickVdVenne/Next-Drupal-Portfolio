@@ -1,3 +1,0 @@
-extend type FieldItemTypeImage {
-  derivative(style: ImageStyleId!): ImageResource
-}

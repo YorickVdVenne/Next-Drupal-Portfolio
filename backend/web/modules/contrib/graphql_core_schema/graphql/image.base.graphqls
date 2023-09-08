@@ -1,5 +1,0 @@
-type ImageResource {
-  urlPath: String
-  width: Int
-  height: Int
-}

@@ -1,7 +1,0 @@
-type LocalTask {
-  baseId: String!
-  active: Boolean!
-  url: Url!
-  title: String!
-  weight: Int!
-}

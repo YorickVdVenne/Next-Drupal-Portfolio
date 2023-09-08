@@ -1,3 +1,0 @@
-extend interface FieldItemTypeTimestampInterface {
-  formatted(format: String, drupalDateFormat: DrupalDateFormat): String!
-}
