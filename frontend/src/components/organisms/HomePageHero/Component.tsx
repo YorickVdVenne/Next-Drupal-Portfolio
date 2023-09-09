@@ -1,9 +1,9 @@
-import clsx from 'clsx'
 import React from 'react'
 import Container from '@components/atoms/Container/Component'
 import styles from './styles.module.css'
 
 export default function HomePageHero (): JSX.Element {
+
   return (
     <div className={styles.hero}>
       <Container>
