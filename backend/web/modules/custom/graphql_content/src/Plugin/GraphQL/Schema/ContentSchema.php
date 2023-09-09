@@ -36,11 +36,19 @@ class ContentSchema extends SdlSchemaPluginBase {
    * @param \Drupal\graphql\GraphQL\ResolverBuilder $builder
   */
   protected function addProjectFields(ResolverRegistry $registry, ResolverBuilder $builder): void {
+
+    /**
+      * Identifiers
+    */
     $registry->addFieldResolver('Project', 'id',
       $builder->produce('entity_id')
         ->map('entity', $builder->fromParent())
     );
 
+
+    /**
+      * Titles
+    */
     $registry->addFieldResolver('Project', 'title',
       $builder->compose(
         $builder->produce('entity_label')
@@ -55,6 +63,9 @@ class ContentSchema extends SdlSchemaPluginBase {
       ->map('path', $builder->fromValue('field_project_brand.value'))
     );
 
+    /**
+      * Dates
+    */
     $registry->addFieldResolver('Project', 'period',
     $builder->produce('property_path')
       ->map('type', $builder->fromValue('entity:node'))
@@ -62,6 +73,36 @@ class ContentSchema extends SdlSchemaPluginBase {
       ->map('path', $builder->fromValue('field_project_period.value'))
     );
 
+    /**
+      * Media
+    */
+    $registry->addFieldResolver('Project', 'mainImage',
+      $builder->compose(
+        $builder->produce('property_path')
+          ->map('type', $builder->fromValue('entity:node'))
+          ->map('value', $builder->fromParent())
+          ->map('path', $builder->fromValue('field_project_main_image.entity')),            
+        $builder->produce("image_url")
+          ->map('entity',$builder->fromParent()
+        )
+      )
+    );
+
+    $registry->addFieldResolver('Project', 'screenshots',
+      $builder->compose(
+        $builder->produce('property_path')
+          ->map('type', $builder->fromValue('entity:node'))
+          ->map('value', $builder->fromParent())
+          ->map('path', $builder->fromValue('field_project_screenshots')),            
+        $builder->produce("image_url")
+          ->map('entity',$builder->fromParent()
+        )
+      )
+    );
+
+    /**
+      * Descriptions
+    */
     $registry->addFieldResolver('Project', 'description',
     $builder->produce('property_path')
       ->map('type', $builder->fromValue('entity:node'))
@@ -69,49 +110,19 @@ class ContentSchema extends SdlSchemaPluginBase {
       ->map('path', $builder->fromValue('body.value'))
     );
 
-    $registry->addFieldResolver('Project', 'image',
-      $builder->compose(
-        $builder->produce('property_path')
-          ->map('type', $builder->fromValue('entity:node'))
-          ->map('value', $builder->fromParent())
-          ->map('path', $builder->fromValue('field_project_image.entity')),            
-        $builder->produce("image_url")
-          ->map('entity',$builder->fromParent()
-        )
-      )
-    );
-
+    /**
+      * Taxonomy
+    */
     $registry->addFieldResolver('Project', 'roles',
     $builder->produce('entity_reference')
       ->map('entity', $builder->fromParent())
-      ->map('field', $builder->fromValue('field_roles'))
+      ->map('field', $builder->fromValue('field_project_roles'))
     );
 
     $registry->addFieldResolver('Project', 'technologies',
     $builder->produce('entity_reference')
       ->map('entity', $builder->fromParent())
-      ->map('field', $builder->fromValue('field_technologies'))
-    );
-
-    $registry->addFieldResolver('Project', 'codeLink',
-    $builder->produce('property_path')
-      ->map('type', $builder->fromValue('entity:node'))
-      ->map('value', $builder->fromParent())
-      ->map('path', $builder->fromValue('field_code_link.value'))
-    );
-
-    $registry->addFieldResolver('Project', 'siteLink',
-    $builder->produce('property_path')
-      ->map('type', $builder->fromValue('entity:node'))
-      ->map('value', $builder->fromParent())
-      ->map('path', $builder->fromValue('field_site_link.value'))
-    );
-
-    $registry->addFieldResolver('Project', 'featured',
-    $builder->produce('property_path')
-      ->map('type', $builder->fromValue('entity:node'))
-      ->map('value', $builder->fromParent())
-      ->map('path', $builder->fromValue('field_featured_project.value'))
+      ->map('field', $builder->fromValue('field_project_technologies'))
     );
 
     $registry->addFieldResolver('Role', 'id',
@@ -132,6 +143,33 @@ class ContentSchema extends SdlSchemaPluginBase {
     $registry->addFieldResolver('Technology', 'name',
       $builder->produce('entity_label')
         ->map('entity', $builder->fromParent())
+    );
+
+    /**
+      * Links
+    */
+    $registry->addFieldResolver('Project', 'codeLink',
+    $builder->produce('property_path')
+      ->map('type', $builder->fromValue('entity:node'))
+      ->map('value', $builder->fromParent())
+      ->map('path', $builder->fromValue('field_project_code_link.value'))
+    );
+
+    $registry->addFieldResolver('Project', 'siteLink',
+    $builder->produce('property_path')
+      ->map('type', $builder->fromValue('entity:node'))
+      ->map('value', $builder->fromParent())
+      ->map('path', $builder->fromValue('field_project_site_link.value'))
+    );
+
+    /**
+      * Specialties
+    */ 
+    $registry->addFieldResolver('Project', 'featured',
+    $builder->produce('property_path')
+      ->map('type', $builder->fromValue('entity:node'))
+      ->map('value', $builder->fromParent())
+      ->map('path', $builder->fromValue('field_project_featured.value'))
     );
   }
 
