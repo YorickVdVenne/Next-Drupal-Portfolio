@@ -8,7 +8,13 @@ export default function App ({ Component, pageProps }: AppProps): JSX.Element {
 
   return (
     <ApolloProvider client={apolloClient}>
-      <Component {...pageProps} />
+      {/* NAVIGATION */}
+      <div className='stack'>
+        <div className='content'>
+          <Component {...pageProps} />
+        </div>
+        {/* FOOTER */}
+      </div>
     </ApolloProvider>
   )
 }

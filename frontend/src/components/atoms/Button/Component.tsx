@@ -1,23 +1,18 @@
-import clsx from 'clsx'
 import React from 'react'
 import styles from './styles.module.css'
 
 interface ButtonProps {
-  children?: React.ReactNode
+  children: React.ReactNode
 }
 
-export function Button (props: ButtonProps): JSX.Element {
-  const { children } = props
+type Props =
+| ({ as: 'link' } & ButtonProps & React.AnchorHTMLAttributes<HTMLAnchorElement>)
+| ({ as: 'button' } & ButtonProps & React.ButtonHTMLAttributes<HTMLButtonElement>)
 
-  return (
-    <button
-      className={clsx(styles.button, {
-        [styles.button]: true
-      })}
-    >
-      {children !== undefined && (
-        <span className={styles.text}>{children}</span>
-      )}
-    </button>
-  )
+export function Button (props: Props): JSX.Element {
+  const { children, ...componentProps } = props
+
+  if (componentProps.as === 'link') {
+    return <a className={styles.link}>{children}</a>
+  } else return <button className={styles.button}>{children}</button>
 }

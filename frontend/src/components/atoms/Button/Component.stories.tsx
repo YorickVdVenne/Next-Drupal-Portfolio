@@ -10,7 +10,7 @@ export default {
 export const Default = (): JSX.Element => {
   return (
     <div style={{ marginBlock: 'var(--spacing-4x)' }}>
-      <Button>Button</Button>
+      <Button as='button'>Button</Button>
     </div>
   )
 }

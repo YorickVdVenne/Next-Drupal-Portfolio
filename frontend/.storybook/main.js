@@ -5,6 +5,7 @@ module.exports = {
   "addons": [
     "@storybook/addon-links",
     "@storybook/addon-essentials",
+    "@storybook/manager-webpack5",
     "@storybook/addon-interactions"
   ],
   "framework": "@storybook/react",

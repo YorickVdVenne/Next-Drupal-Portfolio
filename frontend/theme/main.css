@@ -4,7 +4,16 @@
 
 :root {
   /* Fonts */
-  --font-family-primary: "Acumin Pro" , "Helvetica", "Arial", sans-serif;
+  --font-family-primary:  'Calibre','Inter','San Francisco','SF Pro Text',-apple-system,system-ui,sans-serif;
+  --font-family-mono: 'SF Mono','Fira Code','Fira Mono','Roboto Mono',monospace;
+  --fz-xxs: 1.2rem;
+  --fz-xs: 1.3rem;
+  --fz-sm: 1.4rem;
+  --fz-md: 1.6rem;
+  --fz-lg: 1.8rem;
+  --fz-xl: 2rem;
+  --fz-xxl: 2.2rem;
+  --fz-heading: 3.2rem;
 
   /* Spacing (4px steps) */
   --spacing-1x: 0.4rem;
@@ -29,6 +38,11 @@
   --spacing-20x: 8rem;
   --spacing-24x: 9.6rem;
   --spacing-30x: 12rem;
+
+  /* Global variables */
+  --border-radius: 4px;
+  --easing: cubic-bezier(0.645,0.045,0.355,1);
+  --transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
 }
 
 html {
@@ -40,14 +54,29 @@ html {
 html,
 body {
   font-family: var(--font-family-primary);
-  background-color: var(--color-primary-black);
-  color: var(--color-white);
+  background-color: var(--color-navy);
+  color: var(--color-grey);
   overflow-x: hidden;
 }
 
 body {
-  font-size: 1.6rem;
+  font-size: 2rem;
   position: relative;
   max-width: 100%;
   margin: 0;
+}
+
+.stack {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 100%;
+  min-height: 100vh;
+  justify-content: space-between;
+}
+
+.content {
+  flex-grow: 1;
+  display: flex;
+  flex-flow: column nowrap;
+  min-height: fit-content;
 }
