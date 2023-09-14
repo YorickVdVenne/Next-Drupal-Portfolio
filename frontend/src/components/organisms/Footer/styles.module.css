@@ -1,0 +1,18 @@
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.link {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.icon svg {
+    width: 20px;
+    height: 20px;
+}

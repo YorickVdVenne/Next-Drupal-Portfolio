@@ -1,5 +1,5 @@
 .button,
-.link {
+.linkPrimary {
     color: var(--color-green);
     transition: var(--transition);
     text-decoration: none;
@@ -21,12 +21,12 @@
     transform: translate(5px, 5px);
 }
 
-.link {
+.linkPrimary {
     display: inline-block;
     position: relative;
 }
 
-.link::after {
+.linkPrimary::after {
     content: "";
     display: block;
     width: 0px;
@@ -36,11 +36,24 @@
     transition: var(--transition);
 }
 
-.link:hover::after {
+.linkPrimary:hover::after {
     width: 100%;
 }
 
-.link:hover {
+.linkPrimary:hover {
     cursor: pointer;
     outline: 0px;
+}
+
+.linkSecondary {
+    text-decoration: none;
+    font-family: var(--font-family-mono);
+    font-size: var(--fz-xxs);
+    transition: var(--transition);
+    color: inherit;
+}
+
+.linkSecondary:hover {
+    color: var(--color-green);
+    cursor: pointer;
 }
