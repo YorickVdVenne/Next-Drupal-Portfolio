@@ -21,6 +21,9 @@
       "@pages/*": [
         "./pages/*"
       ],
+      "@icons/*": [
+        "./icons/*"
+      ],
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
