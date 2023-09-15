@@ -43,6 +43,7 @@
   --border-radius: 4px;
   --easing: cubic-bezier(0.645,0.045,0.355,1);
   --transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+  --nav-height: 10rem;
 }
 
 html {
@@ -79,4 +80,23 @@ body {
   display: flex;
   flex-flow: column nowrap;
   min-height: fit-content;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 1.2rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-dark-grey);
+  border: 3px solid var(--color-navy);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-lightest-navy); 
+}
+
+::-webkit-scrollbar-track {
+    background: var(--color-navy);
 }

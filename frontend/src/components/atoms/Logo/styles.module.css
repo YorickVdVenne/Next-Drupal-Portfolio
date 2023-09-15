@@ -1,0 +1,39 @@
+.logo {
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.logo a {
+    color: var(--color-green);
+    width: 42px;
+    height: 42px;
+    position: relative;
+    z-index: 1;
+}
+
+.hexContainer {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+    transition: var(--transition);
+}
+
+.hexContainer svg {
+    width: 100%;
+    height: 100%;
+    fill: currentcolor;
+    vertical-align: middle;
+}
+
+.logoContainer {
+    position: relative;
+    z-index: 1;
+}
+
+.logoContainer svg {
+    color: var(--color-green);
+}

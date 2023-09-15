@@ -1,0 +1,60 @@
+.nav {
+    height: var(--nav-height);
+    display: flex;
+    align-items: center;
+    padding: 0 5rem;
+}
+
+.innerNav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    counter-reset: item 0;
+    z-index: 12;
+    color: var(--color-lightest-grey);
+    font-family: var(--font-family-mono);
+}
+
+.actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.actions ol {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.actions ol li {
+    margin: 0 var(--spacing-1x);
+    position: relative;
+    counter-increment: item 1;
+    font-size: var(--fz-xs);
+}
+
+.actions ol li a {
+    padding: 1rem;
+}
+
+.actions ol li a:hover, .actions ol li a:focus {
+    color: var(--color-green);
+    cursor: pointer;
+}
+
+.actions ol li a::before {
+    content: "0" counter(item) ".";
+    color: var(--color-green);
+    font-size: var(--fz-xxs);
+    text-align: right;
+}
+
+.button {
+    margin-left: var(--spacing-3x);
+}

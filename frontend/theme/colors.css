@@ -3,11 +3,13 @@
     --color-green: #64FF9c;
     --color-navy: #0A192F;
     --color-light-navy: #112240;
+    --color-lightest-navy: #233554;
     --color-navy-shadow: #020C1B;
   
     /* Basics */
     --color-white: #fff; 
     --color-black: #000;
+    --color-dark-grey: #495670;
     --color-grey: #8892B0;
     --color-light-grey: #A8B2D1;
     --color-lightest-grey: #CCD6F6;
