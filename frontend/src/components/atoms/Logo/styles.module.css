@@ -8,8 +8,8 @@
 
 .logo a {
     color: var(--color-green);
-    width: 42px;
-    height: 42px;
+    width: 4.2rem;
+    height: 4.2rem;
     position: relative;
     z-index: 1;
 }

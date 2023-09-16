@@ -1,8 +1,9 @@
 import { initializeApollo } from '../src/lib/apolloClient'
 import { ALL_PROJECTS_QUERY } from '../src/graphql/all_projects'
-
-import HomePageHero from '@components/organisms/HomePageHero/Component'
 import { useQuery } from '@apollo/client'
+
+import MainContainer from '@components/atoms/MainContainer/Component'
+import Header from '@components/organisms/Header/Component'
 
 export default function Home (): JSX.Element {
   const { data } = useQuery(ALL_PROJECTS_QUERY)
@@ -10,9 +11,9 @@ export default function Home (): JSX.Element {
   console.log(data)
 
   return (
-    <>
-      <HomePageHero />
-    </>
+    <MainContainer>
+      <Header />
+    </MainContainer>
   )
 }
 

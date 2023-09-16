@@ -37,3 +37,29 @@
     font-style: normal;
     font-stretch: normal;
 }
+
+@font-face {
+    font-family: "Calibre";
+    src: url("/fonts/Calibre-Regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+}
+
+@font-face {
+    font-family: "Calibre Semibold";
+    src: url("/fonts/Calibre-Semibold.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+}
+
+
+
+@font-face {
+    font-family: "SF Mono";
+    src: url("/fonts/sf-mono-regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+}

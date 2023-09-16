@@ -1,0 +1,53 @@
+.grid {
+    --grid-column-count: 12;
+    --column-gap: var(--spacing-2x);
+    --grid-padding: var(--spacing-4x);
+  
+    display: grid;
+    grid-template-columns: var(--grid-padding) repeat(var(--grid-column-count), 1fr) var(--grid-padding);
+    grid-column-gap: var(--column-gap);
+  
+    @media (width >= 768px) {
+      --column-gap: var(--spacing-6x);
+      --grid-padding: var(--spacing-2x);
+    }
+  
+    @media (width >= 1440px) {
+      --column-gap: var(--spacing-8x);
+      --grid-padding: calc((100vw - 112.2rem) / 2);
+    }
+  
+    @media (width >= 1920px) {
+      --grid-padding: calc((100vw - 140.8rem) / 2);
+    }
+  
+    --grid-12x: calc(100vw - var(--scrollbar-width) - (var(--grid-padding) * 2) - (var(--column-gap) * 2));
+    --grid-1x: calc((var(--grid-12x) - (var(--column-gap) * 11)) / 12);
+    --grid-2x: calc((var(--grid-1x) * 2) + (var(--column-gap) * 1));
+    --grid-3x: calc((var(--grid-1x) * 3) + (var(--column-gap) * 2));
+    --grid-4x: calc((var(--grid-1x) * 4) + (var(--column-gap) * 3));
+    --grid-5x: calc((var(--grid-1x) * 5) + (var(--column-gap) * 4));
+    --grid-6x: calc((var(--grid-1x) * 6) + (var(--column-gap) * 5));
+    --grid-7x: calc((var(--grid-1x) * 7) + (var(--column-gap) * 6));
+    --grid-8x: calc((var(--grid-1x) * 8) + (var(--column-gap) * 7));
+    --grid-9x: calc((var(--grid-1x) * 9) + (var(--column-gap) * 8));
+    --grid-10x: calc((var(--grid-1x) * 10) + (var(--column-gap) * 9));
+    --grid-11x: calc((var(--grid-1x) * 11) + (var(--column-gap) * 10));
+  }
+  
+  .noPadding {
+    grid-template-columns: repeat(var(--grid-column-count), 1fr);
+    padding-inline-start: 0;
+    padding-inline-end: 0;
+  
+    @media (width >= 768px) {
+      padding-inline-start: 0;
+      padding-inline-end: 0;
+    }
+  
+    @media (width >= 1440px) {
+      padding-inline-start: 0;
+      padding-inline-end: 0;
+    }
+  }
+  

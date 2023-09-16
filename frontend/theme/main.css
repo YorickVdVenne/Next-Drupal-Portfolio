@@ -5,6 +5,7 @@
 :root {
   /* Fonts */
   --font-family-primary:  'Calibre','Inter','San Francisco','SF Pro Text',-apple-system,system-ui,sans-serif;
+  --font-family-primary-bold:  'Calibre Semibold','Inter','San Francisco','SF Pro Text',-apple-system,system-ui,sans-serif;
   --font-family-mono: 'SF Mono','Fira Code','Fira Mono','Roboto Mono',monospace;
   --fz-xxs: 1.2rem;
   --fz-xs: 1.3rem;
