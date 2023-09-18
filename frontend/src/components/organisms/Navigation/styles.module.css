@@ -61,6 +61,7 @@
     color: var(--color-green);
     font-size: var(--fz-xxs);
     text-align: right;
+    margin-inline-end: var(--spacing-1x);
 }
 
 .button {
