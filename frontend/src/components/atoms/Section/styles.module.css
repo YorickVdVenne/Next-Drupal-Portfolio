@@ -1,3 +1,5 @@
 .section {
     padding-block: var(--spacing-24x);
+    margin: 0 auto;
+    max-width: 90rem;
 }
