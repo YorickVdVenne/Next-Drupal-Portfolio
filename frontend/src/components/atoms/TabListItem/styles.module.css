@@ -1,0 +1,26 @@
+.tabListItem {
+    border: none;
+    appearance: none;
+    cursor: pointer;
+    transition: var(--transition);
+    padding-inline: var(--spacing-5x);
+    padding-block: var(--spacing-1x);
+    height: 4.2rem;
+    outline: 0;
+
+    background-color: transparent;
+    font-family: var(--font-family-mono);
+    font-size: var(--fz-xs);
+    color: var(--color-grey);
+    text-align: left;
+    border-left: 2px solid var(--color-lightest-navy);
+}
+
+.tabListItem:hover {
+    background-color: var(--color-light-navy);
+    color: var(--color-green);
+}
+
+.active {
+    color: var(--color-green);
+}

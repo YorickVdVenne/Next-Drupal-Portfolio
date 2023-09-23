@@ -1,0 +1,46 @@
+.panel {
+    padding-block: var(--spacing-2x);
+    padding-inline: var(--spacing-1x);
+    transition: opacity 0.4s cubic-bezier(0.645,0.045,0.355,1);
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.active {
+    opacity: 1;
+}
+
+.company {
+    color: var(--color-green);
+}
+
+.range {
+    margin-block-end: var(--spacing-6x);
+    color: var(--color-light-slate);
+    font-family: var(--font-family-mono);
+    font-size: var(--fz-xs);
+}
+
+.panel ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    font-size: var(--fz-lg);
+}
+
+.panel ul li {
+    position: relative;
+    padding-inline-start: var(--spacing-7x);
+    margin-block-end: var(--spacing-3x);
+}
+
+.panel ul li::before {
+    content: "▹";
+    position: absolute;
+    left: 0px;
+    color: var(--color-green);
+}

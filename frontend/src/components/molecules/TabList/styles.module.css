@@ -1,0 +1,18 @@
+.tabList {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.highlight {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 10;
+    width: 2px;
+    height: 4.2rem;
+    border-radius: var(--border-radius);
+    background: var(--color-green);
+    /* transform: translateY(calc(0 * 4.2rem)); */
+    transition: transform 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s;
+}

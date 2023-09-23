@@ -1,0 +1,39 @@
+.numberedHeading {
+    font-size: var(--fz-heading);
+    display: flex;
+    align-items: center;
+    margin-block-end: var(--spacing-8x);
+}
+
+.numberedHeading::before {
+    position: relative;
+    bottom: 4px;
+    counter-increment: section 2;
+    content: "0" counter(section) ".";
+    margin-inline-end: var(--spacing-2x);
+    color: var(--color-green);
+    font-family: var(--font-family-mono);
+    font-size: var(--fz-xl);
+    font-weight: 400;
+}
+
+.numberedHeading::after {
+    content: "";
+    display: block;
+    position: relative;
+    top: -5px;
+    width: 20rem;
+    height: 1px;
+    margin-left: 20px;
+    background-color: var(--color-lightest-navy);
+}
+
+.tabListWrapper {
+    grid-column: 1 / 4;
+}
+
+.tabPannelWrapper {
+    grid-column: 4 / -1;
+    position: relative;
+    height: 45rem;
+}

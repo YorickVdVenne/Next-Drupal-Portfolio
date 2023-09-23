@@ -5,16 +5,16 @@ import { useQuery } from '@apollo/client'
 import MainContainer from '@components/atoms/MainContainer/Component'
 import Header from '@components/organisms/Header/Component'
 import About from '@components/organisms/About/Component'
+import Experience from '@components/organisms/Experience/Component'
 
 export default function Home (): JSX.Element {
   const { data } = useQuery(ALL_PROJECTS_QUERY)
-
-  console.log(data)
 
   return (
     <MainContainer>
       <Header />
       <About />
+      <Experience />
     </MainContainer>
   )
 }
