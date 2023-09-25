@@ -3,3 +3,11 @@
     margin: 0 auto;
     max-width: 90rem;
 }
+
+.section:last-child {
+    margin-block-end: var(--spacing-24x);
+}
+
+.allignCenter {
+    text-align: center;
+}

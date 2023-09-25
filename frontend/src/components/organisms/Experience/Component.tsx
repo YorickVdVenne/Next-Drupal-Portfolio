@@ -37,7 +37,7 @@ export default function Experience (): JSX.Element {
   }, [activeListItem, listItems])
 
   return (
-    <Section>
+    <Section maxWidth={700}>
       <h2 className={styles.numberedHeading}>Experience</h2>
       <div className={gridStyles.grid}>
         <div className={styles.tabListWrapper}>

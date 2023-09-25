@@ -19,6 +19,7 @@
     outline: 0;
     box-shadow: -4px -4px var(--color-green);
     transform: translate(5px, 5px);
+    cursor: pointer;
 }
 
 .linkPrimary {

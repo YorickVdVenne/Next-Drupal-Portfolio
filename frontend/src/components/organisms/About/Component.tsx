@@ -8,7 +8,7 @@ import profileImage from '../../../../public/images/profile-image.png'
 export default function About (): JSX.Element {
 
   return (
-    <Section>
+    <Section maxWidth={900}>
       <h2 className={styles.numberedHeading}>About me</h2>
       <div className={gridStyles.grid}>
         <div className={styles.content}>

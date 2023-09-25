@@ -7,6 +7,7 @@ import Header from '@components/organisms/Header/Component'
 import About from '@components/organisms/About/Component'
 import Experience from '@components/organisms/Experience/Component'
 import Featured from '@components/organisms/Featured/Component'
+import Contact from '@components/organisms/Contact/Component'
 
 export default function Home (): JSX.Element {
   const { data } = useQuery(ALL_PROJECTS_QUERY)
@@ -17,6 +18,7 @@ export default function Home (): JSX.Element {
       <About />
       <Experience />
       <Featured />
+      <Contact />
     </MainContainer>
   )
 }
