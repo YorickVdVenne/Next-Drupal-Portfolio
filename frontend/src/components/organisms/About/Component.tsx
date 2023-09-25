@@ -31,8 +31,6 @@ export default function About (): JSX.Element {
               src={profileImage}
               alt='Picture of Yorick'
               className={styles.image}
-              width={500}
-              height={500}
             />
           </div>
         </div>  

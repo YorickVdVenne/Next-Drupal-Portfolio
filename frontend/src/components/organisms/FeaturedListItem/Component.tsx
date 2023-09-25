@@ -4,6 +4,8 @@ import gridStyles from '@components/atoms/Grid/styles.module.css'
 import clsx from 'clsx'
 import Card from '@components/atoms/Card/Component'
 import { IconMapper } from '@components/atoms/Icons/Component'
+import Image from 'next/image'
+import profileImage from '../../../../public/images/profile-image.png'
 
 export enum TextAlign {
   right = 'right',
@@ -35,7 +37,15 @@ export default function FeaturedListItem (props: FeaturedListItemProps): JSX.Ele
         </div>
       </div>
       <div className={styles.projectImage}>
-
+        <a href='https://qr.avikofoodservice.com/' target='__blank'>        
+          <div className={styles.imageWrapper}>
+            <Image 
+              src={profileImage}
+              alt='Picture of Yorick'
+              className={styles.image}
+            />
+          </div>
+        </a>
       </div>
     </li>
   )
