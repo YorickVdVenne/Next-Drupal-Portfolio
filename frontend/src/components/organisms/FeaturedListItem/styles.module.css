@@ -1,0 +1,77 @@
+.featuredItem {
+    position: relative;
+    align-items: center;
+}
+
+.projectContent {
+    grid-column: 7 / -1;
+    position: relative;
+    text-align: right;
+}
+
+.projectOverline {
+    margin-block: var(--spacing-2x);
+    color: var(--color-green);
+    font-family: var(--font-family-mono);
+    font-size: var(--fz-xs);
+    font-weight: 400;
+}
+
+.projectTitle {
+    font-size: var(--fz-xxxl);
+    margin-block-end: var(--spacing-5x);
+}
+
+.projectTech {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 2;
+    padding: 0;
+    list-style: none;
+    justify-content: flex-end;
+    margin-block-start: var(--spacing-6x);
+    margin-block-end: var(--spacing-2x);
+}
+
+.projectTech li {
+    color: var(--color-light-grey);
+    font-family: var(--font-family-mono);
+    font-size: var(--fz-xs);
+    white-space: nowrap;
+    margin-inline-start: var(--spacing-5x);
+    margin-block-end: var(--spacing-1x);
+}
+
+.projectLinks {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+    margin-block-start: var(--spacing-2x);
+    margin-inline-end: -1rem;
+    color: var(--color-lightest-grey);
+}
+
+.projectLinks a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: var(--spacing-2x);
+    width: 2.2rem;
+    height: 2.2rem;
+    position: relative;
+    z-index: 1;
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition);
+}
+
+.projectLinks a:hover, .projectLinks a:focus {
+    color: var(--color-green);
+}
+
+
+.projectImage {
+    grid-column: 1 / 8;
+}

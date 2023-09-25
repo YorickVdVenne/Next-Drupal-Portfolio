@@ -1,0 +1,15 @@
+.card {
+    box-shadow: 0 10px 30px -15px var(--color-navy-shadow);
+    transition: var(--transition);
+    position: relative;
+    z-index: 2;
+    padding: var(--spacing-6x);
+    border-radius: var(--border-radius);
+    background-color: var(--color-light-navy);
+    color: var(--color-light-grey);
+    font-size: var(--fz-lg);
+}
+
+.card:hover {
+    box-shadow: 0 20px 30px -15px var(--color-navy-shadow);
+}
