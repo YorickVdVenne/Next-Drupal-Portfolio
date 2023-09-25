@@ -12,37 +12,71 @@ export enum TextAlign {
   left = 'left'
 }
 
+export interface Tag {
+  id?: number
+  name: string
+}
+
+export interface Project {
+  id: number
+  title: string
+  brand: string
+  description: string
+  period: string
+  mainImage: string
+  screenshots?: string
+  roles: Tag[]
+  technologies: Tag[]
+  codeLink?: null
+  siteLink?: string
+  featured: boolean
+}
+
 interface FeaturedListItemProps {
+  item: Project
   textAlign: TextAlign
 }
 
 
 export default function FeaturedListItem (props: FeaturedListItemProps): JSX.Element {
-  const { textAlign } = props
+  const { item, textAlign } = props
 
   return (
     <li className={clsx(gridStyles.grid, styles.featuredItem)}>
-      <div className={clsx(styles.projectContent)}>
+      <div className={clsx(styles.projectContent, {
+        [styles.contentLeft]: textAlign === TextAlign.left,
+      })}>
         <p className={styles.projectOverline}>Featured Project</p>
-        <h4 className={styles.projectTitle}>Aviko QR</h4>
-        <Card>Description of project</Card>
-        <ul className={styles.projectTech}>
-          <li>Drupal</li>
-          <li>Node.js</li>
-          <li>JavaScript</li>
-          <li>PHP</li>
+        <h4 className={styles.projectTitle}>{item.title}</h4>
+        <Card>{item.description}</Card>
+        <ul className={clsx(styles.projectTech, {
+            [styles.techLeft]: textAlign === TextAlign.left,
+        })}>
+          {item.technologies.map((tech, key) => (
+            <li key={key} className={clsx(styles.techItem, {
+              [styles.techItemLeft]: textAlign === TextAlign.left,
+            })}>{tech.name}</li>
+          ))}
         </ul>
-        <div className={styles.projectLinks}>
-          <a href='https://qr.avikofoodservice.com/' target='__blank'>{IconMapper('external-link')}</a>
-        </div>
+        {item.siteLink ? (
+          <div className={clsx(styles.projectLinks, {
+            [styles.projectLinksLeft]: textAlign === TextAlign.left,
+          })}>
+            <a href={item.siteLink} target='__blank'>{IconMapper('external-link')}</a>
+          </div>
+        ): ''}
       </div>
-      <div className={styles.projectImage}>
-        <a href='https://qr.avikofoodservice.com/' target='__blank'>        
+      <div className={clsx(styles.projectImage, {
+        [styles.imageRight]: textAlign === TextAlign.left 
+      })}>
+        <a href={item.siteLink ? item.siteLink : item.mainImage} target='__blank'>        
           <div className={styles.imageWrapper}>
             <Image 
-              src={profileImage}
-              alt='Picture of Yorick'
+              src={item.mainImage}
+              alt='Alt text...'
               className={styles.image}
+              width={25}
+              height={25}
             />
           </div>
         </a>

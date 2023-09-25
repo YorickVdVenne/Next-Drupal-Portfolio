@@ -8,9 +8,14 @@
 }
 
 .projectContent {
-    grid-column: 8 / -1;
     position: relative;
+    grid-column: 7 / -1;
     text-align: right;
+}
+
+.contentLeft {
+    grid-column: 1 / 8;
+    text-align: left;
 }
 
 .projectOverline {
@@ -38,13 +43,22 @@
     margin-block-end: var(--spacing-2x);
 }
 
-.projectTech li {
+.techLeft {
+    justify-content: flex-start;
+}
+
+.techItem {
     color: var(--color-light-grey);
     font-family: var(--font-family-mono);
     font-size: var(--fz-xs);
     white-space: nowrap;
     margin-inline-start: var(--spacing-5x);
     margin-block-end: var(--spacing-1x);
+}
+
+.techItemLeft {
+    margin-inline-start: 0;
+    margin-inline-end: var(--spacing-5x);
 }
 
 .projectLinks {
@@ -55,6 +69,10 @@
     margin-block-start: var(--spacing-2x);
     margin-inline-end: -1rem;
     color: var(--color-lightest-grey);
+}
+
+.projectLinksLeft {
+    justify-content: flex-start;
 }
 
 .projectLinks a {
@@ -80,17 +98,21 @@
 }
 
 .projectImage {
-    grid-column: 1 / 9;
     box-shadow: 0 10px 30px -15px var(--color-navy-shadow);
     transition: var(--transition);
     position: relative;
     z-index: 1;
     height: 100%;
     width: 100%;
+    grid-column: 1 / 9;
 }
 
 .projectImage:hover {
     box-shadow: 0 20px 30px -15px var(--color-navy-shadow);
+}
+
+.imageRight {
+    grid-column: 6 / -1;
 }
 
 .imageWrapper {

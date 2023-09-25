@@ -1,0 +1,96 @@
+{
+    "data": {
+      "projects": {
+        "total": 3,
+        "items": [
+          {
+            "id": 1,
+            "title": "Aviko QR Code",
+            "brand": "Aviko",
+            "description": "Aviko wilde nieuwe QR code's op hun verpakkingen gaan plaatsen. Deze QR code's moesten reidrecten naar de juiste landing pagina. De QR code is generiek (op alle verpakkingen hetzelfde) maar de gebruikers kunnen van allerlei verschillende landen komen en moeten dus naar de juiste taal en landings pagina. In het CMS moesten de redirects beheerbaar zijn en via Graphql naar de node server communiceren die op een generiek domein (qr.avikofoodservice.com) wordt gehost. De server vraagt de locatie op van de gebruiker en zorgt dat de gebruiker. Juist wordt geredirect en heeft altijd een fallback voor als er iets in het process verkeerd gaat.",
+            "period": "2022-12-02",
+            "mainImage": "/../public/images/profile-image.png",
+            "roles": [
+              {
+                "name": "Backend"
+              },
+              {
+                "name": "Lead"
+              }
+            ],
+            "technologies": [
+              {
+                "name": "Drupal"
+              },
+              {
+                "name": "PHP"
+              },
+              {
+                "name": "Node.js"
+              },
+              {
+                "name": "JavaScript"
+              }
+            ],
+            "codeLink": null,
+            "siteLink": "https://qr.avikofoodservice.com/",
+            "featured": true
+          },
+          {
+            "id": 5,
+            "title": "Verno Customized frames",
+            "brand": "Verno",
+            "description": "De customize lijst van Verno was al redelijk gebouwd alleen hadden ze nog een aantal uitdagingen openstaan vanuit feedback. Het proces moest op elk moment te delen zijn met andere of onthouden kunnen worden. Hierdoor moesten de stappen encoded als base64 in de url opgeslagen worden\r\n en moesten er buttons toegevoegd worden. Het lastige hieraan was dat de logica en de stappen\r\ntechnisch gezien dichtgetimmerd waren in react states, dus dit moest generieker en via de url gaan. En dat terwijl alles netjes getyped moest via typescript, best tricky. ",
+            "period": "2021-01-25",
+            "mainImage": "/../public/images/profile-image.png",
+            "roles": [
+              {
+                "name": "Frontend"
+              }
+            ],
+            "technologies": [
+              {
+                "name": "JavaScript"
+              },
+              {
+                "name": "TypeScript"
+              },
+              {
+                "name": "HTML & CSS"
+              }
+            ],
+            "codeLink": null,
+            "siteLink": "https://customize.verno.com/nl_NL/configure-frame?data=eyJmcmFtYWJsZU9iamVjdCI6InBvc3RlciJ9&step=framableObject",
+            "featured": true
+          },
+          {
+            "id": 6,
+            "title": "HPL Portal",
+            "brand": "High Profile Locaties (HPL)",
+            "description": "HPL wilde zijn websites vernieuwen en styles rechttrekken over de verschillende sites. (https://www.locaties.nl/ & https://www.inspirerendelocaties.nl/ & https://www.toptrouwlocaties.nl/). Ik heb gewerkt aan locaties.nl, grotendeels aan het portaal; dit is wat de locatiehouder ziet en waar hij alles over zijn locatie kan plaatsen zodat het op de frontend (locaties.nl) zichtbaar wordt. Daarnaast heb ik ook wat geholpen aan de frontend (locaties.nl) kant door bijvoorbeeld de categorie\r\npagina te maken (bijv: https://www.toptrouwlocaties.nl/categorie/sfeervolle_trouw_en_feestlocaties-66163), QA te doen en kleine styling of bug fixes. Maar grotendeels aan het portaal waar ik onder andere een generieke dialog heb gemaakt, confetti animatie met GSAP, verschillende overzicht pagina's met tabellen, data verkeer van API's afgehandeld, mobiele navigatie gemaakt, verschillende formulieren gebouwd en de algemene responsiveness van componenten verbeterd.",
+            "period": "2023-03-07",
+            "mainImage": "/../public/images/profile-image.png",
+            "roles": [
+              {
+                "name": "Frontend"
+              }
+            ],
+            "technologies": [
+              {
+                "name": "HTML & CSS"
+              },
+              {
+                "name": "TypeScript"
+              },
+              {
+                "name": "JavaScript"
+              }
+            ],
+            "codeLink": null,
+            "siteLink": "https://www.locaties.nl/",
+            "featured": true
+          }
+        ]
+      }
+    }
+  }
