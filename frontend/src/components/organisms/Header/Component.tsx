@@ -16,7 +16,7 @@ export default function Header (): JSX.Element {
           Some nice text about me, even more. Some nice text about me, even more. Some nice text about me, even more. Some nice text about me, even more.
           Some nice text about me, even more. Some nice text about me, even more. Some nice text about me, even more. <Button as='link' onClick={() => console.log('test')}>Link</Button>
         </p>
-        <Button onClick={() => console.log('test')} as='button' className={styles.button}>Resume</Button>
+        <Button onClick={() => window.location.href = '/resume.pdf'} as='button' size='large' className={styles.button}>Resume</Button>
       </div>
     </header>
   )
