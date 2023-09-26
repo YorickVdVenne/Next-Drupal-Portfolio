@@ -5,21 +5,31 @@ import { useApollo } from '../src/lib/apolloClient'
 import Navigation from '@components/organisms/Navigation/Component'
 import Footer from '@components/organisms/Footer/Component'
 import SideElement, { DisplayOption, Orientation } from '@components/molecules/SideElement/Component'
+import Favicons from '@components/molecules/Favicons/Component'
+import Head from 'next/head'
+import { usePageVisibility } from '../misc/usePageVisibility'
 
 export default function App ({ Component, pageProps }: AppProps): JSX.Element {
   const apolloClient = useApollo(pageProps.initialApolloState)
+  usePageVisibility()
 
   return (
-    <ApolloProvider client={apolloClient}>
-      <Navigation />
-      <SideElement orientation={Orientation.left} displayOption={DisplayOption.socials}/>
-      <SideElement orientation={Orientation.right} displayOption={DisplayOption.mail}/>
-      <div className='stack'>
-        <div className='content'>
-          <Component {...pageProps} />
+    <>
+      <Head>
+        <title>Yorick's Portfolio</title>
+        <Favicons />
+      </Head>
+      <ApolloProvider client={apolloClient}>
+        <Navigation />
+        <SideElement orientation={Orientation.left} displayOption={DisplayOption.socials}/>
+        <SideElement orientation={Orientation.right} displayOption={DisplayOption.mail}/>
+        <div className='stack'>
+          <div className='content'>
+            <Component {...pageProps} />
+          </div>
+          <Footer />
         </div>
-        <Footer />
-      </div>
-    </ApolloProvider>
+      </ApolloProvider>
+    </>
   )
 }

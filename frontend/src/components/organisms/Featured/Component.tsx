@@ -12,8 +12,8 @@ export default function Featured (): JSX.Element {
         <ul className={styles.featuredList}>
           {projects.data.projects.items.map((item, index) => {
             if (index % 2 === 0) {
-              return <FeaturedListItem item={item} textAlign={TextAlign.right} />
-            } else return <FeaturedListItem item={item} textAlign={TextAlign.left} />
+              return <FeaturedListItem item={item} textAlign={TextAlign.right} key={index} />
+            } else return <FeaturedListItem item={item} textAlign={TextAlign.left} key={index} />
           })}
         </ul>
     </Section>
