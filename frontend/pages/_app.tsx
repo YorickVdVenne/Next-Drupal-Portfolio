@@ -13,10 +13,12 @@ export default function App ({ Component, pageProps }: AppProps): JSX.Element {
   const apolloClient = useApollo(pageProps.initialApolloState)
   usePageVisibility()
 
+  const title = "Yorick's Portfolio" 
+
   return (
     <>
       <Head>
-        <title>Yorick's Portfolio</title>
+        <title>{title}</title>
         <Favicons />
       </Head>
       <ApolloProvider client={apolloClient}>
