@@ -10,7 +10,7 @@
 .numberedHeading::before {
     position: relative;
     bottom: 0;
-    counter-increment: section 1;
+    counter-increment: section 4;
     content: "0" counter(section) ".";
     margin-inline-end: var(--spacing-2x);
     color: var(--color-green);

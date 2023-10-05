@@ -5,10 +5,12 @@ import clsx from 'clsx'
 
 interface TabPanelProps {
   data: Array<{
-    company: string,
+    name: string,
     role: string,
-    range: string,
-    listContent: string[]
+    period: string,
+    responsibilities: Array<{
+      description: string
+    }>
   }>
   activeIndex: number
 }
@@ -23,12 +25,12 @@ export default function TabPanel (props: TabPanelProps): JSX.Element {
         <div key={key} className={clsx(styles.panel, {[styles.active]: activeIndex === key})}>
           <h4>
             <span>{content.role}</span>
-            <span className={styles.company}>&nbsp;@&nbsp;<Button as='link' href="" target='__blank'>{content.company}</Button></span>
+            <span className={styles.company}>&nbsp;@&nbsp;<Button as='link' href="" target='__blank'>{content.name}</Button></span>
           </h4>
-          <p className={styles.range}>{content.range}</p>
+          <p className={styles.range}>{content.period}</p>
           <ul>
-            {content.listContent.map((listItem, key) => (
-              <li key={key}>{listItem}</li>
+            {content.responsibilities.map((responsibility, key) => (
+              <li key={key}>{responsibility.description}</li>
             ))}
           </ul>
         </div>

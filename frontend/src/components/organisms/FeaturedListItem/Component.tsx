@@ -5,7 +5,6 @@ import clsx from 'clsx'
 import Card from '@components/atoms/Card/Component'
 import { IconMapper } from '@components/atoms/Icons/Component'
 import Image from 'next/image'
-import profileImage from '../../../../public/images/profile-image.png'
 
 export enum TextAlign {
   right = 'right',
@@ -35,18 +34,19 @@ export interface Project {
 interface FeaturedListItemProps {
   item: Project
   textAlign: TextAlign
+  overlineText: string
 }
 
 
 export default function FeaturedListItem (props: FeaturedListItemProps): JSX.Element {
-  const { item, textAlign } = props
+  const { item, textAlign, overlineText } = props
 
   return (
     <li className={clsx(gridStyles.grid, styles.featuredItem)}>
       <div className={clsx(styles.projectContent, {
         [styles.contentLeft]: textAlign === TextAlign.left,
       })}>
-        <p className={styles.projectOverline}>Featured Project</p>
+        <p className={styles.projectOverline}>{overlineText}</p>
         <h4 className={styles.projectTitle}>{item.title}</h4>
         <Card>{item.description}</Card>
         <ul className={clsx(styles.projectTech, {

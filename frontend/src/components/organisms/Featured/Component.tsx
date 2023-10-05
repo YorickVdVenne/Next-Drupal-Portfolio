@@ -2,18 +2,20 @@ import React from 'react'
 import styles from './styles.module.css'
 import Section from '@components/atoms/Section/Component'
 import FeaturedListItem, { TextAlign } from '../FeaturedListItem/Component'
-import projects from '../../../../content/projects.json'
+import NumberedHeading from '@components/atoms/NumberedHeading/Component'
+import sections from '@content/sections.json'
 
 export default function Featured (): JSX.Element {
+  const featured = sections.data.sections.featured
 
   return (
     <Section>
-        <h2 className={styles.numberedHeading}>Featured</h2>
+        <NumberedHeading id={featured.bookmark} number={3}>{featured.title}</NumberedHeading>
         <ul className={styles.featuredList}>
-          {projects.data.projects.items.map((item, index) => {
+          {featured.projects.map((project, index) => {
             if (index % 2 === 0) {
-              return <FeaturedListItem item={item} textAlign={TextAlign.right} key={index} />
-            } else return <FeaturedListItem item={item} textAlign={TextAlign.left} key={index} />
+              return <FeaturedListItem overlineText={featured.overlineText} item={project} textAlign={TextAlign.right} key={index} />
+            } else return <FeaturedListItem overlineText={featured.overlineText} item={project} textAlign={TextAlign.left} key={index} />
           })}
         </ul>
     </Section>
