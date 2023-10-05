@@ -18,8 +18,8 @@
 
 .button:hover {
     outline: 0;
-    box-shadow: -4px -4px var(--color-green);
-    transform: translate(5px, 5px);
+    box-shadow: -4px 4px var(--color-green);
+    transform: translate(4px, -4px);
     cursor: pointer;
 }
 

@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<svg width="50" height="50" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" version="1.1" xml:space="preserve">
+ <g class="layer">
+  <title>Logo</title>
+  <rect fill="rgba(10,25,47,0)" height="50" id="svg_4" width="48" x="0" y="0"/>
+  <g id="35255" transform="matrix(0 0.37577 -0.37577 0 479.59 481.687)">
+   <g id="svg_5">
+    <g id="SvgjsG1007" transform="matrix(2.5572 0 0 2.5572 -10.5646 -10.7414)">
+     <path d="m-436.32,503.19l-15.1,-19.5c0,-0.1 -0.1,-0.1 -0.2,-0.2c-5.6,-5.6 -13,-9.1 -20.9,-9.8c-0.6,0.1 -1.1,0.3 -1.5,0.7c-0.4,0.4 -0.6,1 -0.5,1.6l0,0.3c0.9,7.5 4.3,14.6 9.6,20c0.1,0.1 0.1,0.1 0.2,0.2l19.6,15.5c0.4,0.3 0.8,0.4 1.2,0.4c0.5,0 1,-0.2 1.4,-0.6l6.1,-6.1c0.7,-0.6 0.7,-1.7 0.1,-2.5z" fill="rgb(57,233,145)" fill-rule="nonzero" id="svg_6" stroke-dashoffset="0" stroke-miterlimit="4" transform="translate(-19.9064 -19.75)"/>
+    </g>
+    <g id="svg_1" transform="matrix(2.5572 0 0 2.5572 42.3548 42.0665)">
+     <path d="m-434.72,510.69c-0.2,-0.2 -0.4,-0.3 -0.6,-0.4l-2.6,2.6c0.1,0.2 0.2,0.4 0.4,0.6l3,3c0.4,0.4 0.9,0.6 1.4,0.6s1,-0.2 1.4,-0.6c0.8,-0.8 0.8,-2 0,-2.8l-3,-3z" fill="#64FF9c" fill-rule="nonzero" id="svg_7" stroke-dashoffset="0" stroke-miterlimit="4" transform="translate(-40.6 -40.4)"/>
+    </g>
+    <g id="svg_2" transform="matrix(2.5572 0 0 2.5572 -7.3837 40.4041)">
+     <path d="m-453.62,519.59c0.3,0.7 1,1.2 1.8,1.2c0,0 0,0 0,0c0.8,0 1.5,-0.5 1.8,-1.3l1.9,-4.9l-11.7,-9.3l6.2,14.3z" fill="#64FF9c" fill-rule="nonzero" id="svg_8" stroke-dashoffset="0" stroke-miterlimit="4" transform="translate(-21.15 -39.75)"/>
+    </g>
+    <g id="svg_3" transform="matrix(2.5572 0 0 2.5572 40.4367 -7.6721)">
+     <path d="m-428.82,494.59l-14.1,-6.2l9.1,11.7l4.9,-1.9c0.7,-0.3 1.2,-1 1.3,-1.8c0,-0.7 -0.4,-1.5 -1.2,-1.8z" fill="#64FF9c" fill-rule="nonzero" id="svg_9" stroke-dashoffset="0" stroke-miterlimit="4" transform="translate(-39.85 -20.95)"/>
+    </g>
+   </g>
+  </g>
+ </g>
+</svg>

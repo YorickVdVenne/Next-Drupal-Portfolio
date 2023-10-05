@@ -25,6 +25,31 @@
     padding: 0 var(--spacing-12x);
 }
 
+.logo {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    height: 5rem;
+    gap: var(--spacing-2x);
+}
+
+.logo svg {
+    transition: var(--transition);
+}
+
+.logo:hover svg {
+    transform: translate(4px, -4px);
+}
+
+.logo:hover .logoText {
+    color: var(--color-green);
+}
+
+.logoText {
+    font-size: var(--fz-xxl);
+    transition: var(--transition);
+}
+
 .actions {
     display: flex;
     justify-content: center;

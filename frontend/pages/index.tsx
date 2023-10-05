@@ -10,7 +10,7 @@ import Featured from '@components/organisms/Featured/Component'
 import Contact from '@components/organisms/Contact/Component'
 
 export default function Home (): JSX.Element {
-  // const { data } = useQuery(ALL_PROJECTS_QUERY)
+  const { data } = useQuery(ALL_PROJECTS_QUERY)
 
   return (
     <MainContainer>
@@ -23,17 +23,17 @@ export default function Home (): JSX.Element {
   )
 }
 
-// export async function getStaticProps() {
-//   const apolloClient = initializeApollo()
+export async function getStaticProps() {
+  const apolloClient = initializeApollo()
 
-//   await apolloClient.query({
-//     query: ALL_PROJECTS_QUERY,
-//   })
+  await apolloClient.query({
+    query: ALL_PROJECTS_QUERY,
+  })
 
-//   return {
-//     props: {
-//       initialApolloState: apolloClient.cache.extract(),
-//     },
-//     revalidate: 1,
-//   }
-// }
+  return {
+    props: {
+      initialApolloState: apolloClient.cache.extract(),
+    },
+    revalidate: 1,
+  }
+}

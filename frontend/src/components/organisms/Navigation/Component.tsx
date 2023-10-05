@@ -1,8 +1,8 @@
 import React from 'react'
 import styles from './styles.module.css'
-import Logo from '@components/atoms/Logo/Component'
 import { Button } from '@components/atoms/Button/Component'
 import menu from '../../../../content/menu.json'
+import { Logo } from '@components/atoms/Logo/Component'
 
 export default function Navigation (): JSX.Element {
 
@@ -11,7 +11,10 @@ export default function Navigation (): JSX.Element {
   return (
     <nav className={styles.nav}>
       <div className={styles.innerNav}>
-        <Logo />
+        <a href='/' className={styles.logo}>
+          <Logo />
+          <span className={styles.logoText}>Yorick</span>
+        </a>
         <div className={styles.actions}>
           <ol>       
             {menu.menu.links.map((link, key) => (

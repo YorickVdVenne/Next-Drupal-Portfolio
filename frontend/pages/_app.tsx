@@ -10,7 +10,7 @@ import Head from 'next/head'
 import { usePageVisibility } from '../misc/usePageVisibility'
 
 export default function App ({ Component, pageProps }: AppProps): JSX.Element {
-  // const apolloClient = useApollo(pageProps.initialApolloState)
+  const apolloClient = useApollo(pageProps.initialApolloState)
   usePageVisibility()
 
   const title = "Yorick's Portfolio" 
@@ -21,7 +21,7 @@ export default function App ({ Component, pageProps }: AppProps): JSX.Element {
         <title>{title}</title>
         <Favicons />
       </Head>
-      {/* <ApolloProvider client={apolloClient}> */}
+      <ApolloProvider client={apolloClient}>
         <Navigation />
         <SideElement orientation={Orientation.left} displayOption={DisplayOption.socials}/>
         <SideElement orientation={Orientation.right} displayOption={DisplayOption.mail}/>
@@ -31,7 +31,7 @@ export default function App ({ Component, pageProps }: AppProps): JSX.Element {
           </div>
           <Footer />
         </div>
-      {/* </ApolloProvider> */}
+      </ApolloProvider>
     </>
   )
 }
