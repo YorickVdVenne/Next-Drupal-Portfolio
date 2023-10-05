@@ -5,5 +5,6 @@
 .tabPannelWrapper {
     grid-column: 4 / -1;
     position: relative;
-    height: 45rem;
+    display: grid;
+    grid-template-columns: 1fr;
 }

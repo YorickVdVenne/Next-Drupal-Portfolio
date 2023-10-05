@@ -3,11 +3,10 @@
     padding-inline: var(--spacing-1x);
     transition: opacity 0.4s cubic-bezier(0.645,0.045,0.355,1);
     opacity: 0;
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
+    grid-row-start: 1;
+    grid-column-start: 1;
 }
 
 .active {
