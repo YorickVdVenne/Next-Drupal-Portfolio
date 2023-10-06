@@ -14,7 +14,7 @@ export default function ProjectCardCollection (props: ProjectCardCollectionProps
   return (
     <ul className={styles.projectCollection}>
       {projects.data.projects.items.map((item, key) => (
-        <li key={key} className={styles.project}>
+        <li key={key} className={styles.item}>
           <ProjectCard project={item}/>
         </li>
       ))}

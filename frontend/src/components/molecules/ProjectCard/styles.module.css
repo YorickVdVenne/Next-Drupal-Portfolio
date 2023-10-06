@@ -1,15 +1,10 @@
 .project {
-    box-shadow: 0 10px 30px -15px var(--color-navy-shadow);
     display: flex;
     justify-content: space-between;
     flex-direction: column;
     align-items: flex-start;
-    position: relative;
     height: 100%;
     padding: 2rem 1.75rem;
-    border-radius: var(--border-radius);
-    background-color: var(--color-light-navy);
-    transition: var(--transition);
     overflow: auto;
 }
 

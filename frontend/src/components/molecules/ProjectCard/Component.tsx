@@ -12,7 +12,7 @@ export default function ProjectCard (props: ProjectCardProps): JSX.Element {
      const { project } = props
   
   return (
-    <div className={styles.project}>
+    <Card className={styles.project}>
       <div>
         <div className={styles.top}>
           <div className={styles.folder}>
@@ -39,6 +39,6 @@ export default function ProjectCard (props: ProjectCardProps): JSX.Element {
           ))}
         </ul>
       </div>
-    </div>
+    </Card>
   );
 };

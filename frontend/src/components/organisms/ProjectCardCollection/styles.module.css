@@ -1,19 +1,17 @@
 .projectCollection {
     text-align: start;
     list-style: none;
-    padding: 0px;
-    margin: 50px 0px 0px;
+    padding: 0;
+    margin-block-start: var(--spacing-12x);
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 15px;
-    position: relative;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
 }
 
-.project {
-    position: relative;
+.item {
     transition: var(--transition);
 }
 
-.project:hover {
+.item:hover {
     transform: translateY(-8px);
 }
