@@ -61,6 +61,16 @@ export default function Navigation (): JSX.Element {
             {menu.menu.actionButton.label}
           </Button>
         </div>
+        <div className={styles.menu}>
+          <div>
+            <button onClick={() => console.log('click')} className={styles.hamburgerButton}>
+              <div className={styles.hamBox}>
+                <div className={styles.hamBoxInner}></div>
+              </div>
+            </button>
+            <aside></aside>
+          </div>
+        </div>
       </div>
     </nav>
   )
