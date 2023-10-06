@@ -12,6 +12,19 @@
     transition: var(--transition);
 }
 
+.hidden {
+    transform: translateY(-100%);
+}
+
+.visible {
+    transform: translateY(0);
+}
+
+.small {
+    height: var(--nav-scroll-height);
+    box-shadow: 0 10px 30px -10px var(--color-navy-shadow);
+}
+
 .innerNav {
     display: flex;
     justify-content: space-between;
