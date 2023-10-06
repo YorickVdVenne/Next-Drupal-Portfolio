@@ -13,7 +13,7 @@ export default function ProjectCard (props: ProjectCardProps): JSX.Element {
   
   return (
     <Card className={styles.project}>
-      <div>
+      <div className={styles.topWrapper}>
         <div className={styles.top}>
           <div className={styles.folder}>
             {IconMapper('folder')}
@@ -32,7 +32,7 @@ export default function ProjectCard (props: ProjectCardProps): JSX.Element {
         </h4>
         <p className={styles.description}>{project.summary}</p>
       </div>
-      <div>
+      <div className={styles.bottomWrapper}>
         <ul className={styles.techList}>
           {project.technologies.map((tech, key) => (
             <li key={key}>{tech.name}</li>
