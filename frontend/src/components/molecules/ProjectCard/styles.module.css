@@ -46,6 +46,11 @@
     align-items: center;
     height: fit-content;
     padding: 0.4rem;
+    z-index: 1;
+}
+
+.link:hover, .link:focus {
+    color: var(--color-green);
 }
 
 .link svg {
