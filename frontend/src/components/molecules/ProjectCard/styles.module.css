@@ -1,0 +1,97 @@
+.project {
+    box-shadow: 0 10px 30px -15px var(--color-navy-shadow);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    height: 100%;
+    padding: 2rem 1.75rem;
+    border-radius: var(--border-radius);
+    background-color: var(--color-light-navy);
+    transition: var(--transition);
+    overflow: auto;
+}
+
+.top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: fit-content;
+    margin-block-end: var(--spacing-8x);
+}
+
+.folder {
+    width: 4rem;
+    height: 4rem;
+    color: var(--color-green);
+}
+
+.links {
+    display: flex;
+    align-items: center;
+    color: var(--color-light-grey);
+    height: 100%;
+    margin-inline-end: -0.4rem;
+}
+
+.link {
+    display: flex;
+    align-items: center;
+    height: fit-content;
+    padding: 0.4rem;
+}
+
+.link svg {
+    width: 2.2rem;
+    height: 2.2rem;
+}
+
+.title {
+    margin-block-end: var(--spacing-2x);
+}
+
+.titleLink {
+    position: static;
+}
+
+.titleLink::before {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.titleLink:hover, .titleLink:focus {
+    color: var(--color-green);
+}
+
+.description {
+    color: var(--color-light-grey);
+    font-size: var(--fz-lg);
+}
+
+.techList {
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    padding: 0;
+    margin-block-start: var(--spacing-5x);
+    list-style: none;
+   
+}
+
+.techList li {
+    font-family: var(--font-family-mono);
+    font-size: var(--fz-xxs);
+    line-height: 1.75;
+}
+
+.techList li:not(:last-of-type) {
+    margin-inline-end: var(--spacing-4x);
+}

@@ -39,6 +39,7 @@
     display: block;
     width: 0px;
     height: 1px;
+    bottom: 0.37em;
     position: relative;
     background-color: var(--color-green);
     transition: var(--transition);

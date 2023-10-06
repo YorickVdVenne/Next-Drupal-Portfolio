@@ -1,0 +1,18 @@
+.title {
+    color: var(--color-lightest-grey);
+    line-height: 1.1;
+    font-size: var(--fz-heading);
+}
+
+.link {
+    font-family: var(--font-family-mono);
+    font-size: var(--fz-sm);
+}
+
+.link::after {
+    bottom: 0.1em;
+}
+
+.button {
+    margin-block-start: var(--spacing-20x);
+}

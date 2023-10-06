@@ -20,6 +20,7 @@ export interface Project {
   id: number
   title: string
   brand: string
+  summary?: string
   description: string
   period: string
   mainImage: string

@@ -8,6 +8,7 @@ import About from '@components/organisms/About/Component'
 import Experience from '@components/organisms/Experience/Component'
 import Featured from '@components/organisms/Featured/Component'
 import Contact from '@components/organisms/Contact/Component'
+import Projects from '@components/organisms/Projects/Component'
 
 export default function Home (): JSX.Element {
   const { data } = useQuery(ALL_PROJECTS_QUERY)
@@ -18,22 +19,23 @@ export default function Home (): JSX.Element {
       <About />
       <Experience />
       <Featured />
+      <Projects />
       <Contact />
     </MainContainer>
   )
 }
 
-export async function getStaticProps() {
-  const apolloClient = initializeApollo()
+// export async function getStaticProps() {
+//   const apolloClient = initializeApollo()
 
-  await apolloClient.query({
-    query: ALL_PROJECTS_QUERY,
-  })
+//   await apolloClient.query({
+//     query: ALL_PROJECTS_QUERY,
+//   })
 
-  return {
-    props: {
-      initialApolloState: apolloClient.cache.extract(),
-    },
-    revalidate: 1,
-  }
-}
+//   return {
+//     props: {
+//       initialApolloState: apolloClient.cache.extract(),
+//     },
+//     revalidate: 1,
+//   }
+// }

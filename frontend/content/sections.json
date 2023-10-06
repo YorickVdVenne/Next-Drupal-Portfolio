@@ -81,10 +81,10 @@
           }
         ]
       },
-      "featured": {
+      "projects": {
         "id": 3,
         "bookmark": "projects",
-        "title": "Featured",
+        "title": "Projects",
         "overlineText": "Featured Project",
         "projects": [
           {

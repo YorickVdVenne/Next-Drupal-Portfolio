@@ -4,13 +4,14 @@ import clsx from 'clsx'
 
 interface CardProps {
   children?: React.ReactNode
+  className?: string
 }
 
 export default function Card (props: CardProps): JSX.Element {
-  const { children } = props
+  const { children, className } = props
 
   return (
-    <div className={clsx(styles.card)}>
+    <div className={clsx(styles.card, className ? className : '')}>
       {children}
     </div>
   )
