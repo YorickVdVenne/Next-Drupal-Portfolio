@@ -4,6 +4,7 @@ import { Button } from '@components/atoms/Button/Component'
 import menu from '@content/menu.json'
 import { Logo } from '@components/atoms/Logo/Component'
 import clsx from 'clsx'
+import NavigationMenu from '@components/molecules/NavigationMenu/Component'
 
 export default function Navigation (): JSX.Element {
   const [scrolled, setScrolled] = useState(false);
@@ -61,16 +62,7 @@ export default function Navigation (): JSX.Element {
             {menu.menu.actionButton.label}
           </Button>
         </div>
-        <div className={styles.menu}>
-          <div>
-            <button onClick={() => console.log('click')} className={styles.hamburgerButton}>
-              <div className={styles.hamBox}>
-                <div className={styles.hamBoxInner}></div>
-              </div>
-            </button>
-            <aside></aside>
-          </div>
-        </div>
+        <NavigationMenu />
       </div>
     </nav>
   )
