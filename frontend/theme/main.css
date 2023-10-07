@@ -58,6 +58,21 @@ html {
   -webkit-font-smoothing: antialiased;
   font-size: 62.5%;
   scroll-behavior: smooth;
+
+  &.blur {
+    overflow: hidden;
+
+    #navbar {
+      background-color: transparent;
+    }
+
+    .stack {
+      filter: blur(5px) brightness(0.7);
+      transition: var(--transition);
+      pointer-events: none;
+      user-select: none;
+    }
+  }
 }
 
 html,
