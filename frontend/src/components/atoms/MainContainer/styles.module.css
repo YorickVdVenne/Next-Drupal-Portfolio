@@ -4,3 +4,7 @@
   max-width: 160rem;
   min-height: 100vh;
 }
+
+.paddingBlock {
+  padding-block: var(--spacing-50x);
+}

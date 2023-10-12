@@ -9,9 +9,9 @@ export default function Projects (): JSX.Element {
   return (
     <Section allign={Allign.center}>
       <h3 className={styles.title}>Other Noteworthy Projects</h3>
-      <Button as='link' href='/projects' className={styles.link}>view the archive</Button>
+      <Button as='link' href='/archive' className={styles.link}>view the archive</Button>
       <ProjectCardCollection />
-      <Button as='button' size='large' className={styles.button} onClick={() => console.log('show more')}>Show More</Button>
+      {/* <Button as='button' size='large' className={styles.button} onClick={() => console.log('show more')}>Show More</Button> */}
     </Section>
   )
 }

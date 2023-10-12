@@ -1,0 +1,5 @@
+.tableContainer {
+    margin-block: var(--spacing-24x);
+    font-family: var( --font-family-primary-bold);
+    margin-inline-start: -2rem;
+}

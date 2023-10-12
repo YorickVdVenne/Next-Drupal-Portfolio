@@ -68,7 +68,7 @@
           {
             "id": 6,
             "title": "HPL Portal",
-            "brand": "High Profile Locaties (HPL)",
+            "brand": "High Profile Locaties",
             "description": "HPL wilde zijn websites vernieuwen en styles rechttrekken over de verschillende sites. (https://www.locaties.nl/ & https://www.inspirerendelocaties.nl/ & https://www.toptrouwlocaties.nl/). Ik heb gewerkt aan locaties.nl, grotendeels aan het portaal; dit is wat de locatiehouder ziet en waar hij alles over zijn locatie kan plaatsen zodat het op de frontend (locaties.nl) zichtbaar wordt. Daarnaast heb ik ook wat geholpen aan de frontend (locaties.nl) kant door bijvoorbeeld de categorie\r\npagina te maken (bijv: https://www.toptrouwlocaties.nl/categorie/sfeervolle_trouw_en_feestlocaties-66163), QA te doen en kleine styling of bug fixes. Maar grotendeels aan het portaal waar ik onder andere een generieke dialog heb gemaakt, confetti animatie met GSAP, verschillende overzicht pagina's met tabellen, data verkeer van API's afgehandeld, mobiele navigatie gemaakt, verschillende formulieren gebouwd en de algemene responsiveness van componenten verbeterd.",
             "summary": "This is a summary to show inside a smaller card.",
             "period": "2023-03-07",

@@ -1,6 +1,5 @@
 import React from 'react'
 import styles from './styles.module.css'
-import gridStyles from '@components/atoms/Grid/styles.module.css'
 import ProjectCard from '@components/molecules/ProjectCard/Component';
 import projects from '@content/projects.json'
 

@@ -1,0 +1,95 @@
+.archiveTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.archiveTable tr {
+    cursor: default;
+}
+
+.archiveTable tbody tr:hover, .archiveTable tbody tr:focus {
+    background-color: var(--color-light-navy);
+}
+
+.archiveTable th, .archiveTable td {
+    padding: var(--spacing-3x);
+    text-align: left;
+}
+
+.archiveTable th:first-child, .archiveTable td:first-child {
+    padding-inline-start: var(--spacing-5x);
+}
+
+.archiveTable th:last-child, .archiveTable td:last-child {
+    padding-inline-end: var(--spacing-5x);
+}
+
+.archiveTable td:first-child {
+    border-start-start-radius: var(--border-radius);
+    border-end-start-radius: var(--border-radius);
+}
+
+.archiveTable td:last-child {
+    border-start-end-radius: var(--border-radius);
+    border-end-end-radius: var(--border-radius);
+}
+
+.year {
+    padding-inline-end: var(--spacing-5x);
+    color: var(--color-green);
+    font-family: var(--font-family-mono);
+    font-size: var(--fz-md);
+    font-weight: 400;
+}
+
+.title {
+    color: var(--color-lightest-grey);
+    font-size: var(--fz-xl);
+    font-weight: 600;
+    line-height: 1.25;
+}
+
+.company {
+    font-size: var(--fz-lg);
+    white-space: nowrap;
+}
+
+.tech {
+    font-size: var(--fz-xxs);
+    font-family: var(--font-family-mono);
+    line-height: 1.5;
+}
+
+.tech span {
+    display: inline-block;
+}
+
+.separator {
+    margin-inline: var(--spacing-1x);
+}
+
+.links {
+    min-width: 10rem;
+}
+
+.linkContainer {
+    display: flex;
+    align-items: center;
+}
+
+.link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0; 
+    transition: var(--transition);
+}
+
+.link:hover, .link:focus {
+    color: var(--color-green);
+}
+
+.link svg {
+    width: 2rem;
+    height: 2rem;
+}
