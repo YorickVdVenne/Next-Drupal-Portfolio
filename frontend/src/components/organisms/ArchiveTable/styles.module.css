@@ -17,11 +17,15 @@
 }
 
 .archiveTable th:first-child, .archiveTable td:first-child {
-    padding-inline-start: var(--spacing-5x);
+    @media (min-width: 768px) {
+        padding-inline-start: var(--spacing-5x);
+    }
 }
 
 .archiveTable th:last-child, .archiveTable td:last-child {
-    padding-inline-end: var(--spacing-5x);
+    @media (min-width: 768px) {
+        padding-inline-end: var(--spacing-5x);
+    }
 }
 
 .archiveTable td:first-child {
@@ -32,6 +36,12 @@
 .archiveTable td:last-child {
     border-start-end-radius: var(--border-radius);
     border-end-end-radius: var(--border-radius);
+}
+
+.hideOnMobile {
+    @media (max-width: 768px) {
+        display: none;
+    }
 }
 
 .year {
@@ -52,6 +62,12 @@
 .company {
     font-size: var(--fz-lg);
     white-space: nowrap;
+
+    &.hideOnMobile {
+        @media (max-width: 768px) {
+            display: none;
+        }
+    }
 }
 
 .tech {
@@ -66,10 +82,10 @@
 
 .separator {
     margin-inline: var(--spacing-1x);
-}
 
-.links {
-    min-width: 10rem;
+    &.lastChild {
+        display: none;
+    }
 }
 
 .linkContainer {

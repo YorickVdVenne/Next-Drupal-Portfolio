@@ -1,10 +1,31 @@
 .mainContainer {
-  padding: 0 var(--spacing-30x);
+  padding-inline: var(--spacing-6x);
   margin: 0 auto;
   max-width: 160rem;
   min-height: 100vh;
+
+  @media (min-width: 480px) {
+    padding-inline: var(--spacing-12x);
+  }
+
+  @media (min-width: 768px) {
+    padding-inline: var(--spacing-25x);
+  }
+
+  @media (min-width: 1024px) {
+    padding-inline: var(--spacing-37x);
+  }
 }
 
 .paddingBlock {
-  padding-block: var(--spacing-50x);
+  padding-block: var(--spacing-30x);
+  min-height: fit-content;
+
+  @media (min-width: 480px) {
+    padding-block: var(--spacing-37x);
+  }
+
+  @media (min-width: 768px) {
+    padding-block: var(--spacing-50x);
+  }
 }

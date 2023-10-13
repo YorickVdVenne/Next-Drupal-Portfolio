@@ -1,5 +1,7 @@
 import React from 'react'
 import styles from './styles.module.css'
+import clsx from 'clsx'
+
 import { Project } from '@components/molecules/FeaturedListItem/Component'
 import { IconMapper } from '@components/atoms/Icons/Component'
 
@@ -17,8 +19,8 @@ export default function ArchiveTable (props: ArchiveTableProps): JSX.Element {
                 <tr>
                     <th>Year</th>
                     <th>Title</th>
-                    <th>Made at</th>
-                    <th>Built with</th>
+                    <th className={styles.hideOnMobile}>Made at</th>
+                    <th className={styles.hideOnMobile}>Built with</th>
                     <th>Links</th>
                 </tr>
             </thead>
@@ -31,12 +33,14 @@ export default function ArchiveTable (props: ArchiveTableProps): JSX.Element {
                         <td className={styles.title}>
                             {item.title}
                         </td>
-                        <td className={styles.company}>
+                        <td className={clsx(styles.company, styles.hideOnMobile)}>
                             {item.brand}
                         </td>
-                        <td className={styles.tech}>
+                        <td className={clsx(styles.tech, styles.hideOnMobile)}>
                             {item.technologies.map((tech, key) => (
-                                <span key={key}>{tech.name}<span className={styles.separator}>·</span></span>
+                                <span key={key}>{tech.name}<span className={clsx(styles.separator, {
+                                    [styles.lastChild]: key === item.technologies.length - 1
+                                })}>·</span></span>
                             ))}
                         </td>
                         <td className={styles.links}>
