@@ -1,5 +1,5 @@
 .numberedHeading {
-    font-size: var(--fz-heading);
+    font-size: clamp(2.6rem ,5vw, var(--fz-heading));
     display: flex;
     align-items: center;
     margin-block-end: var(--spacing-8x);
@@ -12,7 +12,7 @@
     margin-inline-end: var(--spacing-2x);
     color: var(--color-green);
     font-family: var(--font-family-mono);
-    font-size: var(--fz-xl);
+    font-size: clamp(var(--fz-md), 3vw, var(--fz-xl));
     font-weight: 400;
 }
 

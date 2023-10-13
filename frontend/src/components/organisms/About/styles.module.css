@@ -1,5 +1,9 @@
 .content {
-    grid-column: 1 / 9;
+    grid-column: 1 / -1;
+
+    @media (min-width: 768px) {
+        grid-column: 1 / 9;
+    }
 }
 
 .content p {
@@ -34,9 +38,15 @@
 }
 
 .profileImage {
-    grid-column: 9 / -1;
+    grid-column: 1 / -1;
     max-width: 30rem;
     position: relative;
+    margin: var(--spacing-12x) auto 0;
+
+    @media (min-width: 768px) {
+        margin:0;
+        grid-column: 9 / -1;
+    }
 }
 
 .imageWrapper {

@@ -35,7 +35,15 @@
     z-index: 12;
     color: var(--color-lightest-grey);
     font-family: var(--font-family-mono);
-    padding: 0 var(--spacing-12x);
+    padding-inline: var(--spacing-6x);
+
+    @media (min-width: 768px) {
+        padding-inline: var(--spacing-10x);
+    }
+
+    @media (min-width: 1024px) {
+        padding-inline: var(--spacing-12x);
+    }
 }
 
 .logo {
