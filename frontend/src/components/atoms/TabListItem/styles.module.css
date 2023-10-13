@@ -2,18 +2,34 @@
     border: none;
     appearance: none;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 10rem;
+    padding-inline: var(--spacing-4x);
+    border-bottom: 2px solid var(--color-lightest-navy);
+    text-align: center;
+    
+    text-decoration: none;
+    text-decoration-skip-ink: auto;
+    position: relative;
     transition: var(--transition);
-    padding-inline: var(--spacing-5x);
-    padding-block: var(--spacing-1x);
-    height: 4.2rem;
-    outline: 0;
-
+    width: 100%;
+    height: var(--tab-height);
     background-color: transparent;
+    color: var(--color-grey);
     font-family: var(--font-family-mono);
     font-size: var(--fz-xs);
-    color: var(--color-grey);
-    text-align: left;
-    border-left: 2px solid var(--color-lightest-navy);
+    white-space: nowrap;
+
+    @media (min-width: 600px) {
+        border-left: 2px solid var(--color-lightest-navy);
+        padding-inline: var(--spacing-5x);
+        padding-block: var(--spacing-1x);
+        height: 4.2rem;
+        outline: 0;
+        border-bottom: 0;
+    }
 }
 
 .tabListItem:hover {

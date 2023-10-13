@@ -1,18 +1,35 @@
 .tabList {
+    width: 100%;
     display: flex;
-    flex-direction: column;
     position: relative;
+    z-index: 3;
+
+    @media (min-width: 600px) {
+        width: max-content;
+        flex-direction: column;
+    }
 }
 
 .highlight {
+    top: auto;
+    bottom: 0;
+    width: calc(100% / var(--list-length));
+    min-width: 10rem;
+    height: 2px;
+
     position: absolute;
-    top: 0px;
-    left: 0px;
+    left: 0;
     z-index: 10;
-    width: 2px;
-    height: 4.2rem;
     border-radius: var(--border-radius);
     background: var(--color-green);
-    /* transform: translateY(calc(0 * 4.2rem)); */
     transition: transform 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s;
+    transform: translateX(calc(100% * var(--active-item-index)));
+
+    @media (min-width: 600px) {
+        top: 0;
+        height: var(--tab-height);
+        width: 2px;
+        min-width: 0;
+        transform: translateY(calc(var(--active-item-index) * var(--tab-height)))
+    }
 }

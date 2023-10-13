@@ -11,7 +11,6 @@ interface ArchiveTableProps {
 
 export default function ArchiveTable (props: ArchiveTableProps): JSX.Element {
     const { data } = props
-    const date = new Date()
     
     return (
         <table className={styles.archiveTable}>
