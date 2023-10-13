@@ -2,8 +2,44 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     padding: var(--spacing-4x);
     text-align: center;
+}
+
+.socials {
+    display: block;
+    width: 100%;
+    margin: 0 auto var(--spacing-3x);
+    color: var(--color-lightest-grey);
+
+    @media (min-width: 768px) {
+        display: none;
+    }
+}
+
+.socials ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-2x);
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.socials ul a {
+    padding: var(--spacing-2x);
+    transition: var(--transition);
+}
+
+.socials ul a:hover, .socials ul a:focus {
+    color: var(--color-green);
+}
+
+.socials ul a svg {
+    width: 2rem;
+    height: 2rem;
 }
 
 .link {
