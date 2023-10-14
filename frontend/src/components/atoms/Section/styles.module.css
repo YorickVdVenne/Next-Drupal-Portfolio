@@ -1,11 +1,27 @@
 .section {
-    padding-block: var(--spacing-24x);
+    padding-block: var(--spacing-15x);
     margin: 0 auto;
     max-width: 90rem;
+
+    @media (min-width: 480px) {
+        padding-block: var(--spacing-20x);
+    }
+
+    @media (min-width: 768px) {
+        padding-block: var(--spacing-25x);
+    }
 }
 
 .section:last-child {
-    margin-block-end: var(--spacing-24x);
+    margin-block-end: var(--spacing-15x);
+
+    @media (min-width: 480px) {
+        margin-block-end: var(--spacing-20x);
+    }
+
+    @media (min-width: 768px) {
+        margin-block-end: var(--spacing-25x);
+    }
 }
 
 .allignCenter {

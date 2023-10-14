@@ -45,7 +45,7 @@
     margin-block-end: var(--spacing-5x);
     color: var(--color-green);
     font-family: var(--font-family-mono);
-    font-size: var(--fz-md);
+    font-size: clamp(var(--fz-sm), 3vw, var(--fz-md));
     font-weight: 400;
 }
 
@@ -56,7 +56,7 @@
     margin-inline-end: var(--spacing-2x);
     color: var(--color-green);
     font-family: var(--font-family-mono);
-    font-size: var(--fz-sm);
+    font-size: clamp(var(--fz-xs), 3vw, var(--fz-sm));
     font-weight: 400;
 }
 

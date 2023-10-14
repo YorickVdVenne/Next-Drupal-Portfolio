@@ -1,26 +1,5 @@
-.numberedHeading {
-    display: block;
-    margin-block-end: var(--spacing-5x);
-    color: var(--color-green);
-    font-family: var(--font-family-mono);
-    font-size: var(--fz-md);
-    font-weight: 400;
-}
-
-.numberedHeading::before {
-    position: relative;
-    bottom: 0;
-    counter-increment: section 4;
-    content: "0" counter(section) ".";
-    margin-inline-end: var(--spacing-2x);
-    color: var(--color-green);
-    font-family: var(--font-family-mono);
-    font-size: var(--fz-sm);
-    font-weight: 400;
-}
-
 .title {
-    font-size: 6rem;
+    font-size: clamp(4rem, 8vw, 6rem);
 }
 
 .text {
