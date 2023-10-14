@@ -1,8 +1,6 @@
 .header {
     display: flex;
-    -webkit-box-pack: center;
     justify-content: center;
-    -webkit-box-align: center;
     flex-direction: column;
     align-items: flex-start;
     min-height: 100vh;
@@ -23,15 +21,16 @@
 }
 
 .wrapper {
-    row-gap: var(--spacing-8x);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-8x);
     margin-block-start: var(--spacing-2x);
 }
 
 .text {
-    grid-column: 1 / span 8;
+    max-width: 54rem;
 }
 
 .button {
-    grid-column: 1 / -1;
     width: fit-content;
 }
