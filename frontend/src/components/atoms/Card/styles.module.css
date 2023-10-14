@@ -13,3 +13,19 @@
 .card:hover {
     box-shadow: 0 20px 30px -15px var(--color-navy-shadow);
 }
+
+.hideOnMobile {
+    background-color: transparent;
+    box-shadow: none;
+    padding: 2rem 0;
+
+    @media (min-width: 768px) {
+        background-color: var(--color-light-navy);
+        box-shadow: 0 10px 30px -15px var(--color-navy-shadow);
+        padding: var(--spacing-6x);
+    }
+}
+
+.hideOnMobile:hover {
+    box-shadow: none;
+}

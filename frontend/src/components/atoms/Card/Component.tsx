@@ -5,13 +5,16 @@ import clsx from 'clsx'
 interface CardProps {
   children?: React.ReactNode
   className?: string
+  hideOnMobile?: boolean
 }
 
 export default function Card (props: CardProps): JSX.Element {
-  const { children, className } = props
+  const { children, className, hideOnMobile } = props
 
   return (
-    <div className={clsx(styles.card, className ? className : '')}>
+    <div className={clsx(styles.card, className ? className : '', {
+      [styles.hideOnMobile]: hideOnMobile
+    })}>
       {children}
     </div>
   )

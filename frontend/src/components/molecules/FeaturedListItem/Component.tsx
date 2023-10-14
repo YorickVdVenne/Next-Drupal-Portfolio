@@ -49,7 +49,7 @@ export default function FeaturedListItem (props: FeaturedListItemProps): JSX.Ele
       })}>
         <p className={styles.projectOverline}>{overlineText}</p>
         <h4 className={styles.projectTitle}>{item.title}</h4>
-        <Card>{item.description}</Card>
+        <Card hideOnMobile>{item.description}</Card>
         <ul className={clsx(styles.projectTech, {
             [styles.techLeft]: textAlign === TextAlign.left,
         })}>
@@ -71,15 +71,13 @@ export default function FeaturedListItem (props: FeaturedListItemProps): JSX.Ele
         [styles.imageRight]: textAlign === TextAlign.left 
       })}>
         <a href={item.siteLink ? item.siteLink : item.mainImage} target='__blank'>        
-          <div className={styles.imageWrapper}>
             <Image 
               src={item.mainImage}
-              alt='Alt text...'
+              alt={item.title}
               className={styles.image}
               width={25}
               height={25}
             />
-          </div>
         </a>
       </div>
     </li>

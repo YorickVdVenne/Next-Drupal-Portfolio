@@ -9,12 +9,14 @@
 }
 
 .topWrapper {
-    padding-inline: 1.75rem;
+    padding-inline: 2.5rem;
     padding-block-start: 2rem;
+    width: calc(100% - 5rem);
+
 }
 
 .bottomWrapper {
-    padding-inline: 1.75rem;
+    padding-inline: 2.5rem;
     padding-block-end: 2rem;
 }
 
