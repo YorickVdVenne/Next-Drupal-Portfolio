@@ -1,0 +1,19 @@
+.title {
+    color: var(--color-green);
+    font-family: var(--font-family-mono);
+    font-size: clamp(10rem, 25vw, 20rem);
+    line-height: 1;
+    font-weight: 600;
+    margin-block-end: var(--spacing-3x);
+}
+
+.subTitle {
+    font-size: clamp(3rem, 5vw, 5rem);
+    font-weight: 400;
+    font-family: var(--font-family-primary);
+    margin-block-end: var(--spacing-6x);
+
+    @media (min-width: 768px) {
+        margin-block-end: var(--spacing-10x);
+    }
+}

@@ -11,15 +11,17 @@ interface SectionProps {
   children?: React.ReactNode
   allign?: Allign
   maxWidth?: number
+  fullHeight?: boolean
 }
 
 export default function Section (props: SectionProps): JSX.Element {
-  const { children, allign, maxWidth } = props
+  const { children, allign, maxWidth, fullHeight } = props
 
   return (
     <section 
       className={clsx(styles.section, {
-        [styles.allignCenter]: allign === Allign.center
+        [styles.allignCenter]: allign === Allign.center,
+        [styles.fullHeight]: fullHeight
       })}
       style={{ maxWidth: maxWidth ? maxWidth : 1000}}
     >

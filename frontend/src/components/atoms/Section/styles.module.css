@@ -27,3 +27,12 @@
 .allignCenter {
     text-align: center;
 }
+
+.fullHeight {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    padding-block: 0;
+    margin-block-end: 0;
+}
