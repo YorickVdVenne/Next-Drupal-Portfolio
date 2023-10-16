@@ -21,6 +21,7 @@
         "drupal/core-project-message": "^10.1",
         "drupal/core-recommended": "^10.1",
         "drupal/graphql": "4.5.0",
+        "drupal/paragraphs": "1.16.0",
         "drupal/typed_data": "1.x-dev",
         "drush/drush": "^12.1"
     },
