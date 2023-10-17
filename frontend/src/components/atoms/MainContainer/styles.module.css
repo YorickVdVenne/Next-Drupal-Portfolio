@@ -1,7 +1,6 @@
 .mainContainer {
   padding-inline: var(--spacing-6x);
   margin: 0 auto;
-  max-width: 160rem;
   min-height: 100vh;
 
   @media (min-width: 480px) {

@@ -3,22 +3,32 @@ import styles from './styles.module.css'
 import { Button } from '@components/atoms/Button/Component'
 import * as Icons from '@components/atoms/Icons/Component'
 import { IconMapper } from '@components/atoms/Icons/Component'
+import { FooterData } from '@graphql/menus'
 
-export default function Footer (): JSX.Element {
+interface FooterProps {
+  footer: FooterData
+}
+
+export default function Footer (props: FooterProps): JSX.Element {
+  const { footer } = props
 
   return (
     <footer className={styles.footer}>
       <div className={styles.socials}>
         <ul>
-          <li><a href='https://github.com/YorickVdVenne'>{IconMapper('github')}</a></li>
-          <li><a href='https://www.linkedin.com/in/yorick-van-de-venne-514121186'>{IconMapper('linkedin')}</a></li>
-          <li><a href='https://codepen.io/YVenne'>{IconMapper('codepen')}</a></li>
+          {footer.socials.map((social, key) => (
+            <li key={key}>
+              <a href={social.url} target='_blank' title={social.label}>{IconMapper(social.icon)}</a>
+            </li>
+          ))}
         </ul>
       </div>
       <div className={styles.credits}>
-        <Button as='link' className={styles.link} variant='secondary' href='https://github.com/YorickVdVenne/Nextjs-Drupal-Portfolio' target='_blank'>
-            Built by Yorick Van de Venne
-            <span className={styles.icon}>{Icons.IconMapper('github')}</span>
+        <Button as='link' className={styles.link} variant='secondary' href={footer.actionButton.url} target='_blank'>
+          {footer.actionButton.label}
+          {footer.actionButton.icon ? (
+            <span className={styles.icon}>{Icons.IconMapper(footer.actionButton.icon)}</span>
+          ): ''}
         </Button>
       </div>
     </footer>

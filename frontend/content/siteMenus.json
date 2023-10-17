@@ -1,0 +1,85 @@
+{
+    "data": {
+        "mainMenu": {
+            "links": [
+                {
+                    "label": "About",
+                    "url": "#about"
+                },
+                {
+                    "label": "Experience",
+                    "url": "#experience"
+                },
+                {
+                    "label": "Projects",
+                    "url": "#projects"
+                },
+                {
+                    "label": "Contact",
+                    "url": "#contact"
+                }
+            ],
+            "actionButton": {
+                "label": "Resume",
+                "url": "/resume.pdf"
+            }
+        },
+        "footer": {
+            "socials": [
+                {
+                    "label": "Github",
+                    "icon": "github",
+                    "url": "https://github.com/YorickVdVenne"
+                },
+                {
+                    "label": "LinkedIn",
+                    "icon": "linkedin",
+                    "url": "https://www.linkedin.com/in/yorick-van-de-venne-514121186"
+                },
+                {
+                    "label": "CodePen",
+                    "icon": "codepen",
+                    "url": "https://codepen.io/YVenne"
+                },
+                {
+                    "label": "Miro",
+                    "icon": "miro",
+                    "url": "https://miro.com/app/board/uXjVMjoJJsQ=/?share_link_id=697022632082"
+                }
+            ],
+            "actionButton": {
+                "label": "Built by Yorick Van de Venne",
+                "url": "https://github.com/YorickVdVenne/Nextjs-Drupal-Portfolio",
+                "icon": "github"
+            }
+        },
+        "sideElement": {
+            "socials": [
+                {
+                    "label": "Github",
+                    "icon": "github",
+                    "url": "https://github.com/YorickVdVenne"
+                },
+                {
+                    "label": "LinkedIn",
+                    "icon": "linkedin",
+                    "url": "https://www.linkedin.com/in/yorick-van-de-venne-514121186"
+                },
+                {
+                    "label": "CodePen",
+                    "icon": "codepen",
+                    "url": "https://codepen.io/YVenne"
+                },
+                {
+                    "label": "Miro",
+                    "icon": "miro",
+                    "url": "https://miro.com/app/board/uXjVMjoJJsQ=/?share_link_id=697022632082"
+                }
+            ],
+            "email": {
+                "email": "yorick.vd.venne@hotmail.nl",
+                "url": "mailto:yorick.vd.venne@hotmail.nl"
+            }
+        }
+    }
+}

@@ -4,6 +4,7 @@
     justify-content: center;
     flex-direction: column;
     padding: var(--spacing-4x);
+    padding-block-end: var(--spacing-6x);
     text-align: center;
 }
 
@@ -46,6 +47,14 @@
     display: flex;
     flex-direction: column;
     gap: 0.8rem;
+}
+
+.icon {
+    display: none;
+
+    @media (min-width: 768px) {
+        display: block;
+    }
 }
 
 .icon svg {

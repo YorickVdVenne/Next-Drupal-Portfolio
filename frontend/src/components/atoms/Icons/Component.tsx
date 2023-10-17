@@ -41,6 +41,14 @@ export const LinkedIn = dynamic<{ className?: string }>(
     }
 )
 
+export const Miro = dynamic<{ className?: string }>(
+    async () => await import('@icons/miro.svg'),
+    {
+      loading: () => <span />,
+      ssr: false
+    }
+)
+
 export function IconMapper (icon: string): React.ReactElement | null {
     switch (icon) {
         case 'codepen':
@@ -57,6 +65,9 @@ export function IconMapper (icon: string): React.ReactElement | null {
             
         case 'linkedin':
             return <LinkedIn /> 
+        
+        case 'miro':
+            return <Miro />
 
         default:
             return null

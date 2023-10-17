@@ -12,14 +12,14 @@
       --grid-padding: var(--spacing-2x);
     }
   
-    @media (width >= 1440px) {
+    /* @media (width >= 1440px) {
       --column-gap: var(--spacing-8x);
       --grid-padding: calc((100vw - 112.2rem) / 2);
     }
   
     @media (width >= 1920px) {
       --grid-padding: calc((100vw - 140.8rem) / 2);
-    }
+    } */
   
     --grid-12x: calc(100vw - var(--scrollbar-width) - (var(--grid-padding) * 2) - (var(--column-gap) * 2));
     --grid-1x: calc((var(--grid-12x) - (var(--column-gap) * 11)) / 12);

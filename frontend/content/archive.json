@@ -1,0 +1,156 @@
+{
+  "data": {
+    "archive": {
+      "title": "Archive",
+      "shortText": "A list of things I've worked on",
+      "projects": [
+        {
+          "id": "1",
+          "title": "HPL Portal",
+          "technologies": [
+            {
+              "id": "1",
+              "name": "TypeScript"
+            },
+            {
+              "id": "2",
+              "name": "Next.js"
+            },
+            {
+              "id": "3",
+              "name": "Storybook"
+            },
+            {
+              "id": "4",
+              "name": "React"
+            },
+            {
+              "id": "5",
+              "name": "HTML & CSS"
+            }
+          ],
+          "githubLink": "",
+          "externalLink": "https://www.locaties.nl/",
+          "year": "2023",
+          "madeAt": "iO"
+        },
+        {
+          "id": "2",
+          "title": "Aviko QR Code",
+          "technologies": [
+            {
+              "id": "1",
+              "name": "PHP"
+            },
+            {
+              "id": "2",
+              "name": "JavaScript"
+            },
+            {
+              "id": "3",
+              "name": "Drupal"
+            },
+            {
+              "id": "4",
+              "name": "Node.js"
+            }
+          ],
+          "githubLink": "",
+          "externalLink": "https://qr.avikofoodservice.com/",
+          "year": "2022",
+          "madeAt": "iO"
+        },
+        {
+          "id": "3",
+          "title": "Verno Customized frames",
+          "technologies": [
+            {
+              "id": "1",
+              "name": "TypeScript"
+            },
+            {
+              "id": "2",
+              "name": "React"
+            },
+            {
+              "id": "3",
+              "name": "HTML & CSS"
+            }
+          ],
+          "githubLink": "",
+          "externalLink": "https://customize.verno.com/nl_NL/configure-frame?data=eyJmcmFtYWJsZU9iamVjdCI6InBvc3RlciJ9&step=framableObject",
+          "year": "2021",
+          "madeAt": "Burst"
+        },
+        {
+          "id": "4",
+          "title": "Portfolio website",
+          "technologies": [
+            {
+              "id": "1",
+              "name": "Next.js"
+            },
+            {
+              "id": "2",
+              "name": "TypeScript"
+            },
+            {
+              "id": "3",
+              "name": "HTML & CSS"
+            },
+            {
+              "id": "4",
+              "name": "Drupal"
+            },
+            {
+              "id": "5",
+              "name": "PHP"
+            },
+            {
+              "id": "6",
+              "name": "GraphQL"
+            }
+          ],
+          "githubLink": "https://github.com/YorickVdVenne/Nextjs-Drupal-Portfolio",
+          "externalLink": "/",
+          "year": "2023",
+          "madeAt": ""
+        },
+        {
+          "id": "5",
+          "title": "Tinyhouse: Fullstack React Masterclass",
+          "technologies": [
+            {
+              "id": "1",
+              "name": "HTML & CSS"
+            },
+            {
+              "id": "2",
+              "name": "TypeScript"
+            },
+            {
+              "id": "3",
+              "name": "JavaScript"
+            },
+            {
+              "id": "4",
+              "name": "GraphQL"
+            },
+            {
+              "id": "5",
+              "name": "React"
+            },
+            {
+              "id": "6",
+              "name": "MongoDB"
+            }
+          ],
+          "githubLink": "https://github.com/YorickVdVenne/TinyHouse-Fullstack-Application",
+          "externalLink": "https://www.tinyhouse.app/",
+          "year": "2020",
+          "madeAt": ""
+        }
+      ]
+    }
+  }
+}

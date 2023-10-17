@@ -1,18 +1,18 @@
 import React from 'react'
 import styles from './styles.module.css'
 import ProjectCard from '@components/molecules/ProjectCard/Component';
-import projects from '@content/projects.json'
+import { Project } from '@graphql/content-types/project/project';
 
 interface ProjectCardCollectionProps {
-  // prop: string
+  projects: Project[]
 }
 
 export default function ProjectCardCollection (props: ProjectCardCollectionProps): JSX.Element {
-    //  const { prop } = props
+     const { projects } = props
   
   return (
     <ul className={styles.projectCollection}>
-      {projects.data.projects.items.map((item, key) => (
+      {projects.map((item, key) => (
         <li key={key} className={styles.item}>
           <ProjectCard project={item}/>
         </li>

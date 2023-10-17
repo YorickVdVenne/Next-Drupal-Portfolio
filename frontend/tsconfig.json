@@ -32,6 +32,9 @@
       ],
       "@misc/*": [
         "./misc/*"
+      ],
+      "@graphql/*": [
+        "./src/graphql/*"
       ]
     }
   },

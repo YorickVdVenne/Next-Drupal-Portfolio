@@ -4,8 +4,13 @@ import { Logo } from '@components/atoms/Logo/Component'
 import clsx from 'clsx'
 import NavigationMenu from '@components/molecules/NavigationMenu/Component'
 import NavigationItems from '@components/molecules/NavigationItems/Component'
+import { MainMenu } from '@graphql/menus'
 
-export default function Navigation (): JSX.Element {
+interface NavigationProps {
+  mainMenu: MainMenu
+}
+
+export default function Navigation (props: NavigationProps): JSX.Element {
   const [scrolled, setScrolled] = useState(false);
   const [scrollTop, setScrollTop] = useState(true)
 
@@ -45,8 +50,8 @@ export default function Navigation (): JSX.Element {
           <Logo />
           <span className={styles.logoText}>Yorick</span>
         </a>
-        <NavigationItems desktop/>
-        <NavigationMenu />
+        <NavigationItems links={props.mainMenu.links} actionButton={props.mainMenu.actionButton} desktop />
+        <NavigationMenu menu={props.mainMenu} />
       </div>
     </nav>
   )

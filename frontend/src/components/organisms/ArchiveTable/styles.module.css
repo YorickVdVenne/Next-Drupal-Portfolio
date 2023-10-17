@@ -14,6 +14,11 @@
 .archiveTable th, .archiveTable td {
     padding: var(--spacing-3x);
     text-align: left;
+    min-width: 0;
+
+    @media (min-width: 768px) {
+        min-width: 6.5rem;
+    }
 }
 
 .archiveTable th:first-child, .archiveTable td:first-child {
@@ -91,6 +96,7 @@
 .linkContainer {
     display: flex;
     align-items: center;
+    gap: var(--spacing-2x);
 }
 
 .link {

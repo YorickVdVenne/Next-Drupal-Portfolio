@@ -1,8 +1,9 @@
+import Head from 'next/head'
 import React from 'react'
 
 export default function Favicons (): JSX.Element {
   return (
-    <>
+    <Head>
       <link
         rel='apple-touch-icon'
         sizes='180x180'
@@ -30,6 +31,6 @@ export default function Favicons (): JSX.Element {
       <meta name='msapplication-TileColor' content='#0A192F' />
       <meta name='msapplication-config' content='/default/browserconfig.xml' />
       <meta name='theme-color' content='#0A192F' />
-    </>
+    </Head>
   )
 }

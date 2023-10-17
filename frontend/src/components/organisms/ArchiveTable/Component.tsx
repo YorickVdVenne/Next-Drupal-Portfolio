@@ -2,15 +2,15 @@ import React from 'react'
 import styles from './styles.module.css'
 import clsx from 'clsx'
 
-import { Project } from '@components/molecules/FeaturedListItem/Component'
 import { IconMapper } from '@components/atoms/Icons/Component'
+import { Project } from '@graphql/content-types/project/project'
 
 interface ArchiveTableProps {
-    data: Array<Project>
+    content: Project[]
 }
 
 export default function ArchiveTable (props: ArchiveTableProps): JSX.Element {
-    const { data } = props
+    const { content } = props
     
     return (
         <table className={styles.archiveTable}>
@@ -24,16 +24,16 @@ export default function ArchiveTable (props: ArchiveTableProps): JSX.Element {
                 </tr>
             </thead>
             <tbody>
-                {data.map((item, key) => (
+                {content.map((item, key) => (
                     <tr key={key}>
                         <td className={styles.year}>
-                            {item.period.match(/\d{4}/)}
+                            {item.year}
                         </td>
                         <td className={styles.title}>
                             {item.title}
                         </td>
                         <td className={clsx(styles.company, styles.hideOnMobile)}>
-                            {item.brand}
+                            {item.madeAt}
                         </td>
                         <td className={clsx(styles.tech, styles.hideOnMobile)}>
                             {item.technologies.map((tech, key) => (
@@ -44,12 +44,12 @@ export default function ArchiveTable (props: ArchiveTableProps): JSX.Element {
                         </td>
                         <td className={styles.links}>
                             <div className={styles.linkContainer}>
-                                {item.siteLink 
-                                    ? <a className={styles.link} href={item.siteLink} target='_blank'>{IconMapper('external-link')}</a>
+                                {item.externalLink 
+                                    ? <a className={styles.link} href={item.externalLink} target='_blank'>{IconMapper('external-link')}</a>
                                     : ""
                                 }
-                                {item.codeLink 
-                                    ? <a className={styles.link} href={item.codeLink} target='_blank'>{IconMapper('github')}</a>
+                                {item.githubLink 
+                                    ? <a className={styles.link} href={item.githubLink} target='_blank'>{IconMapper('github')}</a>
                                     : ""
                                 }
                             </div>

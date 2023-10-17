@@ -4,13 +4,25 @@ import { ApolloProvider } from '@apollo/client'
 import { useApollo } from '../src/lib/apolloClient'
 import Navigation from '@components/organisms/Navigation/Component'
 import Footer from '@components/organisms/Footer/Component'
-import SideElement, { DisplayOption, Orientation } from '@components/molecules/SideElement/Component'
+import SideElement, { Orientation } from '@components/molecules/SideElement/Component'
 import Favicons from '@components/molecules/Favicons/Component'
 import Head from 'next/head'
 import { usePageVisibility } from '../misc/usePageVisibility'
+import { Menus } from '@graphql/menus'
 
-export default function App ({ Component, pageProps }: AppProps): JSX.Element {
-  const apolloClient = useApollo(pageProps.initialApolloState)
+export interface GlobalPageProps {
+  menus: Menus
+  initialApolloState: any
+}
+
+interface Props extends AppProps {
+  pageProps: GlobalPageProps & {
+    children?: React.ReactNode
+  }
+}
+
+export default function App (props: Props): JSX.Element {
+  const apolloClient = useApollo(props.pageProps.initialApolloState)
   usePageVisibility()
 
   const title = "Yorick's Portfolio" 
@@ -19,17 +31,17 @@ export default function App ({ Component, pageProps }: AppProps): JSX.Element {
     <>
       <Head>
         <title>{title}</title>
-        <Favicons />
       </Head>
+      <Favicons />
       <ApolloProvider client={apolloClient}>
-        <Navigation />
-        <SideElement orientation={Orientation.left} displayOption={DisplayOption.socials}/>
-        <SideElement orientation={Orientation.right} displayOption={DisplayOption.mail}/>
+        <Navigation mainMenu={props.pageProps.menus.mainMenu} />
+        <SideElement orientation={Orientation.left} content={props.pageProps.menus.sideElement.socials} />
+        <SideElement orientation={Orientation.right} content={props.pageProps.menus.sideElement.email} />
         <div className='stack'>
           <div className='content'>
-            <Component {...pageProps} />
+            <props.Component {...props.pageProps} />
           </div>
-          <Footer />
+          <Footer footer={props.pageProps.menus.footer} />  
         </div>
       </ApolloProvider>
     </>

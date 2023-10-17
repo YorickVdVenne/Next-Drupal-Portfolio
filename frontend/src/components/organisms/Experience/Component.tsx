@@ -5,24 +5,32 @@ import Section from '@components/atoms/Section/Component'
 import TabList from '@components/molecules/TabList/Component'
 import TabPanel from '@components/molecules/TabPanel/Component'
 import NumberedHeading from '@components/atoms/NumberedHeading/Component'
-import sections from '@content/sections.json'
+import { ExperienceSection } from '@graphql/sections'
 
-export default function Experience (): JSX.Element {
-  const experience = sections.data.sections.experience
-  const [activeListItem, setActiveListItem] = useState(experience.companyList[0])
+interface ExperienceProps {
+  experienceData: ExperienceSection
+}
+
+export default function Experience (props: ExperienceProps): JSX.Element {
+  const [activeListItem, setActiveListItem] = useState(props.experienceData.companies[0].name)
   const activeListItemIndex = useMemo(() => {
-    return experience.companyList.indexOf(activeListItem)
-  }, [activeListItem, experience.companyList])
+    return props.experienceData.companies.map((company) => company.name).indexOf(activeListItem)
+  }, [activeListItem, props.experienceData.companies])
 
   return (
     <Section maxWidth={700}>
-      <NumberedHeading id={experience.bookmark} number={2}>{experience.title}</NumberedHeading>
+      <NumberedHeading id={props.experienceData.bookmark} number={2}>{props.experienceData.title}</NumberedHeading>
       <div className={gridStyles.grid}>
         <div className={styles.tabListWrapper}>
-          <TabList items={experience.companyList} activeItem={activeListItem} setActiveItem={setActiveListItem} activeItemIndex={activeListItemIndex}/>
+          <TabList 
+            items={props.experienceData.companies.map((company) => company.name)} 
+            activeItem={activeListItem} 
+            setActiveItem={setActiveListItem} 
+            activeItemIndex={activeListItemIndex}
+          />
         </div>
         <div className={styles.tabPannelWrapper}>
-          <TabPanel data={experience.companies} activeIndex={activeListItemIndex} />
+          <TabPanel data={props.experienceData.jobs} activeIndex={activeListItemIndex} />
         </div>
       </div>
     </Section>

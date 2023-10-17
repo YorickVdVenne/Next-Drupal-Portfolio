@@ -3,8 +3,13 @@ import styles from './styles.module.css'
 import NavigationItems from '../NavigationItems/Component'
 import {Helmet} from "react-helmet"
 import { useOnClickOutside } from '@misc/useOnClickOutside';
+import { MainMenu } from '@graphql/menus';
 
-export default function NavigationMenu (): JSX.Element {
+interface NavigationMenuProps {
+  menu: MainMenu
+}
+
+export default function NavigationMenu (props: NavigationMenuProps): JSX.Element {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const hamBoxStyles: { [key: string]: string} = {
@@ -66,7 +71,7 @@ export default function NavigationMenu (): JSX.Element {
           </div>
         </button>
         <aside className={styles.aside} aria-hidden={!menuOpen} tabIndex={menuOpen ? 1 : -1} style={asideStyles}>
-          <NavigationItems setMenuOpen={setMenuOpen} />
+          <NavigationItems links={props.menu.links} actionButton={props.menu.actionButton} setMenuOpen={setMenuOpen} />
         </aside>
       </div>
     </div>

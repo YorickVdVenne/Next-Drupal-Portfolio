@@ -41,6 +41,7 @@
     color: var(--color-light-grey);
     height: 100%;
     margin-inline-end: -0.4rem;
+    gap: var(--spacing-1x);
 }
 
 .link {

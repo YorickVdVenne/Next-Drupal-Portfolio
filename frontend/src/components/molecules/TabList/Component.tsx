@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from './styles.module.css'
 import TabListItem from '@components/atoms/TabListItem/Component'
+import { Company } from '@graphql/taxonomies/company/company'
 
 interface TabListProps {
   items: string[]

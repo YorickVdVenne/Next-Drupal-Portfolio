@@ -1,8 +1,9 @@
 import React from 'react'
 import styles from './styles.module.css'
-import { Project } from '@components/molecules/FeaturedListItem/Component'
 import Card from '@components/atoms/Card/Component'
 import { IconMapper } from '@components/atoms/Icons/Component'
+import { Technologies } from '@graphql/taxonomies/technologies/technology'
+import { Project } from '@graphql/content-types/project/project'
 
 interface ProjectCardProps {
   project: Project
@@ -19,22 +20,22 @@ export default function ProjectCard (props: ProjectCardProps): JSX.Element {
             {IconMapper('folder')}
           </div>
           <div className={styles.links}>
-            {project.codeLink ? (
-              <a className={styles.link} href={project.codeLink} target='_blank'>{IconMapper('github')}</a>
+            {project.githubLink ? (
+              <a className={styles.link} href={project.githubLink} target='_blank'>{IconMapper('github')}</a>
             ): ''}
-            {project.siteLink ? (
-              <a className={styles.link} href={project.siteLink} target='_blank'>{IconMapper('external-link')}</a>
+            {project.externalLink ? (
+              <a className={styles.link} href={project.externalLink} target='_blank'>{IconMapper('external-link')}</a>
             ): ''}
           </div>
         </div>
         <h4 className={styles.title}>
-          <a className={styles.titleLink} href={project.siteLink ? project.siteLink : '/'} target='_blank'>{project.title}</a>
+          <a className={styles.titleLink} href={project.externalLink ? project.externalLink : '/'} target='_blank'>{project.title}</a>
         </h4>
         <p className={styles.description}>{project.summary}</p>
       </div>
       <div className={styles.bottomWrapper}>
         <ul className={styles.techList}>
-          {project.technologies.map((tech, key) => (
+          {project.technologies.map((tech: Technologies, key: number) => (
             <li key={key}>{tech.name}</li>
           ))}
         </ul>

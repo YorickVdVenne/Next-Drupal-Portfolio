@@ -1,0 +1,306 @@
+{
+    "data": {
+      "sections": {
+        "header": {
+          "introText": "Hi, my name is",
+          "name": "Yorick Van de Venne.",
+          "punchline": "I build things for the web.",
+          "shortDescription": "I'm a web developer specializing in creating scalable and responsive websites. Currently, I'm focused on creating my own developer documentation, developing this very portfolio and finding a new employer.",
+          "button": {
+            "text": "Check out my documentation",
+            "link": "https://miro.com/app/board/uXjVMjoJJsQ=/?share_link_id=973204732941"
+          }
+        },
+        "about": {
+          "title": "About Me",
+          "bookmark": "about",
+          "description": "<p>My name is Yorick and I am a young and ambitious web developer. I'm a true all-rounder, I like to learn new stuff and keep improving myself. It's also the reason why I love coding so much as there is always something new to learn.</p><p>My ambition is to become a lead full-stack developer. Though my interests for front-end development exceed my back-end interests, I want to have enough knowlegde of both to independently be able to develop websites.</p><p>When I'm not working you can find me in the gym, on the tennis court or playing the guitar! Also I enjoy cooking, but mostly the eating part.</p><p>Here are a few technologies I've been working with recently:</p>",
+          "technologies": [
+            {
+              "id": "1",
+              "name": "TypeScript"
+            },
+            {
+              "id": "2",
+              "name": "JavaScript"
+            },
+            {
+              "id": "3",
+              "name": "Next.js"
+            },
+            {
+              "id": "4",
+              "name": "React"
+            },
+            {
+              "id": "5",
+              "name": "Node.js"
+            },
+            {
+              "id": "6",
+              "name": "Drupal"
+            }
+          ],
+          "profileImage": {
+            "url": "/../public/images/profile-image.png",
+            "alt": "Yorick Van de Venne"
+          }
+        },
+        "experience": {
+          "title": "Work Experience",
+          "bookmark": "experience",
+          "companies": [
+            {
+              "id": "1",
+              "name": "iO"
+            },
+            {
+              "id": "2",
+              "name": "Burst"
+            }
+          ],
+          "jobs": [
+            {
+              "role": "Frontend Developer",
+              "companyName": "iO",
+              "period": "September 2022 - April 2023",
+              "jobDescription": [
+                {
+                  "description": "Website development based on delivered design"
+                },
+                {
+                  "description": "Debugging & Quality Assurance (QA)"
+                },
+                {
+                  "description": "Writing scalable code and optimizing the responsiveness was essential"
+                },
+                {
+                  "description": "Using the Agile Scrum Method, I participated in multiple sprints mostly as front-end developer but also one project as back-end developer"
+                }
+              ]
+            },
+            {
+              "role": "Trainee Content / Development",
+              "companyName": "Burst",
+              "period": "Oktober 2019 - Februari 2022",
+              "jobDescription": [
+                {
+                  "description": "Bug fixing, both front-end and back-end issues"
+                },
+                {
+                  "description": "Content migrations and CMS management"
+                },
+                {
+                  "description": "Client contact and service"
+                }
+              ]
+            }
+          ]
+        },
+        "projects": {
+          "title": "Projects",
+          "bookmark": "projects",
+          "featuredProjects": [
+            {
+              "id": "1",
+              "title": "HPL Portal",
+              "summary": "The client High Profile Locaties (HPL) wanted to build a website where venue holders could offer there venue to be used for various occasions. I was later envolved in the development proces to work on the portal, where venue holders can create and manage their venues. I've worked on this project as front-end developer a few months and delivered all kinds of features, read more to find out.",
+              "technologies": [
+                {
+                  "id": "1",
+                  "name": "TypeScript"
+                },
+                {
+                  "id": "2",
+                  "name": "Next.js"
+                },
+                {
+                  "id": "3",
+                  "name": "Storybook"
+                },
+                {
+                  "id": "4",
+                  "name": "React"
+                },
+                {
+                  "id": "5",
+                  "name": "HTML & CSS"
+                }
+              ],
+              "githubLink": "",
+              "externalLink": "https://www.locaties.nl/",
+              "mainImage": {
+                "url": "/../public/images/profile-image.png",
+                "alt": "High Profile Locaties"
+              },
+              "year": "2023",
+              "madeAt": "iO",
+              "madeFor": "HPL",
+              "description": "Designed and developed a mobile-responsive website...",
+              "featured": true
+            },
+            {
+              "id": "2",
+              "title": "Aviko QR Code",
+              "summary": "The client Aviko wanted to add QR codes to their packages to attract more visitors. But their packages can be found all over the world and depending on where you scan the package the QR code should redirect you to the correct landingpage. This was the challange I had to deal with while creating a custom Drupal module to manage the redirects and setting up a Node.js server to handle all the redirecting and getting the users location.",
+              "technologies": [
+                {
+                  "id": "1",
+                  "name": "PHP"
+                },
+                {
+                  "id": "2",
+                  "name": "JavaScript"
+                },
+                {
+                  "id": "3",
+                  "name": "Drupal"
+                },
+                {
+                  "id": "4",
+                  "name": "Node.js"
+                }
+              ],
+              "githubLink": "",
+              "externalLink": "https://qr.avikofoodservice.com/",
+              "mainImage": {
+                "url": "/../public/images/profile-image.png",
+                "alt": "Aviko QR Code"
+              },
+              "year": "2022",
+              "madeAt": "iO",
+              "madeFor": "Aviko",
+              "description": "This is the long version of the description.",
+              "featured": true
+            },
+            {
+              "id": "3",
+              "title": "Verno Customized frames",
+              "summary": "The Client Verno (framer) wanted users to be able to see what there art would look like with the frames Verno offered. That's why Burst created a subdomain where users could customize there frame. This was a very complex application which had predefined steps, but Verno wanted the users to be able to share their work with others during any part of this customize proces. So my task during my internship at Burst was to have the steps with it's content tracked within the URL as a Base64 string.",
+              "technologies": [
+                {
+                  "id": "1",
+                  "name": "TypeScript"
+                },
+                {
+                  "id": "2",
+                  "name": "React"
+                },
+                {
+                  "id": "3",
+                  "name": "HTML & CSS"
+                }
+              ],
+              "githubLink": "",
+              "externalLink": "https://customize.verno.com/nl_NL/configure-frame?data=eyJmcmFtYWJsZU9iamVjdCI6InBvc3RlciJ9&step=framableObject",
+              "mainImage": {
+                "url": "/../public/images/profile-image.png",
+                "alt": "Verno Customized frames"
+              },
+              "year": "2021",
+              "madeAt": "Burst",
+              "madeFor": "Verno",
+              "description": "Designed and developed a mobile-responsive website...",
+              "featured": true
+            }
+          ],
+          "projects": [
+            {
+              "id": "4",
+              "title": "Portfolio Website",
+              "summary": "This very website is a great example of my skill. Using my favorite tech stack I built this portfolio to showcase my work experiences, projects and documentation to possible future employers.",
+              "technologies": [
+                {
+                  "id": "1",
+                  "name": "Next.js"
+                },
+                {
+                  "id": "2",
+                  "name": "TypeScript"
+                },
+                {
+                  "id": "3",
+                  "name": "HTML & CSS"
+                },
+                {
+                  "id": "4",
+                  "name": "Drupal"
+                },
+                {
+                  "id": "5",
+                  "name": "PHP"
+                },
+                {
+                  "id": "6",
+                  "name": "GraphQL"
+                }
+              ],
+              "githubLink": "https://github.com/YorickVdVenne/Nextjs-Drupal-Portfolio",
+              "externalLink": "/",
+              "mainImage": {
+                "url": "/../public/images/profile-image.png",
+                "alt": "Portfolio Website"
+              },
+              "year": "2023",
+              "madeAt": "",
+              "madeFor": "",
+              "description": "Developed a high-performance e-commerce platform...",
+              "featured": false
+            },
+            {
+              "id": "5",
+              "title": "Tinyhouse: Fullstack React Masterclass",
+              "summary": "During my time working at Burst I was offered to follow the Tinyhouse: Fullstack React Masterclass. Where I learned how to create an entire website (the tinyhouse application) from skretch.",
+              "technologies": [
+                {
+                  "id": "1",
+                  "name": "HTML & CSS"
+                },
+                {
+                  "id": "2",
+                  "name": "TypeScript"
+                },
+                {
+                  "id": "3",
+                  "name": "JavaScript"
+                },
+                {
+                  "id": "4",
+                  "name": "GraphQL"
+                },
+                {
+                  "id": "5",
+                  "name": "React"
+                },
+                {
+                  "id": "6",
+                  "name": "MongoDB"
+                }
+              ],
+              "githubLink": "https://github.com/YorickVdVenne/TinyHouse-Fullstack-Application",
+              "externalLink": "https://www.tinyhouse.app/",
+              "mainImage": {
+                "url": "/../public/images/profile-image.png",
+                "alt": "Portfolio Website"
+              },
+              "year": "2020",
+              "madeAt": "",
+              "madeFor": "",
+              "description": "Developed a high-performance e-commerce platform...",
+              "featured": false
+            }
+          ]
+        },
+        "contact": {
+          "overlineTitle": "What's Next?",
+          "title": "Get In Touch",
+          "bookmark": "contact",
+          "description": "Feel free to reach out to me if you have any questions or if you're interested in working together or just really feel like saying hello.",
+          "button": {
+            "text": "Say Hello",
+            "link": "mailto:yorick.vd.venne@hotmail.nl"
+          }
+        }
+      }
+    }
+  }
