@@ -1,0 +1,16 @@
+{
+    "archiveTable": {
+        "tableHead": {
+            "year": "Year",
+            "title": "Title",
+            "madeAt": "Made at",
+            "builtWith": "Built with",
+            "links": "Links"
+        }
+    },
+    "message": "Project detail pages are still being built.",
+    "contactButton": {
+        "label": "Get in touch",
+        "link": "mailto:yorick.vd.venne@hotmail.nl"
+    }
+}

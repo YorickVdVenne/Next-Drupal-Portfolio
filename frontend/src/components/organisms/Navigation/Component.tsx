@@ -7,6 +7,7 @@ import NavigationItems from '@components/molecules/NavigationItems/Component'
 import { MainMenu } from '@graphql/menus'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
+import { useTranslation } from 'next-i18next'
 
 interface NavigationProps {
   mainMenu: MainMenu
@@ -14,6 +15,7 @@ interface NavigationProps {
 
 export default function Navigation (props: NavigationProps): JSX.Element {
   const router = useRouter();
+  const { t } = useTranslation('menu');
   const [scrolled, setScrolled] = useState(false);
   const [scrollTop, setScrollTop] = useState(true)
 
@@ -57,7 +59,7 @@ export default function Navigation (props: NavigationProps): JSX.Element {
         }}
         >        
           <Logo />
-          <span className={styles.logoText}>Yorick</span>
+          <span className={styles.logoText}>{t('logoText')}</span>
         </Link>
         <NavigationItems links={props.mainMenu.links} actionButton={props.mainMenu.actionButton} desktop />
         <NavigationMenu menu={props.mainMenu} />

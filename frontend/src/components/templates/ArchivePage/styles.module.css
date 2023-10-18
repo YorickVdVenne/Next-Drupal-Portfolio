@@ -1,10 +1,15 @@
 .tableContainer {
-    margin-block: var(--spacing-12x);
+    margin-block-start: var(--spacing-12x);
+    margin-block-end: var(--spacing-6x);
     font-family: var( --font-family-primary-bold);
     margin-inline-start: -1.2rem;
 
     @media (min-width: 768px) {
-        margin-block: var(--spacing-25x);
+        margin-block-start: var(--spacing-25x);
         margin-inline-start: -2rem;
     }
+}
+
+.message {
+    margin-block-end: var(--spacing-6x);
 }

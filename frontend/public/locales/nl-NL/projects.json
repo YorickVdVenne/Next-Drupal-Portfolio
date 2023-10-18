@@ -1,0 +1,13 @@
+{
+    "featuredProjects": {
+        "overlineText": "Featured Project"
+    },
+    "otherProjects": {
+        "title": "Other Noteworthy Projects",
+        "archiveButton": {
+            "label": "view the archive",
+            "link": "/archive"
+        },
+        "message": "Project detail pages are still being built."
+    }
+}

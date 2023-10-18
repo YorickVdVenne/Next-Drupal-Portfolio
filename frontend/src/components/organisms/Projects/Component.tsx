@@ -4,19 +4,23 @@ import Section, { Allign } from '@components/atoms/Section/Component'
 import { Button } from '@components/atoms/Button/Component'
 import ProjectCardCollection from '../ProjectCardCollection/Component'
 import { Project } from '@graphql/content-types/project/project'
+import { useTranslation } from 'next-i18next'
+import Link from 'next/link'
 
 interface ProjectsProps {
   projectData: Project[]
 }
 
 export default function Projects (props: ProjectsProps): JSX.Element {
+  const { t } = useTranslation('projects');
 
   return (
     <Section allign={Allign.center}>
-      <h3 className={styles.title}>Other Noteworthy Projects</h3>
-      <Button as='link' href='/archive' className={styles.link}>view the archive</Button>
+      <h3 className={styles.title}>{t('otherProjects.title')}</h3>
+      <Button as='link' href={t('otherProjects.archiveButton.link')} className={styles.link}>{t('otherProjects.archiveButton.label')}</Button>
       <ProjectCardCollection projects={props.projectData} />
-      {/* <Button as='button' size='large' className={styles.button} onClick={() => console.log('show more')}>Show More</Button> */}
+      {/* <Button as='button' size='large' className={styles.button}>Show More</Button> */}
+      <p className={styles.message}>{t('otherProjects.message')}</p>
     </Section>
   )
 }

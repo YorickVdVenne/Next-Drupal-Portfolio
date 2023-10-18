@@ -1,6 +1,7 @@
 import { initializeApollo } from '../src/lib/apolloClient'
 import { ALL_PROJECTS_QUERY } from '../src/graphql/all_projects'
 import { ApolloError } from '@apollo/client';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import home from '@content/home.json'
 import siteMenus from '@content/siteMenus.json'
 
@@ -51,7 +52,7 @@ export default function Home (props: Props): JSX.Element {
   )
 }
 
-export async function getStaticProps() {
+export async function getStaticProps(ctx: { locale: string; }) {
   const apolloClient = initializeApollo()
 
   try {
@@ -61,6 +62,7 @@ export async function getStaticProps() {
 
     return {
       props: {
+        ...(await serverSideTranslations(ctx.locale ?? 'en-US')),
         initializeApolloState: apolloClient.cache.extract(),
         basicPage: result.basicPage,
         menus: result.menus.data
@@ -76,6 +78,7 @@ export async function getStaticProps() {
 
     return {
       props: {
+        ...(await serverSideTranslations(ctx.locale ?? 'en-US')),
         initialApolloState: apolloClient.cache.extract(),
         basicPage: home.data,
         menus: siteMenus.data

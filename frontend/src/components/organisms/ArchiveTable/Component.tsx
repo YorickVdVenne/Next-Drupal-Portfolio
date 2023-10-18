@@ -4,23 +4,25 @@ import clsx from 'clsx'
 
 import { IconMapper } from '@components/atoms/Icons/Component'
 import { Project } from '@graphql/content-types/project/project'
+import { useTranslation } from 'next-i18next'
 
 interface ArchiveTableProps {
     content: Project[]
 }
 
 export default function ArchiveTable (props: ArchiveTableProps): JSX.Element {
+    const { t } = useTranslation('archive');
     const { content } = props
     
     return (
         <table className={styles.archiveTable}>
             <thead>
                 <tr>
-                    <th>Year</th>
-                    <th>Title</th>
-                    <th className={styles.hideOnMobile}>Made at</th>
-                    <th className={styles.hideOnMobile}>Built with</th>
-                    <th>Links</th>
+                    <th>{t('archiveTable.tableHead.year')}</th>
+                    <th>{t('archiveTable.tableHead.title')}</th>
+                    <th className={styles.hideOnMobile}>{t('archiveTable.tableHead.madeAt')}</th>
+                    <th className={styles.hideOnMobile}>{t('archiveTable.tableHead.builtWith')}</th>
+                    <th>{t('archiveTable.tableHead.links')}</th>
                 </tr>
             </thead>
             <tbody>

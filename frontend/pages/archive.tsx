@@ -9,6 +9,7 @@ import ArchivePage from '@components/templates/ArchivePage/Component'
 import { GlobalPageProps } from './_app'
 import { ArchiveData } from '@graphql/content-types/basic-page/archive'
 import Metatags from '@components/molecules/Metatags/Component'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
 interface Props extends GlobalPageProps {
   basicPage: ArchiveData
@@ -26,7 +27,7 @@ export default function Archive (props: Props): JSX.Element {
   )
 }
 
-export async function getStaticProps() {
+export async function getStaticProps(ctx: { locale: string; }) {
   const apolloClient = initializeApollo()
 
   try {
@@ -36,6 +37,7 @@ export async function getStaticProps() {
 
     return {
       props: {
+        ...(await serverSideTranslations(ctx.locale ?? 'en-US')),
         initializeApolloState: apolloClient.cache.extract(),
         basicPage: result.basicPage,
         menus: result.menus.data
@@ -51,6 +53,7 @@ export async function getStaticProps() {
 
     return {
       props: {
+        ...(await serverSideTranslations(ctx.locale ?? 'en-US')),
         initialApolloState: apolloClient.cache.extract(),
         basicPage: archive.data.archive,
         menus: siteMenus.data

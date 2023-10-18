@@ -1,0 +1,12 @@
+{
+    "404": {
+        "title": "404",
+        "subTitle": "Page Not Found",
+        "buttonText": "Go Home",
+        "metatags": {
+            "title": "404 page not found",
+            "description": "404 page not found",
+            "image": "/../public/images/profile-image.png"
+        }
+    }
+}

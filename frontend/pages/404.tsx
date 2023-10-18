@@ -4,6 +4,7 @@ import { ApolloError } from '@apollo/client';
 
 import siteMenus from '@content/siteMenus.json'
 import Page404 from "@components/templates/Page404/Component";
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 export default function NotFound (): JSX.Element {
   return (
@@ -11,7 +12,7 @@ export default function NotFound (): JSX.Element {
   )
 }
 
-export async function getStaticProps() {
+export async function getStaticProps(ctx: { locale: string; }) {
   const apolloClient = initializeApollo()
 
   try {
@@ -21,6 +22,7 @@ export async function getStaticProps() {
 
     return {
       props: {
+        ...(await serverSideTranslations(ctx.locale ?? 'en-US')),
         initializeApolloState: apolloClient.cache.extract(),
         basicPage: result.basicPage,
         menus: result.menus.data
@@ -36,6 +38,7 @@ export async function getStaticProps() {
 
     return {
       props: {
+        ...(await serverSideTranslations(ctx.locale ?? 'en-US')),
         initialApolloState: apolloClient.cache.extract(),
         menus: siteMenus.data
       },

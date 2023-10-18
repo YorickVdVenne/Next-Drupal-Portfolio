@@ -16,3 +16,7 @@
 .button {
     margin-block-start: var(--spacing-20x);
 }
+
+.message {
+    margin-block-start: var(--spacing-6x);
+}

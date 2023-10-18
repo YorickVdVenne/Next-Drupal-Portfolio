@@ -2,6 +2,7 @@ import '../theme/main.css'
 import type { AppProps } from 'next/app'
 import { ApolloProvider } from '@apollo/client'
 import { useApollo } from '../src/lib/apolloClient'
+import { appWithTranslation } from 'next-i18next'
 import Navigation from '@components/organisms/Navigation/Component'
 import Footer from '@components/organisms/Footer/Component'
 import SideElement, { Orientation } from '@components/molecules/SideElement/Component'
@@ -21,7 +22,7 @@ interface Props extends AppProps {
   }
 }
 
-export default function App (props: Props): JSX.Element {
+function App (props: Props): JSX.Element {
   const apolloClient = useApollo(props.pageProps.initialApolloState)
   usePageVisibility()
 
@@ -43,3 +44,5 @@ export default function App (props: Props): JSX.Element {
     </>
   )
 }
+
+export default appWithTranslation(App);
