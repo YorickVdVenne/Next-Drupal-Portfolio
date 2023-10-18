@@ -14,12 +14,27 @@ import Projects from '@components/organisms/Projects/Component'
 import { HomeData } from '@graphql/content-types/basic-page/home';
 import { GlobalPageProps } from './_app';
 import Metatags from '@components/molecules/Metatags/Component';
+import { useEffect } from 'react';
 
 interface Props extends GlobalPageProps {
   basicPage: HomeData
 }
 
 export default function Home (props: Props): JSX.Element {
+  useEffect(() => {
+    const hash = window.location.hash;
+    if (hash) {
+      const sectionId = hash.substring(1)
+
+      setTimeout(() => {
+        const section = document.getElementById(sectionId)
+        if (section) {
+          const offset = 100
+          window.scrollTo({ top: section.offsetTop - offset, behavior: 'smooth' })
+        }
+      }, 100);
+    }
+  }, []);
 
   return (
     <>

@@ -4,19 +4,19 @@
             "links": [
                 {
                     "label": "About",
-                    "url": "#about"
+                    "url": "/#about"
                 },
                 {
                     "label": "Experience",
-                    "url": "#experience"
+                    "url": "/#experience"
                 },
                 {
                     "label": "Projects",
-                    "url": "#projects"
+                    "url": "/#projects"
                 },
                 {
                     "label": "Contact",
-                    "url": "#contact"
+                    "url": "/#contact"
                 }
             ],
             "actionButton": {

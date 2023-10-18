@@ -35,6 +35,9 @@
       ],
       "@graphql/*": [
         "./src/graphql/*"
+      ],
+      "@lib/*": [
+        "./src/lib/*"
       ]
     }
   },

@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from './styles.module.css'
 import clsx from 'clsx'
+import InternalOrExternalLink from '@lib/link/Component'
 
 interface ButtonProps {
   children: React.ReactNode
@@ -18,7 +19,7 @@ export function Button (props: Props): JSX.Element {
   if (componentProps.as === 'link') {
     const classes = clsx(componentProps.className, styles.link, variant === 'secondary' ? styles.linkSecondary : styles.linkPrimary)
     const { as, className, ...linkProps } = componentProps
-    return <a className={classes} {...linkProps}>{children}</a>
+    return <InternalOrExternalLink className={classes} {...linkProps}>{children}</InternalOrExternalLink>
   } else {
     const classes = clsx(componentProps.className, styles.button, {[styles.largeButton]: size === 'large'})
     const { as, className, ...buttonProps } = componentProps
