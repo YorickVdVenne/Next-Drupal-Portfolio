@@ -12,7 +12,7 @@ export default function TabListItem (props: TabListItemProp): JSX.Element {
   const { item, onClick, isActive } = props
 
   return (
-    <button className={clsx(styles.tabListItem, {[styles.active]: isActive})} onClick={() => onClick(item)}>
+    <button className={clsx(styles.tabListItem, { [styles.active]: isActive })} onClick={() => onClick(item)}>
       {item}
     </button>
   )

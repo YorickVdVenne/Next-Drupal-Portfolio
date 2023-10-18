@@ -18,12 +18,12 @@ export default function Section (props: SectionProps): JSX.Element {
   const { children, allign, maxWidth, fullHeight } = props
 
   return (
-    <section 
+    <section
       className={clsx(styles.section, {
         [styles.allignCenter]: allign === Allign.center,
         [styles.fullHeight]: fullHeight
       })}
-      style={{ maxWidth: maxWidth ? maxWidth : 1000}}
+      style={{ maxWidth: maxWidth ?? 1000 }}
     >
       {children}
     </section>

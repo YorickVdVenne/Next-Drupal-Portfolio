@@ -12,9 +12,9 @@ export default function MainContainer (props: MainContainerProps): JSX.Element {
   const { children, paddingBlock, maxWidth } = props
 
   return (
-    <main 
-      className={clsx(styles.mainContainer, {[styles.paddingBlock]: paddingBlock})}
-      style={{ maxWidth: maxWidth ? maxWidth : 1600}}
+    <main
+      className={clsx(styles.mainContainer, { [styles.paddingBlock]: paddingBlock })}
+      style={{ maxWidth: maxWidth ?? 1600 }}
     >
       {children}
     </main>

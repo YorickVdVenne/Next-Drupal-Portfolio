@@ -1,9 +1,9 @@
-import { MetatagsFragment } from "@graphql/metatags";
-import { Project } from "../project/project";
+import { MetatagsFragment } from '@graphql/metatags'
+import { Project } from '../project/project'
 
 export interface ArchiveData {
-    title: string;
-    shortText: string;
-    projects: Project[];
-    metatags: MetatagsFragment
+  title: string
+  shortText: string
+  projects: Project[]
+  metatags: MetatagsFragment
 }

@@ -38,11 +38,11 @@ function App (props: Props): JSX.Element {
           <div className='content'>
             <props.Component {...props.pageProps} />
           </div>
-          <Footer footer={props.pageProps.menus.footer} />  
+          <Footer footer={props.pageProps.menus.footer} />
         </div>
       </ApolloProvider>
     </>
   )
 }
 
-export default appWithTranslation(App);
+export default appWithTranslation(App)

@@ -1,19 +1,22 @@
-import { useEffect } from 'react';
+import { useTranslation } from 'next-i18next'
+import { useEffect } from 'react'
 
-export function usePageVisibility() {
+export function usePageVisibility (): void {
+  const { t } = useTranslation('common')
+
   useEffect(() => {
-    const handleVisibilityChange = () => {
+    const handleVisibilityChange = (): void => {
       if (document.hidden) {
-        document.title = 'Come Back!'; // Change the title when inactive
+        document.title = t('hiddenTitle') // Change the title when inactive
       } else {
-        document.title = "Yorick's Portfolio" 
+        document.title = t('documentTitle')
       }
-    };
+    }
 
-    document.addEventListener('visibilitychange', handleVisibilityChange);
+    document.addEventListener('visibilitychange', handleVisibilityChange)
 
     return () => {
-      document.removeEventListener('visibilitychange', handleVisibilityChange);
-    };
-  }, []);
+      document.removeEventListener('visibilitychange', handleVisibilityChange)
+    }
+  }, [])
 }

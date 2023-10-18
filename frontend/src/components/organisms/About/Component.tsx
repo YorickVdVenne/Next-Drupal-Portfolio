@@ -11,10 +11,9 @@ interface AboutProps {
 }
 
 export default function About (props: AboutProps): JSX.Element {
-
   return (
     <Section maxWidth={900}>
-      <NumberedHeading number={1} id={props.aboutData.bookmark} >{props.aboutData.title}</NumberedHeading>
+      <NumberedHeading number={1} id={props.aboutData.bookmark}>{props.aboutData.title}</NumberedHeading>
       <div className={gridStyles.grid}>
         <div className={styles.content}>
           <div dangerouslySetInnerHTML={{ __html: props.aboutData.description }} />
@@ -26,7 +25,7 @@ export default function About (props: AboutProps): JSX.Element {
         </div>
         <div className={styles.profileImage}>
           <div className={styles.imageWrapper}>
-            <Image 
+            <Image
               src={props.aboutData.profileImage.url}
               alt={props.aboutData.profileImage.alt}
               className={styles.image}
@@ -35,7 +34,7 @@ export default function About (props: AboutProps): JSX.Element {
               height={1000}
             />
           </div>
-        </div>  
+        </div>
       </div>
     </Section>
   )

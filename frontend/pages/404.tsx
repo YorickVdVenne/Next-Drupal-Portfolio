@@ -1,10 +1,11 @@
-import { ALL_PROJECTS_QUERY } from '@graphql/all_projects';
+import { ALL_PROJECTS_QUERY } from '@graphql/all_projects'
 import { initializeApollo } from '../src/lib/apolloClient'
-import { ApolloError } from '@apollo/client';
+import { ApolloError } from '@apollo/client'
 
 import siteMenus from '@content/siteMenus.json'
-import Page404 from "@components/templates/Page404/Component";
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import Page404 from '@components/templates/Page404/Component'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import { GetStaticProps } from 'next'
 
 export default function NotFound (): JSX.Element {
   return (
@@ -12,12 +13,12 @@ export default function NotFound (): JSX.Element {
   )
 }
 
-export async function getStaticProps(ctx: { locale: string; }) {
+export const getStaticProps: GetStaticProps = async (ctx) => {
   const apolloClient = initializeApollo()
 
   try {
     const result = await apolloClient.query({
-      query: ALL_PROJECTS_QUERY,
+      query: ALL_PROJECTS_QUERY
     })
 
     return {
@@ -31,9 +32,9 @@ export async function getStaticProps(ctx: { locale: string; }) {
     }
   } catch (error) {
     if (error instanceof ApolloError) {
-      console.error('Apollo Error:', error);
+      console.error('Apollo Error:', error)
     } else {
-      console.error('Error:', error);
+      console.error('Error:', error)
     }
 
     return {
@@ -42,7 +43,7 @@ export async function getStaticProps(ctx: { locale: string; }) {
         initialApolloState: apolloClient.cache.extract(),
         menus: siteMenus.data
       },
-      revalidate: 1,
-    };
+      revalidate: 1
+    }
   }
 }

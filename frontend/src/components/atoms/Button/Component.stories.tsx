@@ -1,10 +1,10 @@
 import React from 'react'
 import { Button } from './Component'
-import { ComponentMeta } from '@storybook/react';
+import { ComponentMeta } from '@storybook/react'
 
 export default {
   title: 'Atoms/Buttons',
-  component: Button,
+  component: Button
 } as ComponentMeta<typeof Button>
 
 export const Default = (): JSX.Element => {

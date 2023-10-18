@@ -21,7 +21,7 @@ export function Button (props: Props): JSX.Element {
     const { as, className, ...linkProps } = componentProps
     return <InternalOrExternalLink className={classes} {...linkProps}>{children}</InternalOrExternalLink>
   } else {
-    const classes = clsx(componentProps.className, styles.button, {[styles.largeButton]: size === 'large'})
+    const classes = clsx(componentProps.className, styles.button, { [styles.largeButton]: size === 'large' })
     const { as, className, ...buttonProps } = componentProps
     return <button className={classes} {...buttonProps}>{children}</button>
   }

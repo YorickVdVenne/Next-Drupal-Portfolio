@@ -10,8 +10,8 @@ interface ProjectCardProps {
 }
 
 export default function ProjectCard (props: ProjectCardProps): JSX.Element {
-     const { project } = props
-  
+  const { project } = props
+
   return (
     <Card className={styles.project}>
       <div className={styles.topWrapper}>
@@ -20,16 +20,20 @@ export default function ProjectCard (props: ProjectCardProps): JSX.Element {
             {IconMapper('folder')}
           </div>
           <div className={styles.links}>
-            {project.githubLink ? (
-              <a className={styles.link} href={project.githubLink} target='_blank'>{IconMapper('github')}</a>
-            ): ''}
-            {project.externalLink ? (
-              <a className={styles.link} href={project.externalLink} target='_blank'>{IconMapper('external-link')}</a>
-            ): ''}
+            {project.githubLink
+              ? (
+                <a className={styles.link} href={project.githubLink} target='_blank' rel='noreferrer'>{IconMapper('github')}</a>
+                )
+              : ''}
+            {project.externalLink
+              ? (
+                <a className={styles.link} href={project.externalLink} target='_blank' rel='noreferrer'>{IconMapper('external-link')}</a>
+                )
+              : ''}
           </div>
         </div>
         <h4 className={styles.title}>
-          <a className={styles.titleLink} href={project.externalLink ? project.externalLink : '/'} target='_blank'>{project.title}</a>
+          <a className={styles.titleLink} href={project.externalLink ? project.externalLink : '/'} target='_blank' rel='noreferrer'>{project.title}</a>
         </h4>
         <p className={styles.description}>{project.summary}</p>
       </div>
@@ -41,5 +45,5 @@ export default function ProjectCard (props: ProjectCardProps): JSX.Element {
         </ul>
       </div>
     </Card>
-  );
+  )
 };

@@ -18,7 +18,7 @@ export default function Footer (props: FooterProps): JSX.Element {
         <ul>
           {footer.socials.map((social, key) => (
             <li key={key}>
-              <a href={social.url} target='_blank' title={social.label}>{IconMapper(social.icon)}</a>
+              <a href={social.url} target='_blank' title={social.label} rel='noreferrer'>{IconMapper(social.icon)}</a>
             </li>
           ))}
         </ul>
@@ -26,9 +26,11 @@ export default function Footer (props: FooterProps): JSX.Element {
       <div className={styles.credits}>
         <Button as='link' className={styles.link} variant='secondary' href={footer.actionButton.url} target='_blank'>
           {footer.actionButton.label}
-          {footer.actionButton.icon ? (
-            <span className={styles.icon}>{Icons.IconMapper(footer.actionButton.icon)}</span>
-          ): ''}
+          {footer.actionButton.icon
+            ? (
+              <span className={styles.icon}>{Icons.IconMapper(footer.actionButton.icon)}</span>
+              )
+            : ''}
         </Button>
       </div>
     </footer>

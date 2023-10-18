@@ -1,7 +1,6 @@
 import React from 'react'
 import styles from './styles.module.css'
 import TabListItem from '@components/atoms/TabListItem/Component'
-import { Company } from '@graphql/taxonomies/company/company'
 
 interface TabListProps {
   items: string[]
@@ -13,9 +12,9 @@ interface TabListProps {
 export default function TabList (props: TabListProps): JSX.Element {
   const { items, activeItem, setActiveItem, activeItemIndex } = props
 
-  const hightlightStyles: { [key: string]: number} = {
-      '--list-length': items.length,
-      '--active-item-index': activeItemIndex
+  const hightlightStyles: { [key: string]: number } = {
+    '--list-length': items.length,
+    '--active-item-index': activeItemIndex
   }
 
   return (

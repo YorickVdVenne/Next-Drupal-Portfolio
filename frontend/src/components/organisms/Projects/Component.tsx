@@ -5,14 +5,13 @@ import { Button } from '@components/atoms/Button/Component'
 import ProjectCardCollection from '../ProjectCardCollection/Component'
 import { Project } from '@graphql/content-types/project/project'
 import { useTranslation } from 'next-i18next'
-import Link from 'next/link'
 
 interface ProjectsProps {
   projectData: Project[]
 }
 
 export default function Projects (props: ProjectsProps): JSX.Element {
-  const { t } = useTranslation('projects');
+  const { t } = useTranslation('projects')
 
   return (
     <Section allign={Allign.center}>

@@ -1,6 +1,6 @@
 import { initializeApollo } from '../src/lib/apolloClient'
 import { ALL_PROJECTS_QUERY } from '../src/graphql/all_projects'
-import { ApolloError } from '@apollo/client';
+import { ApolloError } from '@apollo/client'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import home from '@content/home.json'
 import siteMenus from '@content/siteMenus.json'
@@ -12,10 +12,11 @@ import Experience from '@components/organisms/Experience/Component'
 import Featured from '@components/organisms/Featured/Component'
 import Contact from '@components/organisms/Contact/Component'
 import Projects from '@components/organisms/Projects/Component'
-import { HomeData } from '@graphql/content-types/basic-page/home';
-import { GlobalPageProps } from './_app';
-import Metatags from '@components/molecules/Metatags/Component';
-import { useEffect } from 'react';
+import { HomeData } from '@graphql/content-types/basic-page/home'
+import { GlobalPageProps } from './_app'
+import Metatags from '@components/molecules/Metatags/Component'
+import { useEffect } from 'react'
+import { GetStaticProps } from 'next'
 
 interface Props extends GlobalPageProps {
   basicPage: HomeData
@@ -23,19 +24,19 @@ interface Props extends GlobalPageProps {
 
 export default function Home (props: Props): JSX.Element {
   useEffect(() => {
-    const hash = window.location.hash;
-    if (hash) {
+    const hash = window.location.hash
+    if (hash !== '') {
       const sectionId = hash.substring(1)
 
       setTimeout(() => {
         const section = document.getElementById(sectionId)
-        if (section) {
+        if (section != null) {
           const offset = 100
           window.scrollTo({ top: section.offsetTop - offset, behavior: 'smooth' })
         }
-      }, 100);
+      }, 100)
     }
-  }, []);
+  }, [])
 
   return (
     <>
@@ -52,12 +53,12 @@ export default function Home (props: Props): JSX.Element {
   )
 }
 
-export async function getStaticProps(ctx: { locale: string; }) {
+export const getStaticProps: GetStaticProps = async (ctx) => {
   const apolloClient = initializeApollo()
 
   try {
     const result = await apolloClient.query({
-      query: ALL_PROJECTS_QUERY,
+      query: ALL_PROJECTS_QUERY
     })
 
     return {
@@ -71,9 +72,9 @@ export async function getStaticProps(ctx: { locale: string; }) {
     }
   } catch (error) {
     if (error instanceof ApolloError) {
-      console.error('Apollo Error:', error);
+      console.error('Apollo Error:', error)
     } else {
-      console.error('Error:', error);
+      console.error('Error:', error)
     }
 
     return {
@@ -83,7 +84,7 @@ export async function getStaticProps(ctx: { locale: string; }) {
         basicPage: home.data,
         menus: siteMenus.data
       },
-      revalidate: 1,
-    };
+      revalidate: 1
+    }
   }
 }

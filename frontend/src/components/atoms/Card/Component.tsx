@@ -12,9 +12,10 @@ export default function Card (props: CardProps): JSX.Element {
   const { children, className, hideOnMobile } = props
 
   return (
-    <div className={clsx(styles.card, className ? className : '', {
+    <div className={clsx(styles.card, className ?? '', {
       [styles.hideOnMobile]: hideOnMobile
-    })}>
+    })}
+    >
       {children}
     </div>
   )

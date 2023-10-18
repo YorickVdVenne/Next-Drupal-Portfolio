@@ -22,10 +22,10 @@ export default function Experience (props: ExperienceProps): JSX.Element {
       <NumberedHeading id={props.experienceData.bookmark} number={2}>{props.experienceData.title}</NumberedHeading>
       <div className={gridStyles.grid}>
         <div className={styles.tabListWrapper}>
-          <TabList 
-            items={props.experienceData.companies.map((company) => company.name)} 
-            activeItem={activeListItem} 
-            setActiveItem={setActiveListItem} 
+          <TabList
+            items={props.experienceData.companies.map((company) => company.name)}
+            activeItem={activeListItem}
+            setActiveItem={setActiveListItem}
             activeItemIndex={activeListItemIndex}
           />
         </div>

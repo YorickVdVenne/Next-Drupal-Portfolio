@@ -1,10 +1,10 @@
 export interface JobDescription {
-    description: string;
-  }
+  description: string
+}
 
 export interface Job {
-    role: string;
-    companyName: string;
-    period: string;
-    jobDescription: JobDescription[];
+  role: string
+  companyName: string
+  period: string
+  jobDescription: JobDescription[]
 }

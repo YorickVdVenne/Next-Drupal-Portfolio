@@ -10,29 +10,29 @@ import { GlobalPageProps } from './_app'
 import { ArchiveData } from '@graphql/content-types/basic-page/archive'
 import Metatags from '@components/molecules/Metatags/Component'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import { GetStaticProps } from 'next'
 
 interface Props extends GlobalPageProps {
   basicPage: ArchiveData
 }
 
 export default function Archive (props: Props): JSX.Element {
-
   return (
-    <>    
+    <>
       <Metatags {...props.basicPage.metatags} />
       <MainContainer paddingBlock maxWidth={1300}>
-          <ArchivePage archiveData={props.basicPage} />
+        <ArchivePage archiveData={props.basicPage} />
       </MainContainer>
     </>
   )
 }
 
-export async function getStaticProps(ctx: { locale: string; }) {
+export const getStaticProps: GetStaticProps = async (ctx) => {
   const apolloClient = initializeApollo()
 
   try {
     const result = await apolloClient.query({
-      query: ALL_PROJECTS_QUERY,
+      query: ALL_PROJECTS_QUERY
     })
 
     return {
@@ -46,9 +46,9 @@ export async function getStaticProps(ctx: { locale: string; }) {
     }
   } catch (error) {
     if (error instanceof ApolloError) {
-      console.error('Apollo Error:', error);
+      console.error('Apollo Error:', error)
     } else {
-      console.error('Error:', error);
+      console.error('Error:', error)
     }
 
     return {
@@ -58,7 +58,7 @@ export async function getStaticProps(ctx: { locale: string; }) {
         basicPage: archive.data.archive,
         menus: siteMenus.data
       },
-      revalidate: 1,
-    };
+      revalidate: 1
+    }
   }
 }

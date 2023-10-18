@@ -1,4 +1,4 @@
 export interface MainImage {
-    url: string;
-    alt: string;
+  url: string
+  alt: string
 }

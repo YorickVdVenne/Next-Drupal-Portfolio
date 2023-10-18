@@ -1,18 +1,18 @@
 import React, { useEffect, useRef, useState } from 'react'
 import styles from './styles.module.css'
 import NavigationItems from '../NavigationItems/Component'
-import {Helmet} from "react-helmet"
-import { useOnClickOutside } from '@misc/useOnClickOutside';
-import { MainMenu } from '@graphql/menus';
+import { Helmet } from 'react-helmet'
+import { useOnClickOutside } from '@misc/useOnClickOutside'
+import { MainMenu } from '@graphql/menus'
 
 interface NavigationMenuProps {
   menu: MainMenu
 }
 
 export default function NavigationMenu (props: NavigationMenuProps): JSX.Element {
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false)
 
-  const hamBoxStyles: { [key: string]: string} = {
+  const hamBoxStyles: { [key: string]: string } = {
     '--transition-delay': `${menuOpen ? '0.12s' : '0s'}`,
     '--transform-rotation': `${menuOpen ? '225deg' : '0deg'}`,
     '--transition-timing-function': `${menuOpen ? '0.215, 0.61, 0.355, 1' : '0.55, 0.055, 0.675, 0.19'}`,
@@ -25,45 +25,45 @@ export default function NavigationMenu (props: NavigationMenuProps): JSX.Element
     '--inner-after-width': `${menuOpen ? '100%' : '80%'}`,
     '--inner-after-bottom': `${menuOpen ? '0' : '-10px'}`,
     '--inner-after-transform': `${menuOpen ? '-90deg' : '0'}`,
-    '--inner-after-transition': `${menuOpen ? 'var(--ham-after-active)' : 'var(--ham-after)'}`,
+    '--inner-after-transition': `${menuOpen ? 'var(--ham-after-active)' : 'var(--ham-after)'}`
   }
 
-  const asideStyles: { [key: string]: string} = {
+  const asideStyles: { [key: string]: string } = {
     '--aside-transform': `${menuOpen ? '0' : '100'}vw`,
-    '--aside-visibility': `${menuOpen ? 'visible' : 'hidden'}`,
+    '--aside-visibility': `${menuOpen ? 'visible' : 'hidden'}`
   }
 
-  const onKeyDown = (e: { key: any; }) => {
+  const onKeyDown = (e: { key: any }): void => {
     if (e.key === 'Escape' || e.key === 'Esc') {
-      setMenuOpen(false);
+      setMenuOpen(false)
     }
-  };
+  }
 
-  const onResize = () => {
+  const onResize = (): void => {
     if (window.innerWidth > 768) {
-      setMenuOpen(false);
+      setMenuOpen(false)
     }
-  };
+  }
 
   useEffect(() => {
-    document.addEventListener('keydown', onKeyDown);
-    window.addEventListener('resize', onResize);
+    document.addEventListener('keydown', onKeyDown)
+    window.addEventListener('resize', onResize)
 
     return () => {
-      document.removeEventListener('keydown', onKeyDown);
-      window.removeEventListener('resize', onResize);
-    };
-  }, []);
+      document.removeEventListener('keydown', onKeyDown)
+      window.removeEventListener('resize', onResize)
+    }
+  }, [])
 
   const wrapperRef = useRef(null)
   useOnClickOutside(wrapperRef, () => setMenuOpen(false))
-    
+
   return (
     <div className={styles.menu}>
       <Helmet>
         <html className={menuOpen ? 'blur' : ''} />
       </Helmet>
-        
+
       <div ref={wrapperRef}>
         <button onClick={() => setMenuOpen(!menuOpen)} className={styles.hamburgerButton}>
           <div className={styles.hamBox}>
@@ -75,5 +75,5 @@ export default function NavigationMenu (props: NavigationMenuProps): JSX.Element
         </aside>
       </div>
     </div>
-  );
+  )
 };

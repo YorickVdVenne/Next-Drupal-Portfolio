@@ -14,50 +14,52 @@ interface NavigationProps {
 }
 
 export default function Navigation (props: NavigationProps): JSX.Element {
-  const router = useRouter();
-  const { t } = useTranslation('menu');
-  const [scrolled, setScrolled] = useState(false);
+  const router = useRouter()
+  const { t } = useTranslation('menu')
+  const [scrolled, setScrolled] = useState(false)
   const [scrollTop, setScrollTop] = useState(true)
 
   useEffect(() => {
-    let lastScrollY= 0
+    let lastScrollY = 0
 
-    const handleScroll = () => {
+    const handleScroll = (): void => {
       const currentScrollY = window.scrollY
-      
+
       if (currentScrollY !== 0) {
-        setScrollTop(false) 
+        setScrollTop(false)
       } else setScrollTop(true)
 
       if (window.scrollY > lastScrollY) {
-          setScrolled(true)
+        setScrolled(true)
       } else setScrolled(false)
 
       lastScrollY = currentScrollY
-    };
+    }
 
     window.addEventListener('scroll', handleScroll)
 
     return () => {
-        window.removeEventListener('scroll', handleScroll)
+      window.removeEventListener('scroll', handleScroll)
     }
   }, [])
 
   return (
-    <nav id="navbar" className={clsx(styles.nav, {
-      [styles.hidden] : scrolled,
-      [styles.visible]: !scrolled,
-      [styles.small]: !scrolled && !scrollTop
-    })}
+    <nav
+      id='navbar' className={clsx(styles.nav, {
+        [styles.hidden]: scrolled,
+        [styles.visible]: !scrolled,
+        [styles.small]: !scrolled && !scrollTop
+      })}
     >
       <div className={styles.innerNav}>
-        <Link href='/' className={styles.logo} onClick={(e) => {
-          if (router.pathname === '/') {
-            e.preventDefault()
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-          }
-        }}
-        >        
+        <Link
+          href='/' className={styles.logo} onClick={(e) => {
+            if (router.pathname === '/') {
+              e.preventDefault()
+              window.scrollTo({ top: 0, behavior: 'smooth' })
+            }
+          }}
+        >
           <Logo />
           <span className={styles.logoText}>{t('logoText')}</span>
         </Link>

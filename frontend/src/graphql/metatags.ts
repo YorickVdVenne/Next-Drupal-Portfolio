@@ -1,11 +1,11 @@
 export interface MetatagsFragment {
-    __typename?: 'Metatags'
+  __typename?: 'Metatags'
+  title: string
+  description?: string
+  og: {
+    __typename?: 'MetatagsOG'
     title: string
     description?: string
-    og: {
-        __typename?: 'MetatagsOG'
-        title: string
-        description?: string
-        image?: string
-    }
+    image?: string
+  }
 }
