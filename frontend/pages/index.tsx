@@ -13,6 +13,7 @@ import Contact from '@components/organisms/Contact/Component'
 import Projects from '@components/organisms/Projects/Component'
 import { HomeData } from '@graphql/content-types/basic-page/home';
 import { GlobalPageProps } from './_app';
+import Metatags from '@components/molecules/Metatags/Component';
 
 interface Props extends GlobalPageProps {
   basicPage: HomeData
@@ -21,14 +22,17 @@ interface Props extends GlobalPageProps {
 export default function Home (props: Props): JSX.Element {
 
   return (
-    <MainContainer>
-      <Header headerData={props.basicPage.sections.header} />
-      <About aboutData={props.basicPage.sections.about} />
-      <Experience experienceData={props.basicPage.sections.experience} />
-      <Featured featuredData={props.basicPage.sections.projects} />
-      <Projects projectData={props.basicPage.sections.projects.projects} />
-      <Contact contactData={props.basicPage.sections.contact} />
-    </MainContainer>
+    <>
+      <Metatags {...props.basicPage.metatags} />
+      <MainContainer>
+        <Header headerData={props.basicPage.sections.header} />
+        <About aboutData={props.basicPage.sections.about} />
+        <Experience experienceData={props.basicPage.sections.experience} />
+        <Featured featuredData={props.basicPage.sections.projects} />
+        <Projects projectData={props.basicPage.sections.projects.projects} />
+        <Contact contactData={props.basicPage.sections.contact} />
+      </MainContainer>
+    </>
   )
 }
 

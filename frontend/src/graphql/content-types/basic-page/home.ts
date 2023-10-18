@@ -1,3 +1,4 @@
+import { MetatagsFragment } from "@graphql/metatags"
 import { AboutSection, HeaderSection, ContactSection, ExperienceSection, ProjectSection } from "@graphql/sections"
 
 export interface HomeData {
@@ -8,4 +9,5 @@ export interface HomeData {
         projects: ProjectSection,
         contact: ContactSection
     }
+    metatags: MetatagsFragment
 }

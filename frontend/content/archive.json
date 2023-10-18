@@ -150,7 +150,16 @@
           "year": "2020",
           "madeAt": ""
         }
-      ]
+      ],
+      "metatags": {
+        "title": "Yorick's Portfolio - Archive",
+        "description": "Explore a diverse collection of my creative works. This portfolio showcases my skills in web development through projects that reflect my passion for creating awesome website!",
+        "og": {
+          "title": "Yorick's Portfolio",
+          "description": "Explore a diverse collection of my creative works. This portfolio showcases my skills in web development through projects that reflect my passion for creating awesome website!",
+          "image": "/../public/images/profile-image.png"
+        }
+      }
     }
   }
 }

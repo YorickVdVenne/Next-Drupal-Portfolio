@@ -8,6 +8,7 @@ import MainContainer from '@components/atoms/MainContainer/Component'
 import ArchivePage from '@components/templates/ArchivePage/Component'
 import { GlobalPageProps } from './_app'
 import { ArchiveData } from '@graphql/content-types/basic-page/archive'
+import Metatags from '@components/molecules/Metatags/Component'
 
 interface Props extends GlobalPageProps {
   basicPage: ArchiveData
@@ -16,9 +17,12 @@ interface Props extends GlobalPageProps {
 export default function Archive (props: Props): JSX.Element {
 
   return (
-    <MainContainer paddingBlock maxWidth={1300}>
-        <ArchivePage archiveData={props.basicPage} />
-    </MainContainer>
+    <>    
+      <Metatags {...props.basicPage.metatags} />
+      <MainContainer paddingBlock maxWidth={1300}>
+          <ArchivePage archiveData={props.basicPage} />
+      </MainContainer>
+    </>
   )
 }
 
