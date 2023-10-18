@@ -96,7 +96,7 @@
 .linkContainer {
     display: flex;
     align-items: center;
-    gap: var(--spacing-2x);
+    gap: var(--spacing-3x);
 }
 
 .link {

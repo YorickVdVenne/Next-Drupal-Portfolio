@@ -61,6 +61,8 @@
 
     @media (min-width: 768px) {
         color: var(--color-lightest-grey);
+        position: relative;
+        z-index: 2;
     }
 }
 
@@ -68,7 +70,6 @@
     display: flex;
     flex-wrap: wrap;
     position: relative;
-    z-index: 2;
     padding: 0;
     list-style: none;
     justify-content: flex-start;
@@ -78,6 +79,7 @@
     @media (min-width: 768px) {
         justify-content: flex-end;
         margin-block-start: var(--spacing-6x);
+        z-index: 2;
     }
 }
 
@@ -109,6 +111,7 @@
     align-items: center;
     justify-content: flex-start;
     position: relative;
+    z-index: 3;
     margin-block-start: var(--spacing-2x);
     margin-inline-start: -1rem;
     color: var(--color-lightest-grey);
@@ -209,7 +212,11 @@
 
 .projectImage a:hover::before, .projectImage a:hover .image {
   background: transparent;
-  filter: none;
+  filter:  grayscale(0%) contrast(1) brightness(40%);
+
+  @media (min-width: 768px) {
+    filter:  none;
+  }
 }
 
 .image {

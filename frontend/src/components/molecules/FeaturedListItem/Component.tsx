@@ -6,6 +6,7 @@ import Card from '@components/atoms/Card/Component'
 import { IconMapper } from '@components/atoms/Icons/Component'
 import Image from 'next/image'
 import { Project } from '@graphql/content-types/project/project'
+import { Button } from '@components/atoms/Button/Component'
 
 export enum TextAlign {
   right = 'right',
@@ -24,8 +25,8 @@ export default function FeaturedListItem (props: FeaturedListItemProps): JSX.Ele
   return (
     <li className={clsx(gridStyles.grid, styles.featuredItem)}>
       <div className={clsx(styles.projectContent, {
-        [styles.contentLeft]: textAlign === TextAlign.left,
-      })}>
+        [styles.contentLeft]: textAlign === TextAlign.left,})}
+      >
         <p className={styles.projectOverline}>Featured Project</p>
         <h4 className={styles.projectTitle}>{item.title}</h4>
         <Card hideOnMobile>{item.summary}</Card>
@@ -38,17 +39,23 @@ export default function FeaturedListItem (props: FeaturedListItemProps): JSX.Ele
             })}>{tech.name}</li>
           ))}
         </ul>
-        {item.externalLink ? (
-          <div className={clsx(styles.projectLinks, {
-            [styles.projectLinksLeft]: textAlign === TextAlign.left,
-          })}>
-            <a href={item.externalLink} target='__blank'>{IconMapper('external-link')}</a>
-          </div>
-        ): ''}
+        <div className={clsx(styles.projectLinks, {
+          [styles.projectLinksLeft]: textAlign === TextAlign.left })}
+        >
+          {item.externalLink 
+            ? <a href={item.externalLink} target='__blank'>{IconMapper('external-link')}</a>
+            : ''
+          }
+          {item.githubLink 
+            ? <a href={item.githubLink} target='__blank'>{IconMapper('github')}</a>
+            : ''
+          }
+          {/* <Button as='button'>Read more</Button> */}
+        </div>
       </div>
       <div className={clsx(styles.projectImage, {
-        [styles.imageRight]: textAlign === TextAlign.left 
-      })}>
+        [styles.imageRight]: textAlign === TextAlign.left })}
+      >
         <a href={item.externalLink ? item.externalLink : '/'} target='__blank'>        
             <Image 
               src={item.mainImage.url}

@@ -2,12 +2,15 @@
     box-shadow: 0 10px 30px -15px var(--color-navy-shadow);
     transition: var(--transition);
     position: relative;
-    z-index: 2;
     padding: var(--spacing-6x);
     border-radius: var(--border-radius);
     background-color: var(--color-light-navy);
     color: var(--color-light-grey);
     font-size: var(--fz-lg);
+
+    @media (min-width: 768px) {
+        z-index: 2;
+    }
 }
 
 .card:hover {

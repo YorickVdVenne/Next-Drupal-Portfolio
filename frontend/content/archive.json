@@ -5,6 +5,40 @@
       "shortText": "A list of things I've worked on",
       "projects": [
         {
+          "id": "4",
+          "title": "Portfolio Website",
+          "technologies": [
+            {
+              "id": "1",
+              "name": "Next.js"
+            },
+            {
+              "id": "2",
+              "name": "TypeScript"
+            },
+            {
+              "id": "3",
+              "name": "HTML & CSS"
+            },
+            {
+              "id": "4",
+              "name": "Drupal"
+            },
+            {
+              "id": "5",
+              "name": "PHP"
+            },
+            {
+              "id": "6",
+              "name": "GraphQL"
+            }
+          ],
+          "githubLink": "https://github.com/YorickVdVenne/Nextjs-Drupal-Portfolio",
+          "externalLink": "/",
+          "year": "2023",
+          "madeAt": "-"
+        },
+        {
           "id": "1",
           "title": "HPL Portal",
           "technologies": [
@@ -35,6 +69,32 @@
           "madeAt": "iO"
         },
         {
+          "id": "5",
+          "title": "Aviko Sprint 8",
+          "technologies": [
+            {
+              "id": "1",
+              "name": "HTML & CSS"
+            },
+            {
+              "id": "2",
+              "name": "TypeScript"
+            },
+            {
+              "id": "3",
+              "name": "Next.js"
+            },
+            {
+              "id": "4",
+              "name": "Pardot forms"
+            }
+          ],
+          "githubLink": "",
+          "externalLink": "https://www.avikofoodservice.nl/producten/oerfriet-11mm",
+          "year": "2023",
+          "madeAt": "iO"
+        },
+        {
           "id": "2",
           "title": "Aviko QR Code",
           "technologies": [
@@ -61,6 +121,28 @@
           "madeAt": "iO"
         },
         {
+          "id": "7",
+          "title": "Graduation project: Productivity",
+          "technologies": [
+            {
+              "id": "1",
+              "name": "HTML & CSS"
+            },
+            {
+              "id": "2",
+              "name": "JavaScript"
+            },
+            {
+              "id": "3",
+              "name": "Next.js"
+            }
+          ],
+          "githubLink": "https://github.com/YorickVdVenne/Productivity-Nextjs",
+          "externalLink": "https://productivity-phi.vercel.app/",
+          "year": "2022",
+          "madeAt": "iO"
+        },
+        {
           "id": "3",
           "title": "Verno Customized frames",
           "technologies": [
@@ -83,41 +165,37 @@
           "madeAt": "Burst"
         },
         {
-          "id": "4",
-          "title": "Portfolio website",
+          "id": "8",
+          "title": "Internship: Next.js blog",
           "technologies": [
             {
               "id": "1",
-              "name": "Next.js"
-            },
-            {
-              "id": "2",
-              "name": "TypeScript"
-            },
-            {
-              "id": "3",
               "name": "HTML & CSS"
             },
             {
-              "id": "4",
-              "name": "Drupal"
+              "id": "2",
+              "name": "JavaScript"
             },
             {
-              "id": "5",
+              "id": "3",
+              "name": "Next.js"
+            },
+            {
+              "id": "4",
               "name": "PHP"
             },
             {
-              "id": "6",
-              "name": "GraphQL"
+              "id": "5",
+              "name": "Drupal"
             }
           ],
-          "githubLink": "https://github.com/YorickVdVenne/Nextjs-Drupal-Portfolio",
-          "externalLink": "/",
-          "year": "2023",
-          "madeAt": ""
+          "githubLink": "https://github.com/YorickVdVenne/SSR-Nextjs-Blog/tree/master/src",
+          "externalLink": "",
+          "year": "2021",
+          "madeAt": "Burst"
         },
         {
-          "id": "5",
+          "id": "6",
           "title": "Tinyhouse: Fullstack React Masterclass",
           "technologies": [
             {
@@ -148,7 +226,7 @@
           "githubLink": "https://github.com/YorickVdVenne/TinyHouse-Fullstack-Application",
           "externalLink": "https://www.tinyhouse.app/",
           "year": "2020",
-          "madeAt": ""
+          "madeAt": "-"
         }
       ],
       "metatags": {
