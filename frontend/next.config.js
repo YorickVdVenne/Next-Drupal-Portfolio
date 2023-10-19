@@ -1,8 +1,11 @@
 const { i18n } = require('./next-i18next.config')
+const withTranslateRoutes = require('next-translate-routes/plugin')
 
-/** @type {import('next').NextConfig} */
-const nextConfig = {
+module.exports = withTranslateRoutes({
   i18n,
+  translateRoutes: {
+    debug: true
+  },
   webpack (config) {
     config.module.rules.push({
       test: /\.svg$/,
@@ -29,6 +32,4 @@ const nextConfig = {
 
     return config
   }
-}
-
-module.exports = nextConfig
+})

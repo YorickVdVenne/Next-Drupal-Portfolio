@@ -2,6 +2,7 @@ import '../theme/main.css'
 import { ApolloProvider } from '@apollo/client'
 import { useApollo } from '../src/lib/apolloClient'
 import { appWithTranslation } from 'next-i18next'
+import withTranslateRoutes from 'next-translate-routes'
 import { usePageVisibility } from '../misc/usePageVisibility'
 
 import type { AppProps } from 'next/app'
@@ -47,4 +48,4 @@ function App (props: Props): JSX.Element {
   )
 }
 
-export default appWithTranslation(App)
+export default withTranslateRoutes(appWithTranslation(App))
