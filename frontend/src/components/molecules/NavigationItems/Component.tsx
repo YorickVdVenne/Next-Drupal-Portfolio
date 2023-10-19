@@ -35,8 +35,8 @@ export default function NavigationItems (props: NavigationItemsProps): JSX.Eleme
                     top: section.offsetTop - 100,
                     behavior: 'smooth'
                   })
-                  if (hasValue(setMenuOpen)) setMenuOpen(false)
                 }
+                if (hasValue(setMenuOpen)) setMenuOpen(false)
               }}
             >
               {link.label}
