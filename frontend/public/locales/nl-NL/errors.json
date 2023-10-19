@@ -1,0 +1,22 @@
+{
+    "404": {
+        "title": "404",
+        "subTitle": "Page Not Found",
+        "buttonText": "Go Home",
+        "metatags": {
+            "title": "404 page not found",
+            "description": "404 page not found",
+            "image": "/../public/images/profile-image.png"
+        }
+    },
+    "500": {
+        "title": "500",
+        "subTitle": "Unexpected error occured",
+        "buttonText": "Go Home",
+        "metatags": {
+            "title": "500 Unexpected error occured",
+            "description": "500 Unexpected error occured",
+            "image": "/../public/images/profile-image.png"
+        }
+    }
+}

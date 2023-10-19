@@ -6,11 +6,11 @@ import siteMenus from '@content/siteMenus.json'
 
 import type { GetStaticProps } from 'next'
 
-import Page404 from '@components/templates/Page404/Component'
+import ErrorPage from '@components/templates/ErrorPage/Component'
 
-export default function NotFound (): JSX.Element {
+export default function Error500 (): JSX.Element {
   return (
-    <Page404 />
+    <ErrorPage />
   )
 }
 
