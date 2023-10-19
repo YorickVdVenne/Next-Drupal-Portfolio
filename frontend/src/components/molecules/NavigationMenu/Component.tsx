@@ -69,7 +69,7 @@ export default function NavigationMenu (props: NavigationMenuProps): JSX.Element
       </Helmet>
 
       <div ref={wrapperRef}>
-        <button onClick={() => {setMenuOpen(!menuOpen)}} className={styles.hamburgerButton}>
+        <button onClick={() => { setMenuOpen(!menuOpen) }} className={styles.hamburgerButton}>
           <div className={styles.hamBox}>
             <div className={styles.hamBoxInner} style={hamBoxStyles} />
           </div>

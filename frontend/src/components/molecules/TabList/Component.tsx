@@ -20,7 +20,7 @@ export default function TabList (props: TabListProps): JSX.Element {
   return (
     <div className={styles.tabList}>
       {items.map((item, key) => (
-        <TabListItem key={key} item={item} onClick={() => {setActiveItem(item)}} isActive={activeItem === item} />
+        <TabListItem key={key} item={item} onClick={() => { setActiveItem(item)} } isActive={activeItem === item} />
       ))}
       <div className={styles.highlight} style={hightlightStyles} />
     </div>

@@ -13,7 +13,6 @@ import SideElement, { Orientation } from '@components/molecules/SideElement/Comp
 import Favicons from '@components/molecules/Favicons/Component'
 import DefaultMetatags from '@components/molecules/DefaultMetatags/Component'
 
-
 export interface GlobalPageProps {
   menus: Menus
   initialApolloState: any
