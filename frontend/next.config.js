@@ -3,6 +3,7 @@ const withTranslateRoutes = require('next-translate-routes/plugin')
 
 module.exports = withTranslateRoutes({
   i18n,
+  outputFileTracing: true,
   translateRoutes: {
     debug: true
   },
