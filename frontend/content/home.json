@@ -42,7 +42,7 @@
           }
         ],
         "profileImage": {
-          "url": "/../public/images/profile-image.png",
+          "url": "/images/profile-image.png",
           "alt": "Yorick Van de Venne"
         }
       },
@@ -132,7 +132,7 @@
             "githubLink": "",
             "externalLink": "https://www.locaties.nl/",
             "mainImage": {
-              "url": "/../public/images/hpl-main-image.png",
+              "url": "/images/hpl-main-image.png",
               "alt": "High Profile Locaties"
             },
             "year": "2023",
@@ -166,7 +166,7 @@
             "githubLink": "",
             "externalLink": "https://qr.avikofoodservice.com/",
             "mainImage": {
-              "url": "/../public/images/aviko-qr-code-main-image.png",
+              "url": "/images/aviko-qr-code-main-image.png",
               "alt": "Aviko QR Code"
             },
             "year": "2022",
@@ -196,7 +196,7 @@
             "githubLink": "",
             "externalLink": "https://customize.verno.com/nl_NL/configure-frame?data=eyJmcmFtYWJsZU9iamVjdCI6InBvc3RlciJ9&step=framableObject",
             "mainImage": {
-              "url": "/../public/images/verno-main-image.png",
+              "url": "/images/verno-main-image.png",
               "alt": "Verno Customized frames"
             },
             "year": "2021",
@@ -240,7 +240,7 @@
             "githubLink": "https://github.com/YorickVdVenne/Nextjs-Drupal-Portfolio",
             "externalLink": "/",
             "mainImage": {
-              "url": "/../public/images/portfolio-main-image.png",
+              "url": "/images/portfolio-main-image.png",
               "alt": "Portfolio Website"
             },
             "year": "2023",
@@ -274,7 +274,7 @@
             "githubLink": "",
             "externalLink": "https://www.avikofoodservice.nl/producten/oerfriet-11mm",
             "mainImage": {
-              "url": "/../public/images/aviko-sprint-8-main-image.png",
+              "url": "/images/aviko-sprint-8-main-image.png",
               "alt": "Aviko Sprint 8"
             },
             "year": "2023",
@@ -316,7 +316,7 @@
             "githubLink": "https://github.com/YorickVdVenne/TinyHouse-Fullstack-Application",
             "externalLink": "https://www.tinyhouse.app/",
             "mainImage": {
-              "url": "/../public/images/tinyhouse-main-image.png",
+              "url": "/images/tinyhouse-main-image.png",
               "alt": "Tinyhouse Fullstack Masterclass"
             },
             "year": "2020",
@@ -346,7 +346,7 @@
             "githubLink": "https://github.com/YorickVdVenne/Productivity-Nextjs",
             "externalLink": "https://productivity-phi.vercel.app/",
             "mainImage": {
-              "url": "/../public/images/productivity-main-image.png",
+              "url": "/images/productivity-main-image.png",
               "alt": "Productivity application"
             },
             "year": "2022",
@@ -384,7 +384,7 @@
             "githubLink": "https://github.com/YorickVdVenne/SSR-Nextjs-Blog/tree/master/src",
             "externalLink": "",
             "mainImage": {
-              "url": "/../public/images/blog-main-image.png",
+              "url": "/images/blog-main-image.png",
               "alt": "Next.js blog site"
             },
             "year": "2021",
@@ -412,7 +412,7 @@
       "og": {
         "title": "Yorick's Portfolio",
         "description": "Explore a diverse collection of my creative works. This portfolio showcases my skills in web development through projects that reflect my passion for creating awesome website!",
-        "image": "/../public/images/profile-image.png"
+        "image": "/images/profile-image.png"
       }
     }
   }

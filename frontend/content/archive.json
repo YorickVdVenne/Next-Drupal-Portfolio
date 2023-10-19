@@ -235,7 +235,7 @@
         "og": {
           "title": "Yorick's Portfolio",
           "description": "Explore a diverse collection of my creative works. This portfolio showcases my skills in web development through projects that reflect my passion for creating awesome website!",
-          "image": "/../public/images/profile-image.png"
+          "image": "/images/profile-image.png"
         }
       }
     }
