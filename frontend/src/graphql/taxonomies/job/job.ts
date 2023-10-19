@@ -5,6 +5,7 @@ export interface JobDescription {
 export interface Job {
   role: string
   companyName: string
+  link: string
   period: string
   jobDescription: JobDescription[]
 }

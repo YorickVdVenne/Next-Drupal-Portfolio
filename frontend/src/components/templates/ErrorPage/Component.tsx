@@ -9,7 +9,7 @@ import { Button } from '@components/atoms/Button/Component'
 import Metatags from '@components/molecules/Metatags/Component'
 
 export default function ErrorPage (): JSX.Element {
-  const { t } = useTranslation('pageNotFound')
+  const { t } = useTranslation('errors')
 
   return (
     <>
