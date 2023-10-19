@@ -37,7 +37,7 @@
 .linkPrimary::after {
     content: "";
     display: block;
-    width: 0px;
+    width: 0;
     height: 1px;
     bottom: 0.37em;
     position: relative;
@@ -51,7 +51,7 @@
 
 .linkPrimary:hover {
     cursor: pointer;
-    outline: 0px;
+    outline: 0;
 }
 
 .linkSecondary {

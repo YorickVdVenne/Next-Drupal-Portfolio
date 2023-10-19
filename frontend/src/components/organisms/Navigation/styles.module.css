@@ -4,10 +4,10 @@
     align-items: center;
     justify-content: space-between;
     position: fixed;
-    top: 0px;
+    top: 0;
     z-index: 11;
     width: 100%;
-    background-color: rgba(10, 25, 47, 0.85);
+    background-color: rgb(10 25 47 / 85%);
     backdrop-filter: blur(10px);
     transition: var(--transition);
 }
@@ -62,10 +62,6 @@
     transform: translate(4px, -4px);
 }
 
-.logo:hover .logoText {
-    color: var(--color-green);
-}
-
 .logoText {
     font-size: var(--fz-xxl);
     transition: var(--transition);
@@ -82,4 +78,8 @@
     @media (min-width: 1024px) {
         display: block;
     }
+}
+
+.logo:hover .logoText {
+    color: var(--color-green);
 }

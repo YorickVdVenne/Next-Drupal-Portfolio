@@ -19,7 +19,7 @@ export default function SideElement (props: SideElementProps): JSX.Element {
 
   return (
     <div
-      className={clsx(styles.SideElement, {
+      className={clsx(styles.sideElement, {
         [styles.left]: orientation === Orientation.left,
         [styles.right]: orientation === Orientation.right
       })}
@@ -29,7 +29,15 @@ export default function SideElement (props: SideElementProps): JSX.Element {
           <ul className={styles.socials}>
             {content.map((item, index) => (
               <li key={index}>
-                <a href={item.url} target='_blank' title={item.label} rel='noreferrer'>{IconMapper(item.icon)}</a>
+                <a
+                  className={styles.iconLink}
+                  href={item.url}
+                  target='_blank'
+                  title={item.label}
+                  rel='noreferrer'
+                >
+                  {IconMapper(item.icon)}
+                </a>
               </li>
             ))}
           </ul>

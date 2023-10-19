@@ -1,4 +1,4 @@
-.SideElement {
+.sideElement {
     display: none;
 
 
@@ -45,24 +45,24 @@
     display: block;
     width: 1px;
     height: 9rem;
-    margin: 0px auto;
+    margin: 0 auto;
     background-color: var(--color-light-grey);
 }
 
-.socials li a {
+.iconLink {
     text-decoration: none;
     color: inherit;
     position: relative;
 }
 
-.socials li a svg {
+.iconLink svg {
     padding: 1rem;
     width: 2rem;
     height: 2rem;
     transition: var(--transition);
 }
 
-.socials li a svg:hover, .socials li a svg:focus {
+.iconLink svg:hover, .iconLink svg:focus {
     transform: translateY(-3px);
     color: var(--color-green);
 }
@@ -80,7 +80,7 @@
     display: block;
     width: 1px;
     height: 9rem;
-    margin: 0px auto;
+    margin: 0 auto;
     background-color: var(--color-light-grey);
 }
 
@@ -91,7 +91,6 @@
     font-size: var(--fz-xxs);
     line-height: var(--fz-lg);
     letter-spacing: 0.1em;
-    -webkit-writing-mode: vertical-rl;
     writing-mode: vertical-rl;
     text-decoration: none;
     color: inherit;

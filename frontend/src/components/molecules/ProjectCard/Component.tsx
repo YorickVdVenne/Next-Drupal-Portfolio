@@ -4,6 +4,7 @@ import Card from '@components/atoms/Card/Component'
 import { IconMapper } from '@components/atoms/Icons/Component'
 import { Technologies } from '@graphql/taxonomies/technologies/technology'
 import { Project } from '@graphql/content-types/project/project'
+import { hasValue } from '@misc/helpers'
 
 interface ProjectCardProps {
   project: Project
@@ -20,20 +21,20 @@ export default function ProjectCard (props: ProjectCardProps): JSX.Element {
             {IconMapper('folder')}
           </div>
           <div className={styles.links}>
-            {project.githubLink
+            {hasValue(project.githubLink)
               ? (
                 <a className={styles.link} href={project.githubLink} target='_blank' rel='noreferrer'>{IconMapper('github')}</a>
                 )
-              : ''}
-            {project.externalLink
+              : null}
+            {hasValue(project.externalLink)
               ? (
                 <a className={styles.link} href={project.externalLink} target='_blank' rel='noreferrer'>{IconMapper('external-link')}</a>
                 )
-              : ''}
+              : null}
           </div>
         </div>
         <h4 className={styles.title}>
-          <a className={styles.titleLink} href={project.externalLink ? project.externalLink : '/'} target='_blank' rel='noreferrer'>{project.title}</a>
+          <a className={styles.titleLink} href={hasValue(project.externalLink) ? project.externalLink : '/'} target='_blank' rel='noreferrer'>{project.title}</a>
         </h4>
         <p className={styles.description}>{project.summary}</p>
       </div>

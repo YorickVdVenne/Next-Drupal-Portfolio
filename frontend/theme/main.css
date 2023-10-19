@@ -69,13 +69,6 @@ html {
     #navbar {
       background-color: transparent;
     }
-
-    .stack {
-      filter: blur(5px) brightness(0.7);
-      transition: var(--transition);
-      pointer-events: none;
-      user-select: none;
-    }
   }
 }
 
@@ -100,6 +93,13 @@ body {
   width: 100%;
   min-height: 100vh;
   justify-content: space-between;
+}
+
+html.blur .stack {
+  filter: blur(5px) brightness(0.7);
+  transition: var(--transition);
+  pointer-events: none;
+  user-select: none;
 }
 
 /* Scrollbar styling */

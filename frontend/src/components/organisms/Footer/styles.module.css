@@ -38,26 +38,21 @@
     color: var(--color-green);
 }
 
-.socials ul a svg {
-    width: 2rem;
-    height: 2rem;
-}
-
 .link {
     display: flex;
     flex-direction: column;
     gap: 0.8rem;
 }
 
-.icon {
+.icon svg {
+    width: 2rem;
+    height: 2rem;
+}
+
+.hideOnMobile {
     display: none;
 
     @media (min-width: 768px) {
         display: block;
     }
-}
-
-.icon svg {
-    width: 20px;
-    height: 20px;
 }

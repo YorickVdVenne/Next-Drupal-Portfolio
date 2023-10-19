@@ -4,6 +4,7 @@ import { Button } from '@components/atoms/Button/Component'
 import clsx from 'clsx'
 import { ActionButton, MenuItem } from '@graphql/menus'
 import Link from 'next/link'
+import { hasValue } from '@misc/helpers'
 
 interface NavigationItemsProps {
   links: MenuItem[]
@@ -45,7 +46,7 @@ export default function NavigationItems (props: NavigationItemsProps): JSX.Eleme
         <Button
           className={clsx(styles.button, { [styles.desktop]: desktop })}
           as='button'
-          size={!desktop ? 'large' : undefined}
+          size={!hasValue(desktop) ? 'large' : undefined}
         >
           {actionButton.label}
         </Button>

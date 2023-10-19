@@ -5,6 +5,7 @@ import clsx from 'clsx'
 import { IconMapper } from '@components/atoms/Icons/Component'
 import { Project } from '@graphql/content-types/project/project'
 import { useTranslation } from 'next-i18next'
+import { hasValue } from '@misc/helpers'
 
 interface ArchiveTableProps {
   content: Project[]
@@ -50,12 +51,12 @@ export default function ArchiveTable (props: ArchiveTableProps): JSX.Element {
             </td>
             <td className={styles.links}>
               <div className={styles.linkContainer}>
-                {item.externalLink
+                {hasValue(item.externalLink)
                   ? <a className={styles.link} href={item.externalLink} target='_blank' rel='noreferrer'>{IconMapper('external-link')}</a>
-                  : ''}
-                {item.githubLink
+                  : null}
+                {hasValue(item.githubLink)
                   ? <a className={styles.link} href={item.githubLink} target='_blank' rel='noreferrer'>{IconMapper('github')}</a>
-                  : ''}
+                  : null}
               </div>
             </td>
           </tr>

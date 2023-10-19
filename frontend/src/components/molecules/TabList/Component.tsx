@@ -5,7 +5,7 @@ import TabListItem from '@components/atoms/TabListItem/Component'
 interface TabListProps {
   items: string[]
   activeItem: string
-  setActiveItem: Function
+  setActiveItem: React.Dispatch<React.SetStateAction<string>>
   activeItemIndex: number
 }
 
@@ -20,7 +20,7 @@ export default function TabList (props: TabListProps): JSX.Element {
   return (
     <div className={styles.tabList}>
       {items.map((item, key) => (
-        <TabListItem key={key} item={item} onClick={(item: string) => setActiveItem(item)} isActive={activeItem === item} />
+        <TabListItem key={key} item={item} onClick={() => setActiveItem(item)} isActive={activeItem === item} />
       ))}
       <div className={styles.highlight} style={hightlightStyles} />
     </div>

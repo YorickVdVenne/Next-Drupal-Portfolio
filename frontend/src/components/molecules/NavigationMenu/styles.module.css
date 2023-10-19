@@ -14,7 +14,7 @@
     z-index: 10;
     margin-right: -15px;
     padding: 15px;
-    border: 0px;
+    border: 0;
     background-color: transparent;
     color: inherit;
     text-transform: none;
@@ -34,16 +34,13 @@
 .hamBoxInner {
     position: absolute;
     top: 50%;
-    right: 0px;
+    right: 0;
     width: var(--hamburger-width);
     height: 2px;
     border-radius: var(--border-radius);
     background-color: var(--color-green);
-    transition-duration: 0.22s;
-    transition-property: transform;
-    transition-delay: var(--transition-delay);
+    transition: transform 0.22s cubic-bezier(--transition-timing-function) var(--transition-delay);
     transform: rotate(var(--transform-rotation));
-    transition-timing-function: cubic-bezier(--transition-timing-function);
 }
 
 .hamBoxInner::before, .hamBoxInner::after {
@@ -51,7 +48,7 @@
     display: block;
     position: absolute;
     left: auto;
-    right: 0px;
+    right: 0;
     width: var(--hamburger-width);
     height: 2px;
     border-radius: 4px;
@@ -88,7 +85,7 @@
     height: 100vh;
     outline: 0;
     background-color: var(--color-light-navy);
-    box-shadow: -10px 0px 30px -15px var(--navy-shadow);
+    box-shadow: -10px 0 30px -15px var(--navy-shadow);
     z-index: 9;
     transition: var(--transition);
     transform: translateX(var(--aside-transform));

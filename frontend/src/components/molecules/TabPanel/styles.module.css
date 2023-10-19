@@ -40,6 +40,6 @@
 .panel ul li::before {
     content: "▹";
     position: absolute;
-    left: 0px;
+    left: 0;
     color: var(--color-green);
 }

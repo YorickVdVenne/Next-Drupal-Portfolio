@@ -31,7 +31,7 @@
 .techList li::before {
     content: "▹";
     position: absolute;
-    left: 0px;
+    left: 0;
     color: var(--color-green);
     font-size: var(--fz-sm);
     line-height: 1.2rem;
@@ -59,20 +59,6 @@
     background-color: var(--color-green);
 }
 
-.imageWrapper:hover, .imageWrapper:focus {
-    outline: 0;
-    transform: translate(0.4rem, 0.4rem);
-
-    .image {
-        filter: none;
-        mix-blend-mode: normal;
-    }
-}
-
-.imageWrapper:hover::after {
-    transform: translate(-0.8rem, -0.8rem);
-}
-
 .imageWrapper::before, .imageWrapper::after {
     content: '';
     display: block;
@@ -97,6 +83,10 @@
     z-index: 0;
 }
 
+.imageWrapper:hover::after {
+    transform: translate(-0.8rem, -0.8rem);
+}
+
 .image {
     position: relative;
     border-radius: var(--border-radius);
@@ -108,4 +98,14 @@
     height: 100%;
     vertical-align: middle;
     z-index: 1;
+}
+
+.imageWrapper:hover, .imageWrapper:focus {
+    outline: 0;
+    transform: translate(0.4rem, 0.4rem);
+
+    .image {
+        filter: none;
+        mix-blend-mode: normal;
+    }
 }

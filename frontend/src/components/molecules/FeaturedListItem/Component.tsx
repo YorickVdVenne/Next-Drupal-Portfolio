@@ -7,6 +7,7 @@ import { IconMapper } from '@components/atoms/Icons/Component'
 import Image from 'next/image'
 import { Project } from '@graphql/content-types/project/project'
 import { useTranslation } from 'next-i18next'
+import { hasValue } from '@misc/helpers'
 
 export enum TextAlign {
   right = 'right',
@@ -42,17 +43,17 @@ export default function FeaturedListItem (props: FeaturedListItemProps): JSX.Ele
           ))}
         </ul>
         <div className={clsx(styles.projectLinks, { [styles.projectLinksLeft]: textAlign === TextAlign.left })}>
-          {item.externalLink
-            ? <a href={item.externalLink} target='__blank'>{IconMapper('external-link')}</a>
-            : ''}
-          {item.githubLink
-            ? <a href={item.githubLink} target='__blank'>{IconMapper('github')}</a>
-            : ''}
+          {hasValue(item.externalLink)
+            ? <a className={styles.link} href={item.externalLink} target='__blank'>{IconMapper('external-link')}</a>
+            : null}
+          {hasValue(item.githubLink)
+            ? <a className={styles.link} href={item.githubLink} target='__blank'>{IconMapper('github')}</a>
+            : null}
           {/* <Button as='button'>Read more</Button> */}
         </div>
       </div>
       <div className={clsx(styles.projectImage, { [styles.imageRight]: textAlign === TextAlign.left })}>
-        <a href={item.externalLink ? item.externalLink : '/'} target='__blank'>
+        <a href={hasValue(item.externalLink) ? item.externalLink : '/'} target='__blank'>
           <Image
             src={item.mainImage.url}
             alt={item.mainImage.alt}
