@@ -1,9 +1,11 @@
 import React from 'react'
 import styles from './styles.module.css'
+
+import type { ContactSection } from '@graphql/sections'
+
 import Section, { Allign } from '@components/atoms/Section/Component'
 import { Button } from '@components/atoms/Button/Component'
 import NumberedHeading from '@components/atoms/NumberedHeading/Component'
-import { ContactSection } from '@graphql/sections'
 
 interface ContactProps {
   contactData: ContactSection

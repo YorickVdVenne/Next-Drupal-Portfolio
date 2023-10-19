@@ -1,8 +1,10 @@
 import React from 'react'
 import styles from './styles.module.css'
 import clsx from 'clsx'
+
+import type { EmailItem, SocialItem } from '@graphql/menus'
+
 import { IconMapper } from '@components/atoms/Icons/Component'
-import { EmailItem, SocialItem } from '@graphql/menus'
 
 export enum Orientation {
   left = 'left',

@@ -1,11 +1,12 @@
 import React from 'react'
 import styles from './styles.module.css'
 import clsx from 'clsx'
-
-import { IconMapper } from '@components/atoms/Icons/Component'
-import { Project } from '@graphql/content-types/project/project'
 import { useTranslation } from 'next-i18next'
 import { hasValue } from '@misc/helpers'
+
+import type { Project } from '@graphql/content-types/project/project'
+
+import { IconMapper } from '@components/atoms/Icons/Component'
 
 interface ArchiveTableProps {
   content: Project[]

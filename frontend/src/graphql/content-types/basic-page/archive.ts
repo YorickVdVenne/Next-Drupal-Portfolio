@@ -1,5 +1,5 @@
-import { MetatagsFragment } from '@graphql/metatags'
-import { Project } from '../project/project'
+import type { MetatagsFragment } from '@graphql/metatags'
+import type { Project } from '../project/project'
 
 export interface ArchiveData {
   title: string

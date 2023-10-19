@@ -1,6 +1,7 @@
-import { MetatagsFragment } from '@graphql/metatags'
 import Head from 'next/head'
 import React from 'react'
+
+import type { MetatagsFragment } from '@graphql/metatags'
 
 export default function Metatags (props: MetatagsFragment): JSX.Element {
   return (

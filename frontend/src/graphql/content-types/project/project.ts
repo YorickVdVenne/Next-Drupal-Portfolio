@@ -1,5 +1,5 @@
-import { MainImage } from '@graphql/media'
-import { Technologies } from '@graphql/taxonomies/technologies/technology'
+import type { MainImage } from '@graphql/media'
+import type { Technologies } from '@graphql/taxonomies/technologies/technology'
 
 export interface Project {
   id: string

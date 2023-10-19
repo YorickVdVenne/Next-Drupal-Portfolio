@@ -1,13 +1,15 @@
 import React from 'react'
 import styles from './styles.module.css'
-import gridStyles from '@components/atoms/Grid/styles.module.css'
 import clsx from 'clsx'
-import Card from '@components/atoms/Card/Component'
-import { IconMapper } from '@components/atoms/Icons/Component'
 import Image from 'next/image'
-import { Project } from '@graphql/content-types/project/project'
 import { useTranslation } from 'next-i18next'
 import { hasValue } from '@misc/helpers'
+
+import type { Project } from '@graphql/content-types/project/project'
+
+import gridStyles from '@components/atoms/Grid/styles.module.css'
+import { IconMapper } from '@components/atoms/Icons/Component'
+import Card from '@components/atoms/Card/Component'
 
 export enum TextAlign {
   right = 'right',

@@ -1,11 +1,12 @@
 import { ALL_PROJECTS_QUERY } from '@graphql/all_projects'
 import { initializeApollo } from '../src/lib/apolloClient'
 import { ApolloError } from '@apollo/client'
-
-import siteMenus from '@content/siteMenus.json'
-import Page404 from '@components/templates/Page404/Component'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
-import { GetStaticProps } from 'next'
+import siteMenus from '@content/siteMenus.json'
+
+import type { GetStaticProps } from 'next'
+
+import Page404 from '@components/templates/Page404/Component'
 
 export default function NotFound (): JSX.Element {
   return (

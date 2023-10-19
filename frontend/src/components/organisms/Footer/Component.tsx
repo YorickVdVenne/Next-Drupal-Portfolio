@@ -1,11 +1,13 @@
 import React from 'react'
 import styles from './styles.module.css'
+import clsx from 'clsx'
+import { hasValue } from '@misc/helpers'
+
+import type { FooterData } from '@graphql/menus'
+
 import { Button } from '@components/atoms/Button/Component'
 import * as Icons from '@components/atoms/Icons/Component'
 import { IconMapper } from '@components/atoms/Icons/Component'
-import { FooterData } from '@graphql/menus'
-import clsx from 'clsx'
-import { hasValue } from '@misc/helpers'
 
 interface FooterProps {
   footer: FooterData

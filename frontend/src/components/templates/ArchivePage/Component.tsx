@@ -1,10 +1,11 @@
 import React from 'react'
 import styles from './styles.module.css'
+import { useTranslation } from 'next-i18next'
+
+import type { ArchiveData } from '@graphql/content-types/basic-page/archive'
 
 import ArchiveTable from '@components/organisms/ArchiveTable/Component'
-import { ArchiveData } from '@graphql/content-types/basic-page/archive'
 import { Button } from '@components/atoms/Button/Component'
-import { useTranslation } from 'next-i18next'
 
 interface ArchivePageProps {
   archiveData: ArchiveData

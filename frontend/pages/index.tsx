@@ -1,9 +1,14 @@
+import { useEffect } from 'react'
 import { initializeApollo } from '../src/lib/apolloClient'
 import { ALL_PROJECTS_QUERY } from '../src/graphql/all_projects'
 import { ApolloError } from '@apollo/client'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import home from '@content/home.json'
 import siteMenus from '@content/siteMenus.json'
+
+import type { HomeData } from '@graphql/content-types/basic-page/home'
+import type { GlobalPageProps } from './_app'
+import type { GetStaticProps } from 'next'
 
 import MainContainer from '@components/atoms/MainContainer/Component'
 import Header from '@components/organisms/Header/Component'
@@ -12,11 +17,7 @@ import Experience from '@components/organisms/Experience/Component'
 import Featured from '@components/organisms/Featured/Component'
 import Contact from '@components/organisms/Contact/Component'
 import Projects from '@components/organisms/Projects/Component'
-import { HomeData } from '@graphql/content-types/basic-page/home'
-import { GlobalPageProps } from './_app'
 import Metatags from '@components/molecules/Metatags/Component'
-import { useEffect } from 'react'
-import { GetStaticProps } from 'next'
 
 interface Props extends GlobalPageProps {
   basicPage: HomeData

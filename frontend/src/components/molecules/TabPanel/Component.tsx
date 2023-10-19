@@ -1,8 +1,10 @@
 import React from 'react'
 import styles from './styles.module.css'
-import { Button } from '@components/atoms/Button/Component'
 import clsx from 'clsx'
-import { Job } from '@graphql/taxonomies/job/job'
+
+import type { Job } from '@graphql/taxonomies/job/job'
+
+import { Button } from '@components/atoms/Button/Component'
 
 interface TabPanelProps {
   data: Job[]

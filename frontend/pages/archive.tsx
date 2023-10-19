@@ -1,16 +1,17 @@
 import { initializeApollo } from '../src/lib/apolloClient'
 import { ALL_PROJECTS_QUERY } from '../src/graphql/all_projects'
 import { ApolloError } from '@apollo/client'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import archive from '@content/archive.json'
 import siteMenus from '@content/siteMenus.json'
 
+import type { GetStaticProps } from 'next'
+import type { GlobalPageProps } from './_app'
+import type { ArchiveData } from '@graphql/content-types/basic-page/archive'
+
 import MainContainer from '@components/atoms/MainContainer/Component'
 import ArchivePage from '@components/templates/ArchivePage/Component'
-import { GlobalPageProps } from './_app'
-import { ArchiveData } from '@graphql/content-types/basic-page/archive'
 import Metatags from '@components/molecules/Metatags/Component'
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
-import { GetStaticProps } from 'next'
 
 interface Props extends GlobalPageProps {
   basicPage: ArchiveData

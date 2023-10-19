@@ -1,9 +1,11 @@
 import React from 'react'
 import styles from './styles.module.css'
+
+import type { ProjectSection } from '@graphql/sections'
+
 import Section from '@components/atoms/Section/Component'
 import FeaturedListItem, { TextAlign } from '../../molecules/FeaturedListItem/Component'
 import NumberedHeading from '@components/atoms/NumberedHeading/Component'
-import { ProjectSection } from '@graphql/sections'
 
 interface FeaturedProps {
   featuredData: ProjectSection

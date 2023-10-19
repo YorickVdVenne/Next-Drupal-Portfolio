@@ -1,7 +1,9 @@
 import React from 'react'
 import styles from './styles.module.css'
+
+import type { HeaderSection } from '@graphql/sections'
+
 import { Button } from '@components/atoms/Button/Component'
-import { HeaderSection } from '@graphql/sections'
 
 interface HeaderProps {
   headerData: HeaderSection

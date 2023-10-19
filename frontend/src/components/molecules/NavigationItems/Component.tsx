@@ -1,16 +1,18 @@
 import React from 'react'
 import styles from './styles.module.css'
-import { Button } from '@components/atoms/Button/Component'
-import clsx from 'clsx'
-import { ActionButton, MenuItem } from '@graphql/menus'
 import Link from 'next/link'
 import { hasValue } from '@misc/helpers'
+import clsx from 'clsx'
+
+import type { ActionButton, MenuItem } from '@graphql/menus'
+
+import { Button } from '@components/atoms/Button/Component'
 
 interface NavigationItemsProps {
   links: MenuItem[]
   actionButton: ActionButton
   desktop?: boolean
-  setMenuOpen?: Function
+  setMenuOpen?: (menuOpen: boolean) => void
 }
 
 export default function NavigationItems (props: NavigationItemsProps): JSX.Element {
@@ -33,7 +35,7 @@ export default function NavigationItems (props: NavigationItemsProps): JSX.Eleme
                     top: section.offsetTop - 100,
                     behavior: 'smooth'
                   })
-                  if (setMenuOpen != null) setMenuOpen(false)
+                  if (hasValue(setMenuOpen)) setMenuOpen(false)
                 }
               }}
             >

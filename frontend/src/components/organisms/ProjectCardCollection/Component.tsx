@@ -1,7 +1,9 @@
 import React from 'react'
 import styles from './styles.module.css'
+
+import type { Project } from '@graphql/content-types/project/project'
+
 import ProjectCard from '@components/molecules/ProjectCard/Component'
-import { Project } from '@graphql/content-types/project/project'
 
 interface ProjectCardCollectionProps {
   projects: Project[]

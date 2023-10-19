@@ -1,15 +1,18 @@
 import '../theme/main.css'
-import type { AppProps } from 'next/app'
 import { ApolloProvider } from '@apollo/client'
 import { useApollo } from '../src/lib/apolloClient'
 import { appWithTranslation } from 'next-i18next'
+import { usePageVisibility } from '../misc/usePageVisibility'
+
+import type { AppProps } from 'next/app'
+import type { Menus } from '@graphql/menus'
+
 import Navigation from '@components/organisms/Navigation/Component'
 import Footer from '@components/organisms/Footer/Component'
 import SideElement, { Orientation } from '@components/molecules/SideElement/Component'
 import Favicons from '@components/molecules/Favicons/Component'
-import { usePageVisibility } from '../misc/usePageVisibility'
-import { Menus } from '@graphql/menus'
 import DefaultMetatags from '@components/molecules/DefaultMetatags/Component'
+
 
 export interface GlobalPageProps {
   menus: Menus

@@ -1,13 +1,15 @@
 import React, { useEffect, useState } from 'react'
 import styles from './styles.module.css'
-import { Logo } from '@components/atoms/Logo/Component'
 import clsx from 'clsx'
-import NavigationMenu from '@components/molecules/NavigationMenu/Component'
-import NavigationItems from '@components/molecules/NavigationItems/Component'
-import { MainMenu } from '@graphql/menus'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { useTranslation } from 'next-i18next'
+
+import type { MainMenu } from '@graphql/menus'
+
+import { Logo } from '@components/atoms/Logo/Component'
+import NavigationMenu from '@components/molecules/NavigationMenu/Component'
+import NavigationItems from '@components/molecules/NavigationItems/Component'
 
 interface NavigationProps {
   mainMenu: MainMenu

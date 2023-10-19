@@ -1,10 +1,12 @@
 import React from 'react'
 import styles from './styles.module.css'
+import { useTranslation } from 'next-i18next'
+
+import type { Project } from '@graphql/content-types/project/project'
+
 import Section, { Allign } from '@components/atoms/Section/Component'
 import { Button } from '@components/atoms/Button/Component'
 import ProjectCardCollection from '../ProjectCardCollection/Component'
-import { Project } from '@graphql/content-types/project/project'
-import { useTranslation } from 'next-i18next'
 
 interface ProjectsProps {
   projectData: Project[]

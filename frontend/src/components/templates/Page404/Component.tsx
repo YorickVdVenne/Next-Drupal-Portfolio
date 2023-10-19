@@ -1,11 +1,12 @@
 import React from 'react'
 import styles from './styles.module.css'
+import { useTranslation } from 'next-i18next'
+import Link from 'next/link'
+
 import MainContainer from '@components/atoms/MainContainer/Component'
 import Section, { Allign } from '@components/atoms/Section/Component'
 import { Button } from '@components/atoms/Button/Component'
 import Metatags from '@components/molecules/Metatags/Component'
-import { useTranslation } from 'next-i18next'
-import Link from 'next/link'
 
 export default function Page404 (): JSX.Element {
   const { t } = useTranslation('pageNotFound')

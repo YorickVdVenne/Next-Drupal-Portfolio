@@ -1,9 +1,9 @@
-import { Project } from './content-types/project/project'
-import { Button } from './generic'
-import { MainImage } from './media'
-import { Company } from './taxonomies/company/company'
-import { Job } from './taxonomies/job/job'
-import { Technologies } from './taxonomies/technologies/technology'
+import type { Project } from './content-types/project/project'
+import type { Button } from './generic'
+import type { MainImage } from './media'
+import type { Company } from './taxonomies/company/company'
+import type { Job } from './taxonomies/job/job'
+import type { Technologies } from './taxonomies/technologies/technology'
 
 export interface HeaderSection {
   introText: string

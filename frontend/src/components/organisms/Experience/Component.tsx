@@ -1,11 +1,13 @@
 import React, { useMemo, useState } from 'react'
 import styles from './styles.module.css'
+
+import type { ExperienceSection } from '@graphql/sections'
+
 import gridStyles from '@components/atoms/Grid/styles.module.css'
 import Section from '@components/atoms/Section/Component'
 import TabList from '@components/molecules/TabList/Component'
 import TabPanel from '@components/molecules/TabPanel/Component'
 import NumberedHeading from '@components/atoms/NumberedHeading/Component'
-import { ExperienceSection } from '@graphql/sections'
 
 interface ExperienceProps {
   experienceData: ExperienceSection

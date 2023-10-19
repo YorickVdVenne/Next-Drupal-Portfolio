@@ -1,10 +1,12 @@
 import React from 'react'
 import styles from './styles.module.css'
+import Image from 'next/image'
+
+import type { AboutSection } from '@graphql/sections'
+
 import gridStyles from '@components/atoms/Grid/styles.module.css'
 import Section from '@components/atoms/Section/Component'
-import Image from 'next/image'
 import NumberedHeading from '@components/atoms/NumberedHeading/Component'
-import { AboutSection } from '@graphql/sections'
 
 interface AboutProps {
   aboutData: AboutSection

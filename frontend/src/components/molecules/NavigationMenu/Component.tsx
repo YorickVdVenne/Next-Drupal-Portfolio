@@ -1,9 +1,11 @@
 import React, { useEffect, useRef, useState } from 'react'
 import styles from './styles.module.css'
-import NavigationItems from '../NavigationItems/Component'
 import { Helmet } from 'react-helmet'
 import { useOnClickOutside } from '@misc/useOnClickOutside'
-import { MainMenu } from '@graphql/menus'
+
+import type { MainMenu } from '@graphql/menus'
+
+import NavigationItems from '../NavigationItems/Component'
 
 interface NavigationMenuProps {
   menu: MainMenu
@@ -12,7 +14,7 @@ interface NavigationMenuProps {
 export default function NavigationMenu (props: NavigationMenuProps): JSX.Element {
   const [menuOpen, setMenuOpen] = useState(false)
 
-  const hamBoxStyles: { [key: string]: string } = {
+  const hamBoxStyles: Record<string, string> = {
     '--transition-delay': `${menuOpen ? '0.12s' : '0s'}`,
     '--transform-rotation': `${menuOpen ? '225deg' : '0deg'}`,
     '--transition-timing-function': `${menuOpen ? '0.215, 0.61, 0.355, 1' : '0.55, 0.055, 0.675, 0.19'}`,
@@ -28,7 +30,7 @@ export default function NavigationMenu (props: NavigationMenuProps): JSX.Element
     '--inner-after-transition': `${menuOpen ? 'var(--ham-after-active)' : 'var(--ham-after)'}`
   }
 
-  const asideStyles: { [key: string]: string } = {
+  const asideStyles: Record<string, string> = {
     '--aside-transform': `${menuOpen ? '0' : '100'}vw`,
     '--aside-visibility': `${menuOpen ? 'visible' : 'hidden'}`
   }
@@ -56,7 +58,9 @@ export default function NavigationMenu (props: NavigationMenuProps): JSX.Element
   }, [])
 
   const wrapperRef = useRef(null)
-  useOnClickOutside(wrapperRef, () => setMenuOpen(false))
+  useOnClickOutside(wrapperRef, () => {
+    setMenuOpen(false)
+  })
 
   return (
     <div className={styles.menu}>
@@ -65,7 +69,7 @@ export default function NavigationMenu (props: NavigationMenuProps): JSX.Element
       </Helmet>
 
       <div ref={wrapperRef}>
-        <button onClick={() => setMenuOpen(!menuOpen)} className={styles.hamburgerButton}>
+        <button onClick={() => {setMenuOpen(!menuOpen)}} className={styles.hamburgerButton}>
           <div className={styles.hamBox}>
             <div className={styles.hamBoxInner} style={hamBoxStyles} />
           </div>

@@ -1,10 +1,12 @@
 import React from 'react'
 import styles from './styles.module.css'
+import { hasValue } from '@misc/helpers'
+
+import type { Technologies } from '@graphql/taxonomies/technologies/technology'
+import type { Project } from '@graphql/content-types/project/project'
+
 import Card from '@components/atoms/Card/Component'
 import { IconMapper } from '@components/atoms/Icons/Component'
-import { Technologies } from '@graphql/taxonomies/technologies/technology'
-import { Project } from '@graphql/content-types/project/project'
-import { hasValue } from '@misc/helpers'
 
 interface ProjectCardProps {
   project: Project
