@@ -4,10 +4,26 @@
     flex-direction: column;
     align-items: flex-start;
     min-height: 100vh;
-    height: 100vh;
     padding: 0;
     margin: 0 auto;
     max-width: 1000px;
+    height: auto;
+    padding-block-start: var(--nav-height);
+
+    @media (min-width: 1024px) and (min-height: 700px) {
+      height: 100vh;
+      padding-block-start: 0;
+    }
+
+    @media (min-height: 700px) and (max-width: 299px) {
+      height: 100vh;
+      padding-block-start: 0;
+    }
+
+    @media (min-height: 650px) and (min-width: 300px) and (max-width: 1023px) {
+      height: 100vh;
+      padding-block-start: 0;
+    }
 }
 
 .h1 {

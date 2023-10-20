@@ -116,16 +116,16 @@
     margin-inline-start: -1rem;
     color: var(--color-lightest-grey);
 
+    &.projectLinksLeft {
+        justify-content: flex-start;
+        margin-inline-start: -1rem;
+    }
+
     @media (min-width: 768px) {
         justify-content: flex-end;
         margin-inline-end: -1rem;
         margin-inline-start: 0;
     }
-}
-
-.projectLinksLeft {
-    justify-content: flex-start;
-    margin-inline-start: -1rem;
 }
 
 .link {
