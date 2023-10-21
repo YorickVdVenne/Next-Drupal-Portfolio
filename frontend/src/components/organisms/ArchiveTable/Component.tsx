@@ -7,6 +7,7 @@ import { hasValue } from '@misc/helpers'
 import type { Project } from '@graphql/content-types/project/project'
 
 import { IconMapper } from '@components/atoms/Icons/Component'
+import Link from 'next/link'
 
 interface ArchiveTableProps {
   content: Project[]
@@ -33,9 +34,13 @@ export default function ArchiveTable (props: ArchiveTableProps): JSX.Element {
             <td className={styles.year}>
               {item.year}
             </td>
-            <td className={styles.title}>
-              {item.title}
-            </td>
+                     
+              <td className={styles.title}>
+                <Link href={`/projects/${item.id}`}>   
+                  {item.title}
+                </Link>
+              </td>
+            
             <td className={clsx(styles.company, styles.hideOnMobile)}>
               {item.madeAt}
             </td>
