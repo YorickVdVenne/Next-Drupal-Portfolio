@@ -15,7 +15,7 @@ import Favicons from '@components/molecules/Favicons/Component'
 import DefaultMetatags from '@components/molecules/DefaultMetatags/Component'
 
 export interface GlobalPageProps {
-  menus: Menus
+  menus?: Menus
   initialApolloState: any
 }
 
@@ -34,14 +34,14 @@ function App (props: Props): JSX.Element {
       <DefaultMetatags />
       <Favicons />
       <ApolloProvider client={apolloClient}>
-        <Navigation mainMenu={props.pageProps.menus.mainMenu} />
-        <SideElement orientation={Orientation.left} content={props.pageProps.menus.sideElement.socials} />
-        <SideElement orientation={Orientation.right} content={props.pageProps.menus.sideElement.email} />
+        <Navigation mainMenu={props.pageProps.menus?.mainMenu} />
+        <SideElement orientation={Orientation.left} content={props.pageProps.menus?.sideElement.socials} />
+        <SideElement orientation={Orientation.right} content={props.pageProps.menus?.sideElement.email} />
         <div className='stack'>
           <div className='content'>
             <props.Component {...props.pageProps} />
           </div>
-          <Footer footer={props.pageProps.menus.footer} />
+          <Footer footer={props.pageProps.menus?.footer} />
         </div>
       </ApolloProvider>
     </>

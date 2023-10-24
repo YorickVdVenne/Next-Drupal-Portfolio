@@ -10,7 +10,7 @@ import * as Icons from '@components/atoms/Icons/Component'
 import { IconMapper } from '@components/atoms/Icons/Component'
 
 interface FooterProps {
-  footer: FooterData
+  footer?: FooterData
 }
 
 export default function Footer (props: FooterProps): JSX.Element {
@@ -20,30 +20,35 @@ export default function Footer (props: FooterProps): JSX.Element {
     <footer className={styles.footer}>
       <div className={styles.socials}>
         <ul>
-          {footer.socials.map((social, key) => (
-            <li key={key}>
-              <a
-                className={styles.icon}
-                href={social.url}
-                target='_blank'
-                title={social.label}
-                rel='noreferrer'
-              >
-                {IconMapper(social.icon)}
-              </a>
-            </li>
-          ))}
+          {hasValue(footer) 
+            ? footer.socials.map((social, key) => (
+              <li key={key}>
+                <a
+                  className={styles.icon}
+                  href={social.url}
+                  target='_blank'
+                  title={social.label}
+                  rel='noreferrer'
+                >
+                  {IconMapper(social.icon)}
+                </a>
+              </li>
+            ))
+            : ''}
         </ul>
       </div>
       <div className={styles.credits}>
-        <Button as='link' className={styles.link} variant='secondary' href={footer.actionButton.url} target='_blank'>
-          {footer.actionButton.label}
-          {hasValue(footer.actionButton.icon)
-            ? (
-              <span className={clsx(styles.icon, styles.hideOnMobile)}>{Icons.IconMapper(footer.actionButton.icon)}</span>
-              )
-            : null}
-        </Button>
+        {hasValue(footer) 
+        ? <Button as='link' className={styles.link} variant='secondary' href={footer.actionButton.url} target='_blank'>
+            {footer.actionButton.label}
+            {hasValue(footer.actionButton.icon)
+              ? (
+                <span className={clsx(styles.icon, styles.hideOnMobile)}>{Icons.IconMapper(footer.actionButton.icon)}</span>
+                )
+              : null}
+          </Button>
+        : ''}
+        
       </div>
     </footer>
   )

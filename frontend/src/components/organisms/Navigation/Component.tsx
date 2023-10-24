@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useMemo, useState } from 'react'
 import styles from './styles.module.css'
 import clsx from 'clsx'
 import Link from 'next/link'
@@ -12,7 +12,7 @@ import NavigationMenu from '@components/molecules/NavigationMenu/Component'
 import NavigationItems from '@components/molecules/NavigationItems/Component'
 
 interface NavigationProps {
-  mainMenu: MainMenu
+  mainMenu?: MainMenu
 }
 
 export default function Navigation (props: NavigationProps): JSX.Element {
@@ -20,6 +20,10 @@ export default function Navigation (props: NavigationProps): JSX.Element {
   const { t } = useTranslation('menu')
   const [scrolled, setScrolled] = useState(false)
   const [scrollTop, setScrollTop] = useState(true)
+  
+  const isProjectPage = useMemo(() => {
+    return router.pathname === '/projects/[slug]'; // Replace with your actual pathname
+  }, [router.pathname]);
 
   useEffect(() => {
     let lastScrollY = 0
@@ -50,7 +54,8 @@ export default function Navigation (props: NavigationProps): JSX.Element {
       id='navbar' className={clsx(styles.nav, {
         [styles.hidden]: scrolled,
         [styles.visible]: !scrolled,
-        [styles.small]: !scrolled && !scrollTop
+        [styles.small]: !scrolled && !scrollTop,
+        [styles.transparent]: isProjectPage
       })}
     >
       <div className={styles.innerNav}>
@@ -63,10 +68,13 @@ export default function Navigation (props: NavigationProps): JSX.Element {
           }}
         >
           <Logo />
-          <span className={styles.logoText}>{t('logoText')}</span>
+          <span className={clsx(styles.logoText, {[styles.hide]: isProjectPage})}>{t('logoText')}</span>
         </Link>
-        <NavigationItems links={props.mainMenu.links} actionButton={props.mainMenu.actionButton} desktop />
-        <NavigationMenu menu={props.mainMenu} />
+        {!isProjectPage 
+          ? <NavigationItems links={props.mainMenu?.links} actionButton={props.mainMenu?.actionButton} desktop />
+          : ''
+        }
+        <NavigationMenu menu={props.mainMenu} show={isProjectPage} />
       </div>
     </nav>
   )

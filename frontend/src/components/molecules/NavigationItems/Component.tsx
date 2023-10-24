@@ -9,8 +9,8 @@ import type { ActionButton, MenuItem } from '@graphql/menus'
 import { Button } from '@components/atoms/Button/Component'
 
 interface NavigationItemsProps {
-  links: MenuItem[]
-  actionButton: ActionButton
+  links?: MenuItem[]
+  actionButton?: ActionButton
   desktop?: boolean
   setMenuOpen?: (menuOpen: boolean) => void
 }
@@ -21,7 +21,7 @@ export default function NavigationItems (props: NavigationItemsProps): JSX.Eleme
   return (
     <div className={clsx(styles.navItems, { [styles.desktop]: desktop })}>
       <ol className={clsx({ [styles.desktop]: desktop })}>
-        {links.map((link, key) => (
+        {hasValue(links) ? links.map((link, key) => (
           <li key={key} className={clsx({ [styles.desktop]: desktop })}>
             <Link
               href={link.url}
@@ -42,17 +42,19 @@ export default function NavigationItems (props: NavigationItemsProps): JSX.Eleme
               {link.label}
             </Link>
           </li>
-        ))}
+        )): ''}
       </ol>
-      <Link href={actionButton.url}>
-        <Button
-          className={clsx(styles.button, { [styles.desktop]: desktop })}
-          as='button'
-          size={!hasValue(desktop) ? 'large' : undefined}
-        >
-          {actionButton.label}
-        </Button>
-      </Link>
+      {hasValue(actionButton) ? (
+        <Link href={actionButton.url}>
+          <Button
+            className={clsx(styles.button, { [styles.desktop]: desktop })}
+            as='button'
+            size={!hasValue(desktop) ? 'large' : undefined}
+          >
+            {actionButton.label}
+          </Button>
+        </Link>
+      ): ''}
     </div>
   )
 };

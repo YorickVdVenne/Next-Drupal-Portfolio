@@ -5,6 +5,7 @@ import clsx from 'clsx'
 import type { EmailItem, SocialItem } from '@graphql/menus'
 
 import { IconMapper } from '@components/atoms/Icons/Component'
+import { hasValue } from '@misc/helpers'
 
 export enum Orientation {
   left = 'left',
@@ -13,7 +14,7 @@ export enum Orientation {
 
 interface SideElementProps {
   orientation: Orientation
-  content: SocialItem[] | EmailItem
+  content?: SocialItem[] | EmailItem
 }
 
 export default function SideElement (props: SideElementProps): JSX.Element {
@@ -44,11 +45,12 @@ export default function SideElement (props: SideElementProps): JSX.Element {
             ))}
           </ul>
           )
-        : (
-          <div className={styles.mail}>
-            <a href={content.url}>{content.email}</a>
-          </div>
-          )}
+        : hasValue(content) 
+          ? (
+            <div className={styles.mail}>
+              <a href={content.url}>{content.email}</a>
+            </div>
+          ): ''}
     </div>
   )
 }
