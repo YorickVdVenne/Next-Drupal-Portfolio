@@ -46,7 +46,8 @@ export default function ArchiveTable (props: ArchiveTableProps): JSX.Element {
             </td>
             <td className={clsx(styles.tech, styles.hideOnMobile)}>
               {item.technologies.map((tech, key) => (
-                <span key={key}>{tech.name}
+                <span key={key}>
+                  {tech.name}
                   <span className={clsx(styles.separator, {
                     [styles.lastChild]: key === item.technologies.length - 1
                   })}

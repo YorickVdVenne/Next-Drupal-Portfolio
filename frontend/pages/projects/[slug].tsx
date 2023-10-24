@@ -21,7 +21,6 @@ interface Props extends GlobalPageProps {
 
 export default function Project (props: Props): JSX.Element {
   const router = useRouter()
-   console.log(props.project)
 
   if (router.isFallback) {
     return <p>LOADING!</p>

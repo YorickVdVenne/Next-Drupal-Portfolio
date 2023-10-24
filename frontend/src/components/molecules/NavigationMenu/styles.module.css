@@ -1,12 +1,6 @@
 .menu {
     display: block;
 
-    &.show {
-        @media (min-width: 768px) {
-            display: block;
-        }
-    }
-
     @media (min-width: 768px) {
         display: none;
     }
@@ -96,12 +90,6 @@
     transition: var(--transition);
     transform: translateX(var(--aside-transform));
     visibility: var(--aside-visibility);
-
-    &.show {
-        @media (min-width: 768px) {
-            display: flex;
-        }
-    }
     
     @media (min-width: 768px) {
         display: none;

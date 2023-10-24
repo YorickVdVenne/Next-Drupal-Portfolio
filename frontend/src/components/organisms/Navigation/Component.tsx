@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import styles from './styles.module.css'
 import clsx from 'clsx'
 import Link from 'next/link'
@@ -21,10 +21,6 @@ export default function Navigation (props: NavigationProps): JSX.Element {
   const [scrolled, setScrolled] = useState(false)
   const [scrollTop, setScrollTop] = useState(true)
   
-  const isProjectPage = useMemo(() => {
-    return router.pathname === '/projects/[slug]'; // Replace with your actual pathname
-  }, [router.pathname]);
-
   useEffect(() => {
     let lastScrollY = 0
 
@@ -54,8 +50,7 @@ export default function Navigation (props: NavigationProps): JSX.Element {
       id='navbar' className={clsx(styles.nav, {
         [styles.hidden]: scrolled,
         [styles.visible]: !scrolled,
-        [styles.small]: !scrolled && !scrollTop,
-        [styles.transparent]: isProjectPage
+        [styles.small]: !scrolled && !scrollTop
       })}
     >
       <div className={styles.innerNav}>
@@ -68,13 +63,10 @@ export default function Navigation (props: NavigationProps): JSX.Element {
           }}
         >
           <Logo />
-          <span className={clsx(styles.logoText, {[styles.hide]: isProjectPage})}>{t('logoText')}</span>
+          <span className={styles.logoText}>{t('logoText')}</span>
         </Link>
-        {!isProjectPage 
-          ? <NavigationItems links={props.mainMenu?.links} actionButton={props.mainMenu?.actionButton} desktop />
-          : ''
-        }
-        <NavigationMenu menu={props.mainMenu} show={isProjectPage} />
+          <NavigationItems links={props.mainMenu?.links} actionButton={props.mainMenu?.actionButton} desktop />
+        <NavigationMenu menu={props.mainMenu} />
       </div>
     </nav>
   )

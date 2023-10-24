@@ -10,7 +10,6 @@ import NavigationItems from '../NavigationItems/Component'
 
 interface NavigationMenuProps {
   menu?: MainMenu
-  show?: boolean
 }
 
 export default function NavigationMenu (props: NavigationMenuProps): JSX.Element {
@@ -65,7 +64,7 @@ export default function NavigationMenu (props: NavigationMenuProps): JSX.Element
   })
 
   return (
-    <div className={clsx(styles.menu, {[styles.show]: props.show})}>
+    <div className={styles.menu}>
       <Helmet>
         <html className={menuOpen ? 'blur' : ''} />
       </Helmet>
@@ -76,7 +75,7 @@ export default function NavigationMenu (props: NavigationMenuProps): JSX.Element
             <div className={styles.hamBoxInner} style={hamBoxStyles} />
           </div>
         </button>
-        <aside className={clsx(styles.aside, {[styles.show]: props.show})} aria-hidden={!menuOpen} tabIndex={menuOpen ? 1 : -1} style={asideStyles}>
+        <aside className={styles.aside} aria-hidden={!menuOpen} tabIndex={menuOpen ? 1 : -1} style={asideStyles}>
           <NavigationItems links={props.menu?.links} actionButton={props.menu?.actionButton} setMenuOpen={setMenuOpen} />
         </aside>
       </div>

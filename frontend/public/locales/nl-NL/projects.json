@@ -9,5 +9,11 @@
             "link": "/archive"
         },
         "message": "Project detail pages are still being built."
+    },
+    "project": {
+        "year": "Year",
+        "client": "Client",
+        "madeAt": "Made at",
+        "technologies": "Technologies"
     }
 }

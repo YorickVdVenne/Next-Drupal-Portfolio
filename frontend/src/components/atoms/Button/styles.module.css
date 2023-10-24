@@ -23,6 +23,15 @@
     cursor: pointer;
 }
 
+.buttonIcon {
+    &.buttonIcon svg {
+        width: 2rem;
+        height: 2rem;
+        transform: translateY(4px);
+        margin-inline-end: var(--spacing-1x);
+    }
+}
+
 .largeButton {
     padding-block: 2rem;
     padding-inline: 2.8rem;
