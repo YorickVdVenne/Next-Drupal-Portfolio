@@ -1,0 +1,53 @@
+.slider {
+  --swiper-pagination-color: var(--color-green);
+  --swiper-pagination-bullet-inactive-color: var(--color-navy);
+  --swiper-pagination-bullet-inactive-opacity: 1;
+  --swiper-pagination-bullet-size: 1.2rem;
+  --swiper-pagination-bullet-horizontal-gap: 6px;
+}
+
+.nextButton,
+.prevButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3rem;
+  height: 3rem;
+  padding: 0;
+  border: 0;
+  z-index: 1;
+  cursor: pointer;
+  background-color: var(--color-navy);
+  border-radius: var(--border-radius) 0 0 var(--border-radius);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (min-width: 768px) {
+    width: 4rem;
+    height: 4rem;
+  }
+}
+
+.nextButton {
+  right: 0;
+  transform: rotate(0deg);
+}
+
+.prevButton {
+  left: 0;
+  transform: rotate(180deg);
+}
+
+.nextButton svg,
+.prevButton svg {
+  fill: var(--color-green);
+  width: 2.4rem;
+  height: 2.4rem;
+
+  @media (min-width: 768px) {
+    width: 3.6rem;
+    height: 3.6rem;
+  
+  }
+}

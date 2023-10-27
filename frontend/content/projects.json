@@ -33,10 +33,24 @@
               "url": "/images/hpl-main-image.png",
               "alt": "High Profile Locaties"
             },
+            "screenshots": [
+              {
+                "url": "/images/hpl-main-image.png",
+                "alt": "High Profile Locaties"
+              },
+              {
+                "url": "/images/hpl-main-image.png",
+                "alt": "High Profile Locaties"
+              },
+              {
+                "url": "/images/hpl-main-image.png",
+                "alt": "High Profile Locaties"
+              }
+            ],
             "year": "2023",
             "madeAt": "iO",
             "madeFor": "HPL",
-            "description": "Designed and developed a mobile-responsive website...",
+            "description": "The client High Profile Locaties (HPL) wanted to build a website where venue holders could offer there venue to be used for various occasions. I was later envolved in the development proces to work on the portal, where venue holders can create and manage their venues. I've worked on this project as front-end developer a few months and delivered all kinds of features, read more to find out.",
             "featured": true
         },
         {

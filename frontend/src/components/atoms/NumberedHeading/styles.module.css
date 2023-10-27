@@ -63,3 +63,7 @@
 .mono::after {
     display: none;
 }
+
+.hideNumber::before {
+    display: none;
+}

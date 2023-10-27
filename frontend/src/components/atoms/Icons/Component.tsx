@@ -49,6 +49,14 @@ export const Miro = dynamic<{ className?: string }>(
   }
 )
 
+export const Arrow = dynamic<{ className?: string }>(
+  async () => await import('@icons/arrow.svg'),
+  {
+    loading: () => <span />,
+    ssr: false
+  }
+)
+
 export function IconMapper (icon: string): React.ReactElement | null {
   switch (icon) {
     case 'codepen':

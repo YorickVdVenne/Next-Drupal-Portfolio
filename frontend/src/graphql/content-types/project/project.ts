@@ -1,4 +1,4 @@
-import type { MainImage } from '@graphql/media'
+import type { MediaImage } from '@graphql/media'
 import type { Technologies } from '@graphql/taxonomies/technologies/technology'
 
 export interface Project {
@@ -8,7 +8,8 @@ export interface Project {
   technologies: Technologies[]
   githubLink?: string
   externalLink?: string
-  mainImage: MainImage
+  mainImage: MediaImage
+  screenshots?: MediaImage[]
   year: string
   madeAt?: string
   madeFor?: string
