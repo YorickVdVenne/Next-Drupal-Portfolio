@@ -23,8 +23,7 @@ export default function ArchivePage (props: ArchivePageProps): JSX.Element {
       <div className={styles.tableContainer}>
         <ArchiveTable content={props.archiveData.projects} />
       </div>
-      <p className={styles.message}>{t('message')}</p>
-      <Button as='button' onClick={() => { window.location.href = t('contactButton.link') }} size='large'>{t('contactButton.label')}</Button>
+      <Button className={styles.contactButton} as='button' onClick={() => { window.location.href = t('contactButton.link') }} size='large'>{t('contactButton.label')}</Button>
     </>
   )
 };

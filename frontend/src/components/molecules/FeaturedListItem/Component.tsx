@@ -4,12 +4,14 @@ import clsx from 'clsx'
 import Image from 'next/image'
 import { useTranslation } from 'next-i18next'
 import { hasValue } from '@misc/helpers'
+import Link from 'next/link'
 
 import type { ProjectDetail } from '@graphql/content-types/project/project'
 
 import gridStyles from '@components/atoms/Grid/styles.module.css'
 import { IconMapper } from '@components/atoms/Icons/Component'
 import Card from '@components/atoms/Card/Component'
+import { Button } from '@components/atoms/Button/Component'
 
 export enum TextAlign {
   right = 'right',
@@ -22,14 +24,16 @@ interface FeaturedListItemProps {
 }
 
 export default function FeaturedListItem (props: FeaturedListItemProps): JSX.Element {
-  const { t } = useTranslation('projects')
+  const { t } = useTranslation(['projects', 'common'])
   const { item, textAlign } = props
 
   return (
     <li className={clsx(gridStyles.grid, styles.featuredItem)}>
       <div className={clsx(styles.projectContent, { [styles.contentLeft]: textAlign === TextAlign.left })}>
         <p className={styles.projectOverline}>{t('featuredProjects.overlineText')}</p>
-        <h4 className={styles.projectTitle}>{item.title}</h4>
+        <Link href={`/projects/${item.id}`}>
+          <h4 className={styles.projectTitle}>{item.title}</h4>
+        </Link>
         <Card hideOnMobile>{item.summary}</Card>
         <ul className={clsx(styles.projectTech, {
           [styles.techLeft]: textAlign === TextAlign.left
@@ -44,18 +48,24 @@ export default function FeaturedListItem (props: FeaturedListItemProps): JSX.Ele
             </li>
           ))}
         </ul>
-        <div className={clsx(styles.projectLinks, { [styles.projectLinksLeft]: textAlign === TextAlign.left })}>
-          {hasValue(item.externalLink)
-            ? <a className={styles.link} href={item.externalLink} target='__blank'>{IconMapper('external-link')}</a>
-            : null}
-          {hasValue(item.githubLink)
-            ? <a className={styles.link} href={item.githubLink} target='__blank'>{IconMapper('github')}</a>
-            : null}
-          {/* <Button as='button'>Read more</Button> */}
+        <div className={clsx(styles.itemActions, { [styles.itemActionsLeft]: textAlign === TextAlign.left })}>
+          <div className={clsx(styles.projectLinks, { [styles.projectLinksLeft]: textAlign === TextAlign.left })}>
+            {hasValue(item.externalLink) && 
+              <a className={styles.link} href={item.externalLink} target='__blank'>{IconMapper('external-link')}</a>
+            }
+            {hasValue(item.githubLink) && 
+              <a className={styles.link} href={item.githubLink} target='__blank'>{IconMapper('github')}</a>
+            }
+          </div>
+          <div className={clsx(styles.buttonWrapper, { [styles.buttonWrapperLeft]: textAlign === TextAlign.left })}>
+            <Link href={`/projects/${item.id}`}>
+              <Button className={styles.readMoreButton} as='button'>{t('button.readMore', { ns: 'common' })}</Button> 
+            </Link>
+          </div>
         </div>
       </div>
       <div className={clsx(styles.projectImage, { [styles.imageRight]: textAlign === TextAlign.left })}>
-        <a href={hasValue(item.externalLink) ? item.externalLink : '/'} target='__blank'>
+        <Link href={`/projects/${item.id}`}>
           <Image
             src={item.mainImage.url}
             alt={item.mainImage.alt}
@@ -63,7 +73,7 @@ export default function FeaturedListItem (props: FeaturedListItemProps): JSX.Ele
             width={1000}
             height={1000}
           />
-        </a>
+        </Link>
       </div>
     </li>
   )

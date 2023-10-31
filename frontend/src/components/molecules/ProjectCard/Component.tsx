@@ -7,6 +7,7 @@ import type { ProjectDetail } from '@graphql/content-types/project/project'
 
 import Card from '@components/atoms/Card/Component'
 import { IconMapper } from '@components/atoms/Icons/Component'
+import Link from 'next/link'
 
 interface ProjectCardProps {
   project: ProjectDetail
@@ -35,9 +36,9 @@ export default function ProjectCard (props: ProjectCardProps): JSX.Element {
               : null}
           </div>
         </div>
-        <h4 className={styles.title}>
-          <a className={styles.titleLink} href={hasValue(project.externalLink) ? project.externalLink : '/'} target='_blank' rel='noreferrer'>{project.title}</a>
-        </h4>
+        <Link href={`/projects/${project.id}`}>
+          <h4 className={styles.title}>{project.title}</h4>
+        </Link>
         <p className={styles.description}>{project.summary}</p>
       </div>
       <div className={styles.bottomWrapper}>

@@ -10,6 +10,6 @@
     }
 }
 
-.message {
-    margin-block-end: var(--spacing-6x);
+.contactButton {
+    margin-block-start: var(--spacing-6x);
 }

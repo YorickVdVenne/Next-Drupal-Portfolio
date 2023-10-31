@@ -62,14 +62,11 @@
 }
 
 .title {
+    position: static;
     margin-block-end: var(--spacing-2x);
 }
 
-.titleLink {
-    position: static;
-}
-
-.titleLink::before {
+.title::before {
     content: "";
     display: block;
     position: absolute;
@@ -80,7 +77,7 @@
     left: 0;
 }
 
-.titleLink:hover, .titleLink:focus {
+.title:hover, .title:focus {
     color: var(--color-green);
 }
 

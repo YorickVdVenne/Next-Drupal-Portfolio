@@ -1,4 +1,7 @@
 {
     "documentTitle": "Yorick's Portfolio",
-    "hiddenTitle": "Come back!"
+    "hiddenTitle": "Come back!",
+    "button": {
+        "readMore": "Read More"
+    }
 }

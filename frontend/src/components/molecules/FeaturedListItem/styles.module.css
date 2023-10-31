@@ -106,25 +106,38 @@
     margin-inline-end: var(--spacing-5x);
 }
 
+.itemActions {
+    display: flex;
+    justify-content: space-between;
+    margin-block-start: var(--spacing-2x);
+
+    &.projectLinksLeft {
+        margin-inline-start: -1rem;
+    }
+
+    @media (min-width: 768px) {
+        flex-direction: column;
+        justify-content: flex-end;
+        gap: var(--spacing-2x);
+    }
+}
+
 .projectLinks {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
     position: relative;
     z-index: 3;
-    margin-block-start: var(--spacing-2x);
     margin-inline-start: -1rem;
     color: var(--color-lightest-grey);
 
     &.projectLinksLeft {
         justify-content: flex-start;
-        margin-inline-start: -1rem;
     }
 
     @media (min-width: 768px) {
-        justify-content: flex-end;
         margin-inline-end: -1rem;
         margin-inline-start: 0;
+        justify-content: flex-end;
     }
 }
 
@@ -144,6 +157,27 @@
 
 .link:hover, .link:focus {
     color: var(--color-green);
+}
+
+.buttonWrapper {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+
+    &.buttonWrapperLeft {
+        justify-content: flex-end;
+
+        @media (min-width: 768px) {
+            justify-content: flex-start;
+        }
+    }
+}
+
+.readMoreButton {
+    display: flex;
+    z-index: 2;
+    width: fit-content;
+    justify-content: flex-end;
 }
 
 .projectContent, .projectImage {
@@ -222,6 +256,7 @@
     @media (min-width: 768px) {
       filter: grayscale(100%) contrast(1) brightness(90%);
       position: relative;
+      max-height: 500px;
     }
 }
 

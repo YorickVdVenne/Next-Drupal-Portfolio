@@ -21,7 +21,6 @@ export default function Projects (props: ProjectsProps): JSX.Element {
       <Button as='link' href={t('otherProjects.archiveButton.link')} className={styles.link}>{t('otherProjects.archiveButton.label')}</Button>
       <ProjectCardCollection projects={props.projectData} />
       {/* <Button as='button' size='large' className={styles.button}>Show More</Button> */}
-      <p className={styles.message}>{t('otherProjects.message')}</p>
     </Section>
   )
 }

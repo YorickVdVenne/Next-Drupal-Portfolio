@@ -31,4 +31,8 @@
 
 .hideOnMobile:hover {
     box-shadow: none;
+
+    @media (min-width: 768px) {
+        box-shadow: 0 20px 30px -15px var(--color-navy-shadow);
+    }
 }

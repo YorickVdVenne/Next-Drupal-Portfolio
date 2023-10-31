@@ -33,7 +33,9 @@ export default function ArchiveTable (props: ArchiveTableProps): JSX.Element {
         {content.map((item, key) => (
           <tr key={key}>
             <td className={styles.year}>
-              {item.year}
+              <Link href={`/projects/${item.id}`}>
+                {item.year}
+              </Link>
             </td>
 
             <td className={styles.title}>
