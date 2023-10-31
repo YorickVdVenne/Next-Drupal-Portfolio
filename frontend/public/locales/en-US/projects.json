@@ -15,5 +15,9 @@
         "client": "Client",
         "madeAt": "Made at",
         "technologies": "Technologies"
+    },
+    "button": {
+        "viewWebsite": "View the Website",
+        "viewCode": "View the Code"
     }
 }

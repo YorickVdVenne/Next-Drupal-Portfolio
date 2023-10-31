@@ -60,12 +60,13 @@ export default function ProjectDetailPage (props: ProjectDetailPageProps): JSX.E
           </tbody>
         </table>
         <div className={styles.description}>
-          <p>
-            {project.description}
-          </p>
-          {hasValue(project.externalLink)
-            ? <Button as='link' href={project.externalLink} icon='external-link'>View the website</Button>
-            : ''}
+          <p dangerouslySetInnerHTML={{ __html: project.description }} />
+          <div className={styles.externalLinks}>
+            {hasValue(project.externalLink) &&
+              <Button as='link' href={project.externalLink} icon='external-link'>{t('button.viewWebsite')}</Button>}
+            {hasValue(project.githubLink) &&
+              <Button as='link' href={project.githubLink} icon='github'>{t('button.viewCode')}</Button>}
+          </div>
         </div>
         {hasValue(project.screenshots) && (
           <div className={styles.screenshotsContainer}>

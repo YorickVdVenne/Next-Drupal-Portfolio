@@ -113,16 +113,18 @@
 .description {
     grid-column: 1 / -1;
 
+    &.description p {
+        margin-block-end: var(--spacing-2x);
+    }
+
     @media (min-width: 768px) {
         grid-column: 6 / -1;
     }
 }
 
-.externalLink svg {
-    width: 2rem;
-    height: 2rem;
-    margin-inline-end: var(--spacing-2x);
-
+.externalLinks {
+    display: flex;
+    gap: var(--spacing-6x);
 }
 
 .screenshotsContainer {

@@ -50,16 +50,14 @@ export default function FeaturedListItem (props: FeaturedListItemProps): JSX.Ele
         </ul>
         <div className={clsx(styles.itemActions, { [styles.itemActionsLeft]: textAlign === TextAlign.left })}>
           <div className={clsx(styles.projectLinks, { [styles.projectLinksLeft]: textAlign === TextAlign.left })}>
-            {hasValue(item.externalLink) && 
-              <a className={styles.link} href={item.externalLink} target='__blank'>{IconMapper('external-link')}</a>
-            }
-            {hasValue(item.githubLink) && 
-              <a className={styles.link} href={item.githubLink} target='__blank'>{IconMapper('github')}</a>
-            }
+            {hasValue(item.externalLink) &&
+              <a className={styles.link} href={item.externalLink} target='__blank'>{IconMapper('external-link')}</a>}
+            {hasValue(item.githubLink) &&
+              <a className={styles.link} href={item.githubLink} target='__blank'>{IconMapper('github')}</a>}
           </div>
           <div className={clsx(styles.buttonWrapper, { [styles.buttonWrapperLeft]: textAlign === TextAlign.left })}>
             <Link href={`/projects/${item.id}`}>
-              <Button className={styles.readMoreButton} as='button'>{t('button.readMore', { ns: 'common' })}</Button> 
+              <Button className={styles.readMoreButton} as='button'>{t('button.readMore', { ns: 'common' })}</Button>
             </Link>
           </div>
         </div>

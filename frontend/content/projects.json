@@ -30,30 +30,50 @@
             "githubLink": "",
             "externalLink": "https://www.locaties.nl/",
             "mainImage": {
-              "url": "/images/hpl-main-image.png",
+              "url": "/images/main/hpl-main-image.png",
               "alt": "High Profile Locaties"
             },
             "screenshots": [
               {
-                "url": "/images/hpl-main-image.png",
-                "alt": "High Profile Locaties 1",
-                "description": "Screenshot number one is about this"
+                "url": "/images/screenshots/hpl/venue-data-page.png",
+                "alt": "Venue manage page",
+                "description": "This screenshot displays the venue manage page, where the most important information is manageable. You can see the anchor menu (below the title) which I've made and the little information button next to the title. Also clearly visible is the chat service in the right corner which I've implemented. And then the overal display of the data inside the card with the collapsible description which I've worked on."
               },
               {
-                "url": "/images/hpl-main-image.png",
-                "alt": "High Profile Locaties 2",
-                "description": "Screenshot number two is about this"
+                "url": "/images/screenshots/hpl/indoor-spaces-overview-page.png",
+                "alt": "Indoor spaces overview page",
+                "description": "This is the indoor spaces overview page where the venueholder can create new spaces for it's venue. I've created this list display of spaces, with the create/edit dialog."
               },
               {
-                "url": "/images/hpl-main-image.png",
-                "alt": "High Profile Locaties 3",
-                "description": "Screenshot number three is about this"
+                "url": "/images/screenshots/hpl/facilities-with-anchor-menu.png",
+                "alt": "Facilities page with anchor menu",
+                "description": "With this screenshot you can now see the anchor menu in action; it stays sticky under the black main navigation. Apart from that I created this page of facilities; all the messages, dialogs, forms, buttons and styling."
+              },
+              {
+                "url": "/images/screenshots/hpl/tutorial-dialog-1.png",
+                "alt": "Tutorial dialog step 1",
+                "description": "This tutorial dialog is the one created for venues, so it will only show when it's the first time a user creates a venue or when the users hits the help button. To know it's the first time opening the venue a variable is stored in the local storage of the users browser."
+              },
+              {
+                "url": "/images/screenshots/hpl/tutorial-dialog-2.png",
+                "alt": "Tutorial dialog step 2",
+                "description": "This is the next step within the venue tutorial, with an interactive image that changes automatically."
+              },
+              {
+                "url": "/images/screenshots/hpl/tutorial-dialog-3.png",
+                "alt": "Tutotrial dialog step 3",
+                "description": "For the last step, publishing is important so I added the sticky progress block (which is normally seen in the left corner) inside the dialog and made this interactive (not just a static image)."
+              },
+              {
+                "url": "/images/screenshots/hpl/progression-dialog.png",
+                "alt": "Progression dialog",
+                "description": "This shows the progression dialog that indicates how far the user is to publishing it's venue. If there is information missing it will show the percentage it needs to complete it. The edit buttons will then open the relavant edit dialog, which I remember was a pain because not all the data was always available on every page and the progress block was is visible on every page, so it needed the data from all the other forms."
               }
             ],
             "year": "2023",
             "madeAt": "iO",
             "madeFor": "HPL",
-            "description": "The client High Profile Locaties (HPL) wanted to build a website where venue holders could offer there venue to be used for various occasions. I was later envolved in the development proces to work on the portal, where venue holders can create and manage their venues. I've worked on this project as front-end developer a few months and delivered all kinds of features, read more to find out.",
+            "description": "<p>During my time working at iO I spent a lot of time working for a client named High Profile Locaties (HPL). Who wanted to create a platform where users can find venues for all sort of occasions, somewhat similar to Airbnb.</p><p>Mostly worked on the venueholder portal, the place where the venueholders can create and manage their venues. So as you can imagine, this was all about data; making sure the venueholders whould fill in all the necessary data, helping the user to display his venue as complete and professional as possible.</p><p>I've worked on a lot of different features, that sadly at the moment I did not document well enough to showcase all in screenshots. Features such as: overview pages for rooms and spaces, a lot of different forms, different dialogs (tutorial dialog, progress dialog, create/edit dialog), in page anchor menu, mobile navigation, rich text editor from tinymce, live chat integration and to top it all of an confetti animation using GSAP. Apart from these awesome features I helped out with a lot of bug fixing and quality assurance (QA). Unfortunately I have no longer access to the portal so I was only permitted to showcase the following screenshots bellow. They will hopefully give a glimpse of all the work I did for HPL.</p>",
             "nextProjectId": "5",
             "featured": true
         },
@@ -82,7 +102,7 @@
             "githubLink": "",
             "externalLink": "https://qr.avikofoodservice.com/",
             "mainImage": {
-              "url": "/images/aviko-qr-code-main-image.png",
+              "url": "/images/main/aviko-qr-code-main-image.png",
               "alt": "Aviko QR Code"
             },
             "year": "2022",
@@ -113,7 +133,7 @@
             "githubLink": "",
             "externalLink": "https://customize.verno.com/nl_NL/configure-frame?data=eyJmcmFtYWJsZU9iamVjdCI6InBvc3RlciJ9&step=framableObject",
             "mainImage": {
-              "url": "/images/verno-main-image.png",
+              "url": "/images/main/verno-main-image.png",
               "alt": "Verno Customized frames"
             },
             "year": "2021",
@@ -156,13 +176,35 @@
             "githubLink": "https://github.com/YorickVdVenne/Nextjs-Drupal-Portfolio",
             "externalLink": "/",
             "mainImage": {
-              "url": "/images/portfolio-main-image.png",
+              "url": "/images/main/portfolio-main-image.png",
               "alt": "Portfolio Website"
             },
+            "screenshots": [
+              {
+                "url": "/images/screenshots/portfolio/featured-projects.png",
+                "alt": "Featured Projects Layout",
+                "description": "To highlight some of my proudest work I built this featured project layout to alternatives the display from right to left with a nice image and a short summary."
+              },
+              {
+                "url": "/images/screenshots/portfolio/project-card-collection.png",
+                "alt": "Project Card Collection",
+                "description": "This showcases the nice card collection I built."
+              },
+              {
+                "url": "/images/screenshots/portfolio/archive-project-table.png",
+                "alt": "Project Archive Table",
+                "description": "In order to display a list of all my projects I created this Archive table, it also creates a timeline of my career which is interesting."
+              },
+              {
+                "url": "/images/screenshots/portfolio/project-detail-page.png",
+                "alt": "Project Detail Page",
+                "description": "As you are on right now, showcasing a specific project with a screenshot slider (made with Swiper.js) and some general info."
+              }
+            ],
             "year": "2023",
-            "madeAt": "",
-            "madeFor": "",
-            "description": "Developed a high-performance e-commerce platform...",
+            "madeAt": "-",
+            "madeFor": "-",
+            "description": "<p>This Portfolio website was built with a few reasons in mind; to showcase my work and experiences to future employers and to document my career for myself. I enjoy reflecting on the things I've worked on and it motivates me to continue working on things I would be proud to showcase.</p><p>I feel like my Portfolio website itself should be a showcase of my abilities. Therefor I created this website from skretch in Next.js and Drupal 10. The design was inspired of portfolio's I could find online, I combined things I saw and liked to create my own version of it. Right now the back-end is not connected, meaning all the content is added statically. It became more urgent to have something online to showcase then to have it perfectly finished. I will continue developing this portfolio website as it is also a playground for me, I'll continue adding features to practise my skills.</p><p>The code of the website is accessible on my Github, so you can see every little detail of how I created it. If you do have any questions or suggestions about the code, feel free to ask me.</p>",
             "nextProjectId": "1",
             "featured": false
         },
@@ -191,7 +233,7 @@
             "githubLink": "",
             "externalLink": "https://www.avikofoodservice.nl/producten/oerfriet-11mm",
             "mainImage": {
-              "url": "/images/aviko-sprint-8-main-image.png",
+              "url": "/images/main/aviko-sprint-8-main-image.png",
               "alt": "Aviko Sprint 8"
             },
             "year": "2023",
@@ -234,7 +276,7 @@
             "githubLink": "https://github.com/YorickVdVenne/TinyHouse-Fullstack-Application",
             "externalLink": "https://www.tinyhouse.app/",
             "mainImage": {
-              "url": "/images/tinyhouse-main-image.png",
+              "url": "/images/main/tinyhouse-main-image.png",
               "alt": "Tinyhouse Fullstack Masterclass"
             },
             "year": "2020",
@@ -265,7 +307,7 @@
             "githubLink": "https://github.com/YorickVdVenne/Productivity-Nextjs",
             "externalLink": "https://productivity-phi.vercel.app/",
             "mainImage": {
-              "url": "/images/productivity-main-image.png",
+              "url": "/images/main/productivity-main-image.png",
               "alt": "Productivity application"
             },
             "year": "2022",
@@ -304,7 +346,7 @@
             "githubLink": "https://github.com/YorickVdVenne/SSR-Nextjs-Blog/tree/master/src",
             "externalLink": "",
             "mainImage": {
-              "url": "/images/blog-main-image.png",
+              "url": "/images/main/blog-main-image.png",
               "alt": "Next.js blog site"
             },
             "year": "2021",
