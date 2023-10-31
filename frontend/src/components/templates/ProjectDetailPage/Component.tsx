@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styles from './styles.module.css'
 import clsx from 'clsx'
 
@@ -19,6 +19,7 @@ interface ProjectDetailPageProps {
 export default function ProjectDetailPage (props: ProjectDetailPageProps): JSX.Element {
   const { project } = props
   const { t } = useTranslation('projects')
+  const [activeImageIndex, setActiveImageIndex] = useState(0);
 
   return (
     <MainContainer maxWidth={1000} paddingBlock>
@@ -65,9 +66,12 @@ export default function ProjectDetailPage (props: ProjectDetailPageProps): JSX.E
         {hasValue(project.screenshots) && (
           <div className={styles.screenshotsContainer}>
             <NumberedHeading>Screenshots</NumberedHeading>
-            <Slider spaceBetween={50}>
+            <Slider activeItemIndex={setActiveImageIndex}>
               {project.screenshots.map((screenshot, key) => (
-                <div className={styles.screenshotImageWrapper} key={key}>                    
+                <div 
+                  className={styles.screenshotImageWrapper} 
+                  key={key}
+                >                    
                   <Image 
                     className={styles.screenshotImage}
                     src={screenshot.url} 
@@ -78,8 +82,19 @@ export default function ProjectDetailPage (props: ProjectDetailPageProps): JSX.E
                 </div>
               ))}
             </Slider>
+            <div className={styles.screenshotDetails}>
+              {project.screenshots.map((screenshot, key) => (
+                <div key={key} className={clsx(styles.screenshotDetail, {[styles.active]: key === activeImageIndex})}>                
+                  <h3 className={styles.screenshotTitle}>{screenshot.alt}</h3>
+                  <p>{screenshot.description}</p>
+                </div>
+              ))}
+            </div>
           </div>
          )}
+      </div>
+      <div className={styles.buttonWrapper}>
+        <Button className={styles.nextProjectButton} as='button'>Next Project</Button>
       </div>
     </MainContainer>
   )

@@ -36,15 +36,18 @@
             "screenshots": [
               {
                 "url": "/images/hpl-main-image.png",
-                "alt": "High Profile Locaties"
+                "alt": "High Profile Locaties 1",
+                "description": "Screenshot number one is about this"
               },
               {
                 "url": "/images/hpl-main-image.png",
-                "alt": "High Profile Locaties"
+                "alt": "High Profile Locaties 2",
+                "description": "Screenshot number two is about this"
               },
               {
                 "url": "/images/hpl-main-image.png",
-                "alt": "High Profile Locaties"
+                "alt": "High Profile Locaties 3",
+                "description": "Screenshot number three is about this"
               }
             ],
             "year": "2023",

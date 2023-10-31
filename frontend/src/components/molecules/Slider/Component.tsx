@@ -1,44 +1,39 @@
 import React from 'react'
 import styles from './styles.module.css'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { Pagination, A11y } from 'swiper/modules';
+import { Pagination } from 'swiper/modules';
 import { useSwiper } from "swiper/react";
-
-import type { SwiperOptions } from 'swiper/types';
 
 import 'swiper/css';
 import 'swiper/css/pagination';
+
 import { Arrow } from '@components/atoms/Icons/Component';
 
 export interface SliderProps {
   children: React.ReactElement[]
-  className?: string
-  navigation?: boolean
-  spaceBetween?: number
-  breakpoints?: {
-    [width: number]: SwiperOptions
-    [ratio: string]: SwiperOptions
-  }
+  activeItemIndex: React.Dispatch<React.SetStateAction<number>>
 }
 
 export function Slider (props: SliderProps): JSX.Element {
-  
 
   return (
-    <Swiper
-      modules={[ Pagination, A11y]}
-      spaceBetween={50}
-      slidesPerView={1}
-      pagination={{ clickable: true }}
-      loop
-      className={styles.slider}
-    >
-      <SwiperButtonPrev />
-      <SwiperButtonNext />
-      {props.children.map((child, key) => {
-        return <SwiperSlide key={key} className={styles.swiperSlide}>{child}</SwiperSlide>
-      })}
-    </Swiper>
+    <div className={styles.sliderWrapper}>
+      <Swiper
+        modules={[ Pagination ]}
+        spaceBetween={50}
+        slidesPerView={1}
+        pagination={{ clickable: true }}
+        onSlideChange={(swiper) => props.activeItemIndex(swiper.realIndex)}
+        className={styles.slider}
+        loop
+      >
+        <SwiperButtonPrev />
+        <SwiperButtonNext />
+        {props.children.map((child, key) => {
+          return <SwiperSlide key={key} className={styles.swiperSlide}>{child}</SwiperSlide>
+        })}
+      </Swiper>
+    </div>
   )
 }
 
