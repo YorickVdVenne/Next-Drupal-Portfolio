@@ -2,14 +2,14 @@ import React from 'react'
 import styles from './styles.module.css'
 import { useTranslation } from 'next-i18next'
 
-import type { Project } from '@graphql/content-types/project/project'
+import type { ProjectDetail } from '@graphql/content-types/project/project'
 
 import Section, { Allign } from '@components/atoms/Section/Component'
 import { Button } from '@components/atoms/Button/Component'
 import ProjectCardCollection from '../ProjectCardCollection/Component'
 
 interface ProjectsProps {
-  projectData: Project[]
+  projectData: ProjectDetail[]
 }
 
 export default function Projects (props: ProjectsProps): JSX.Element {

@@ -20,7 +20,7 @@ export default function Footer (props: FooterProps): JSX.Element {
     <footer className={styles.footer}>
       <div className={styles.socials}>
         <ul>
-          {hasValue(footer) 
+          {hasValue(footer)
             ? footer.socials.map((social, key) => (
               <li key={key}>
                 <a
@@ -38,17 +38,19 @@ export default function Footer (props: FooterProps): JSX.Element {
         </ul>
       </div>
       <div className={styles.credits}>
-        {hasValue(footer) 
-        ? <Button as='link' className={styles.link} variant='secondary' href={footer.actionButton.url} target='_blank'>
-            {footer.actionButton.label}
-            {hasValue(footer.actionButton.icon)
-              ? (
-                <span className={clsx(styles.icon, styles.hideOnMobile)}>{Icons.IconMapper(footer.actionButton.icon)}</span>
-                )
-              : null}
-          </Button>
-        : ''}
-        
+        {hasValue(footer)
+          ? (
+            <Button as='link' className={styles.link} variant='secondary' href={footer.actionButton.url} target='_blank'>
+              {footer.actionButton.label}
+              {hasValue(footer.actionButton.icon)
+                ? (
+                  <span className={clsx(styles.icon, styles.hideOnMobile)}>{Icons.IconMapper(footer.actionButton.icon)}</span>
+                  )
+                : null}
+            </Button>
+            )
+          : ''}
+
       </div>
     </footer>
   )

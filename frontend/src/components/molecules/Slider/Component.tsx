@@ -1,13 +1,12 @@
 import React from 'react'
 import styles from './styles.module.css'
-import { Swiper, SwiperSlide } from 'swiper/react'
-import { Pagination } from 'swiper/modules';
-import { useSwiper } from "swiper/react";
+import { Swiper, SwiperSlide, useSwiper } from 'swiper/react'
+import { Pagination } from 'swiper/modules'
 
-import 'swiper/css';
-import 'swiper/css/pagination';
+import 'swiper/css'
+import 'swiper/css/pagination'
 
-import { Arrow } from '@components/atoms/Icons/Component';
+import { Arrow } from '@components/atoms/Icons/Component'
 
 export interface SliderProps {
   children: React.ReactElement[]
@@ -15,15 +14,14 @@ export interface SliderProps {
 }
 
 export function Slider (props: SliderProps): JSX.Element {
-
   return (
     <div className={styles.sliderWrapper}>
       <Swiper
-        modules={[ Pagination ]}
+        modules={[Pagination]}
         spaceBetween={50}
         slidesPerView={1}
         pagination={{ clickable: true }}
-        onSlideChange={(swiper) => props.activeItemIndex(swiper.realIndex)}
+        onSlideChange={(swiper) => { props.activeItemIndex(swiper.realIndex) }}
         className={styles.slider}
         loop
       >
@@ -37,12 +35,12 @@ export function Slider (props: SliderProps): JSX.Element {
   )
 }
 
-const SwiperButtonPrev = () => {
-  const swiper = useSwiper();
-  return <button className={styles.prevButton} onClick={() => swiper.slidePrev()}><Arrow /></button>;
-};
+const SwiperButtonPrev = (): JSX.Element => {
+  const swiper = useSwiper()
+  return <button className={styles.prevButton} onClick={() => { swiper.slidePrev() }}><Arrow /></button>
+}
 
-const SwiperButtonNext = () => {
-  const swiper = useSwiper();
-  return <button className={styles.nextButton} onClick={() => swiper.slideNext()}><Arrow /></button>;
-};
+const SwiperButtonNext = (): JSX.Element => {
+  const swiper = useSwiper()
+  return <button className={styles.nextButton} onClick={() => { swiper.slideNext() }}><Arrow /></button>
+}

@@ -5,7 +5,7 @@ import Image from 'next/image'
 import { useTranslation } from 'next-i18next'
 import { hasValue } from '@misc/helpers'
 
-import type { Project } from '@graphql/content-types/project/project'
+import type { ProjectDetail } from '@graphql/content-types/project/project'
 
 import gridStyles from '@components/atoms/Grid/styles.module.css'
 import { IconMapper } from '@components/atoms/Icons/Component'
@@ -17,7 +17,7 @@ export enum TextAlign {
 }
 
 interface FeaturedListItemProps {
-  item: Project
+  item: ProjectDetail
   textAlign: TextAlign
 }
 

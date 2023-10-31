@@ -2,7 +2,6 @@ import React, { useEffect, useRef, useState } from 'react'
 import styles from './styles.module.css'
 import { Helmet } from 'react-helmet'
 import { useOnClickOutside } from '@misc/useOnClickOutside'
-import clsx from 'clsx'
 
 import type { MainMenu } from '@graphql/menus'
 

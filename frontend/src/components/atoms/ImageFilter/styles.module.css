@@ -1,8 +1,5 @@
 .imageWrapper {
-    position: relative;
-    height: fit-content;
     box-shadow: 0 10px 30px -15px var(--color-navy-shadow);
-    transition: var(--transition);
     z-index: 1;
     opacity: 1;
     width: 100%;

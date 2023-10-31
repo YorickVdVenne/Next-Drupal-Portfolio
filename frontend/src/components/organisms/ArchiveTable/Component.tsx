@@ -4,13 +4,14 @@ import clsx from 'clsx'
 import { useTranslation } from 'next-i18next'
 import { hasValue } from '@misc/helpers'
 
-import type { Project } from '@graphql/content-types/project/project'
+import type { ProjectDetail } from '@graphql/content-types/project/project'
+import type { Technologies } from '@graphql/taxonomies/technologies/technology'
 
 import { IconMapper } from '@components/atoms/Icons/Component'
 import Link from 'next/link'
 
 interface ArchiveTableProps {
-  content: Project[]
+  content: ProjectDetail[]
 }
 
 export default function ArchiveTable (props: ArchiveTableProps): JSX.Element {
@@ -34,18 +35,18 @@ export default function ArchiveTable (props: ArchiveTableProps): JSX.Element {
             <td className={styles.year}>
               {item.year}
             </td>
-                     
-              <td className={styles.title}>
-                <Link href={`/projects/${item.id}`}>   
-                  {item.title}
-                </Link>
-              </td>
-            
+
+            <td className={styles.title}>
+              <Link href={`/projects/${item.id}`}>
+                {item.title}
+              </Link>
+            </td>
+
             <td className={clsx(styles.company, styles.hideOnMobile)}>
               {item.madeAt}
             </td>
             <td className={clsx(styles.tech, styles.hideOnMobile)}>
-              {item.technologies.map((tech, key) => (
+              {item.technologies.map((tech: Technologies, key: number) => (
                 <span key={key}>
                   {tech.name}
                   <span className={clsx(styles.separator, {

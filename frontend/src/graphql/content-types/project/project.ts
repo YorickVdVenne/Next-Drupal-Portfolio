@@ -1,7 +1,7 @@
 import type { MediaImage } from '@graphql/media'
 import type { Technologies } from '@graphql/taxonomies/technologies/technology'
 
-export interface Project {
+export interface ProjectDetail {
   id: string
   title: string
   summary: string

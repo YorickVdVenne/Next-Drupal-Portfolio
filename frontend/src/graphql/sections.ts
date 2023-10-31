@@ -1,6 +1,6 @@
-import type { Project } from './content-types/project/project'
+import type { ProjectDetail } from './content-types/project/project'
 import type { Button } from './generic'
-import type { MainImage } from './media'
+import type { MediaImage } from './media'
 import type { Company } from './taxonomies/company/company'
 import type { Job } from './taxonomies/job/job'
 import type { Technologies } from './taxonomies/technologies/technology'
@@ -18,7 +18,7 @@ export interface AboutSection {
   bookmark: string
   description: string
   technologies: Technologies[]
-  profileImage: MainImage
+  profileImage: MediaImage
 }
 
 export interface ExperienceSection {
@@ -31,8 +31,8 @@ export interface ExperienceSection {
 export interface ProjectSection {
   title: string
   bookmark: string
-  featuredProjects: Project[]
-  projects: Project[]
+  featuredProjects: ProjectDetail[]
+  projects: ProjectDetail[]
 }
 
 export interface ContactSection {

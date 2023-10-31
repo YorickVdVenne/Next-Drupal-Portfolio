@@ -14,9 +14,9 @@ export default function MainContainer (props: MainContainerProps): JSX.Element {
 
   return (
     <main
-      className={clsx(styles.mainContainer, { 
+      className={clsx(styles.mainContainer, {
         [styles.paddingBlock]: paddingBlock,
-        [styles.paddingBlockStart]: paddingBlockStart 
+        [styles.paddingBlockStart]: paddingBlockStart
       })}
       style={{ maxWidth: maxWidth ?? 1600 }}
     >

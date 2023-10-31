@@ -3,13 +3,13 @@ import styles from './styles.module.css'
 import { hasValue } from '@misc/helpers'
 
 import type { Technologies } from '@graphql/taxonomies/technologies/technology'
-import type { Project } from '@graphql/content-types/project/project'
+import type { ProjectDetail } from '@graphql/content-types/project/project'
 
 import Card from '@components/atoms/Card/Component'
 import { IconMapper } from '@components/atoms/Icons/Component'
 
 interface ProjectCardProps {
-  project: Project
+  project: ProjectDetail
 }
 
 export default function ProjectCard (props: ProjectCardProps): JSX.Element {

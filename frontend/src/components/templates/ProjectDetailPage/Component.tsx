@@ -6,7 +6,9 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { useTranslation } from 'next-i18next'
 
-import type { Project } from '@graphql/content-types/project/project'
+import type { Technologies } from '@graphql/taxonomies/technologies/technology'
+import type { ProjectDetail } from '@graphql/content-types/project/project'
+import type { MediaImage } from '@graphql/media'
 
 import gridStyles from '@components/atoms/Grid/styles.module.css'
 import MainContainer from '@components/atoms/MainContainer/Component'
@@ -15,13 +17,13 @@ import { Slider } from '@components/molecules/Slider/Component'
 import NumberedHeading from '@components/atoms/NumberedHeading/Component'
 
 interface ProjectDetailPageProps {
-  project: Project
+  project: ProjectDetail
 }
 
 export default function ProjectDetailPage (props: ProjectDetailPageProps): JSX.Element {
   const { project } = props
   const { t } = useTranslation('projects')
-  const [activeImageIndex, setActiveImageIndex] = useState(0);
+  const [activeImageIndex, setActiveImageIndex] = useState(0)
 
   return (
     <MainContainer maxWidth={1000} paddingBlockStart>
@@ -50,7 +52,7 @@ export default function ProjectDetailPage (props: ProjectDetailPageProps): JSX.E
             </tr>
             <tr>
               <td className={styles.techData} colSpan={2}>
-                {project.technologies.map((tech, key) => (
+                {project.technologies.map((tech: Technologies, key: number) => (
                   <span className={styles.techTag} key={key}>{tech.name}</span>
                 ))}
               </td>
@@ -61,49 +63,49 @@ export default function ProjectDetailPage (props: ProjectDetailPageProps): JSX.E
           <p>
             {project.description}
           </p>
-          {hasValue(project.externalLink) 
-            ? <Button as='link' href={project.externalLink} icon='external-link' >View the website</Button>
+          {hasValue(project.externalLink)
+            ? <Button as='link' href={project.externalLink} icon='external-link'>View the website</Button>
             : ''}
         </div>
         {hasValue(project.screenshots) && (
           <div className={styles.screenshotsContainer}>
             <NumberedHeading>Screenshots</NumberedHeading>
             <Slider activeItemIndex={setActiveImageIndex}>
-              {project.screenshots.map((screenshot, key) => (
-                <div 
-                  className={styles.screenshotImageWrapper} 
+              {project.screenshots.map((screenshot: MediaImage, key: number) => (
+                <div
+                  className={styles.screenshotImageWrapper}
                   key={key}
-                >                    
-                  <Image 
+                >
+                  <Image
                     className={styles.screenshotImage}
-                    src={screenshot.url} 
-                    alt={screenshot.alt} 
+                    src={screenshot.url}
+                    alt={screenshot.alt}
                     width={1000}
-                    height={1000} 
+                    height={1000}
                   />
                 </div>
               ))}
             </Slider>
             <div className={styles.screenshotDetails}>
-              {project.screenshots.map((screenshot, key) => (
-                <div key={key} className={clsx(styles.screenshotDetail, {[styles.active]: key === activeImageIndex})}>                
+              {project.screenshots.map((screenshot: MediaImage, key: number) => (
+                <div key={key} className={clsx(styles.screenshotDetail, { [styles.active]: key === activeImageIndex })}>
                   <h3 className={styles.screenshotTitle}>{screenshot.alt}</h3>
                   <p>{screenshot.description}</p>
                 </div>
               ))}
             </div>
           </div>
-         )}
+        )}
       </div>
       <hr className={styles.separator} />
       <div className={styles.actionsWrapper}>
         <Link href='/archive'>
-          <Button as='button'>Back to Archive</Button>  
+          <Button as='button'>Back to Archive</Button>
         </Link>
         {hasValue(project.nextProjectId) && (
-            <Link href={project.nextProjectId}>
-              <Button as='button'>Next Project</Button>  
-            </Link>
+          <Link href={project.nextProjectId}>
+            <Button as='button'>Next Project</Button>
+          </Link>
         )}
       </div>
     </MainContainer>

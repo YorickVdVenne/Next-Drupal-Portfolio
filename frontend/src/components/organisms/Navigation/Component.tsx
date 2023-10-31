@@ -20,7 +20,7 @@ export default function Navigation (props: NavigationProps): JSX.Element {
   const { t } = useTranslation('menu')
   const [scrolled, setScrolled] = useState(false)
   const [scrollTop, setScrollTop] = useState(true)
-  
+
   useEffect(() => {
     let lastScrollY = 0
 
@@ -65,7 +65,7 @@ export default function Navigation (props: NavigationProps): JSX.Element {
           <Logo />
           <span className={styles.logoText}>{t('logoText')}</span>
         </Link>
-          <NavigationItems links={props.mainMenu?.links} actionButton={props.mainMenu?.actionButton} desktop />
+        <NavigationItems links={props.mainMenu?.links} actionButton={props.mainMenu?.actionButton} desktop />
         <NavigationMenu menu={props.mainMenu} />
       </div>
     </nav>

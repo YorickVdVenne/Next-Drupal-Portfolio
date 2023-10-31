@@ -45,12 +45,13 @@ export default function SideElement (props: SideElementProps): JSX.Element {
             ))}
           </ul>
           )
-        : hasValue(content) 
+        : hasValue(content)
           ? (
             <div className={styles.mail}>
               <a href={content.url}>{content.email}</a>
             </div>
-          ): ''}
+            )
+          : ''}
     </div>
   )
 }

@@ -14,13 +14,13 @@ export default function NumberedHeading (props: NumberedHeadingProps): JSX.Eleme
   const { children, id, number, mono } = props
 
   return (
-    <h2 
-      id={id} 
-      className={clsx(styles.numberedHeading, { 
+    <h2
+      id={id}
+      className={clsx(styles.numberedHeading, {
         [styles.mono]: mono,
-        [styles.hideNumber]: !hasValue(number) 
-      })} 
-      style={{ counterIncrement: `section ${number}` }}
+        [styles.hideNumber]: !hasValue(number)
+      })}
+      style={{ counterIncrement: `section ${hasValue(number) ? number : ''}` }}
     >
       {children}
     </h2>
