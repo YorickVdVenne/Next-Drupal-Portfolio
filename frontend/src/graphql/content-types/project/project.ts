@@ -14,5 +14,6 @@ export interface Project {
   madeAt?: string
   madeFor?: string
   description: string
+  nextProjectId?: string
   featured: boolean
 }

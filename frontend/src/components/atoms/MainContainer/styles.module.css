@@ -28,3 +28,16 @@
     padding-block: var(--spacing-50x);
   }
 }
+
+.paddingBlockStart {
+  padding-block-start: var(--spacing-30x);
+  min-height: fit-content;
+
+  @media (min-width: 480px) {
+    padding-block-start: var(--spacing-37x);
+  }
+
+  @media (min-width: 768px) {
+    padding-block-start: var(--spacing-50x);
+  }
+}

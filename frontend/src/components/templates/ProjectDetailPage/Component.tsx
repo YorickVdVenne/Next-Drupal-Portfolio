@@ -1,13 +1,15 @@
 import React, { useState } from 'react'
 import styles from './styles.module.css'
 import clsx from 'clsx'
-
-import type{ Project } from '@graphql/content-types/project/project'
-import Image from 'next/image'
-import MainContainer from '@components/atoms/MainContainer/Component'
-import { useTranslation } from 'next-i18next'
-import gridStyles from '@components/atoms/Grid/styles.module.css'
 import { hasValue } from '@misc/helpers'
+import Link from 'next/link'
+import Image from 'next/image'
+import { useTranslation } from 'next-i18next'
+
+import type { Project } from '@graphql/content-types/project/project'
+
+import gridStyles from '@components/atoms/Grid/styles.module.css'
+import MainContainer from '@components/atoms/MainContainer/Component'
 import { Button } from '@components/atoms/Button/Component'
 import { Slider } from '@components/molecules/Slider/Component'
 import NumberedHeading from '@components/atoms/NumberedHeading/Component'
@@ -22,7 +24,7 @@ export default function ProjectDetailPage (props: ProjectDetailPageProps): JSX.E
   const [activeImageIndex, setActiveImageIndex] = useState(0);
 
   return (
-    <MainContainer maxWidth={1000} paddingBlock>
+    <MainContainer maxWidth={1000} paddingBlockStart>
       <h2 className={styles.projectTitle}>{project.title}</h2>
       <div className={styles.mainImageWrapper}>
         <Image src={project.mainImage.url} alt={project.mainImage.alt} className={styles.mainImage} width={1000} height={1000} />
@@ -93,8 +95,16 @@ export default function ProjectDetailPage (props: ProjectDetailPageProps): JSX.E
           </div>
          )}
       </div>
-      <div className={styles.buttonWrapper}>
-        <Button className={styles.nextProjectButton} as='button'>Next Project</Button>
+      <hr className={styles.separator} />
+      <div className={styles.actionsWrapper}>
+        <Link href='/archive'>
+          <Button as='button'>Back to Archive</Button>  
+        </Link>
+        {hasValue(project.nextProjectId) && (
+            <Link href={project.nextProjectId}>
+              <Button as='button'>Next Project</Button>  
+            </Link>
+        )}
       </div>
     </MainContainer>
   )

@@ -54,6 +54,7 @@
             "madeAt": "iO",
             "madeFor": "HPL",
             "description": "The client High Profile Locaties (HPL) wanted to build a website where venue holders could offer there venue to be used for various occasions. I was later envolved in the development proces to work on the portal, where venue holders can create and manage their venues. I've worked on this project as front-end developer a few months and delivered all kinds of features, read more to find out.",
+            "nextProjectId": "5",
             "featured": true
         },
         {
@@ -88,6 +89,7 @@
             "madeAt": "iO",
             "madeFor": "Aviko",
             "description": "This is the long version of the description.",
+            "nextProjectId": "7",
             "featured": true
         },
         {
@@ -118,6 +120,7 @@
             "madeAt": "Burst",
             "madeFor": "Verno",
             "description": "Designed and developed a mobile-responsive website...",
+            "nextProjectId": "8",
             "featured": true
         },
         {
@@ -160,6 +163,7 @@
             "madeAt": "",
             "madeFor": "",
             "description": "Developed a high-performance e-commerce platform...",
+            "nextProjectId": "1",
             "featured": false
         },
         {
@@ -194,6 +198,7 @@
             "madeAt": "iO",
             "madeFor": "Aviko",
             "description": "Developed a high-performance e-commerce platform...",
+            "nextProjectId": "2",
             "featured": false
         },
         {
@@ -236,6 +241,7 @@
             "madeAt": "",
             "madeFor": "",
             "description": "Developed a high-performance e-commerce platform...",
+            "nextProjectId": "1",
             "featured": false
         },
         {
@@ -266,6 +272,7 @@
             "madeAt": "iO",
             "madeFor": "Hogeschool Rotterdam / iO",
             "description": "Developed a high-performance e-commerce platform...",
+            "nextProjectId": "3",
             "featured": false
         },
         {
@@ -304,6 +311,7 @@
             "madeAt": "Burst",
             "madeFor": "",
             "description": "Developed a high-performance e-commerce platform...",
+            "nextProjectId": "6",
             "featured": false
         }
       ],

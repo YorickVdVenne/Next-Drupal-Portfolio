@@ -1,6 +1,5 @@
 .projectTitle {
     font-size: clamp(4rem, 8vw, 5rem);
-    text-align: center;
     margin-block-end: var(--spacing-4x);
 
     @media (min-width: 768px) {
@@ -177,8 +176,16 @@
     margin-block-end: var(--spacing-2x);
 }
 
-.buttonWrapper {
+.separator {
+    background-color: var(--color-lightest-navy);
+    height: 1px;
+    border: none;
+    margin-block: var(--spacing-10x);
+}
+
+.actionsWrapper {
     display: flex;
-    justify-content: end;
-    margin-block-start: var(--spacing-4x);
+    justify-content: space-between;
+    margin-block-start: var(--spacing-8x);
+    margin-block-end: var(--spacing-4x);
 }
