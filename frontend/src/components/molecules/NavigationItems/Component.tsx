@@ -48,7 +48,7 @@ export default function NavigationItems (props: NavigationItemsProps): JSX.Eleme
       </ol>
       {hasValue(actionButton)
         ? (
-          <Link href={actionButton.url}>
+          <Link href={actionButton.url} target='_blank'>
             <Button
               className={clsx(styles.button, { [styles.desktop]: desktop })}
               as='button'
