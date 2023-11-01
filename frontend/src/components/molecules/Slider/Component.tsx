@@ -26,7 +26,7 @@ export function Slider (props: SliderProps): JSX.Element {
         loop
       >
         {props.children.length > 1 && (
-          <>          
+          <>
             <SwiperButtonPrev />
             <SwiperButtonNext />
           </>
