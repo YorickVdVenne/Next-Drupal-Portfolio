@@ -25,8 +25,12 @@ export function Slider (props: SliderProps): JSX.Element {
         className={styles.slider}
         loop
       >
-        <SwiperButtonPrev />
-        <SwiperButtonNext />
+        {props.children.length > 1 && (
+          <>          
+            <SwiperButtonPrev />
+            <SwiperButtonNext />
+          </>
+        )}
         {props.children.map((child, key) => {
           return <SwiperSlide key={key} className={styles.swiperSlide}>{child}</SwiperSlide>
         })}

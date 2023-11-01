@@ -68,6 +68,11 @@
                 "url": "/images/screenshots/hpl/progression-dialog.png",
                 "alt": "Progression dialog",
                 "description": "This shows the progression dialog that indicates how far the user is to publishing it's venue. If there is information missing it will show the percentage it needs to complete it. The edit buttons will then open the relavant edit dialog, which I remember was a pain because not all the data was always available on every page and the progress block was is visible on every page, so it needed the data from all the other forms."
+              },
+              {
+                "url": "/images/screenshots/hpl/category-page.png",
+                "alt": "Category Page",
+                "description": "Sometimes I would be asked to help the frontend (locaties.nl, so not the portal). For example I was asked to create the category page, so I worked on the layout of the venue cards and also the buttons for pagination, filtering and showing the map."
               }
             ],
             "year": "2023",
@@ -100,15 +105,22 @@
               }
             ],
             "githubLink": "",
-            "externalLink": "https://qr.avikofoodservice.com/",
+            "externalLink": "https://qr.avikofoodservice.com/churros",
             "mainImage": {
               "url": "/images/main/aviko-qr-code-main-image.png",
               "alt": "Aviko QR Code"
             },
+            "screenshots": [
+              {
+                "url": "/images/screenshots/aviko/qr-code-explanation.png",
+                "alt": "QR Code redirect functionality",
+                "description": "There is not much visual about this project, it was a back-end task. But I can show you in this sketch I made at the time how it was constructed and what the customer journey is."
+              }
+            ],
             "year": "2022",
             "madeAt": "iO",
             "madeFor": "Aviko",
-            "description": "This is the long version of the description.",
+            "description": "<p>The client Aviko wanted to add QR codes to their packages to attract more visitors. I brought onto the project to handle the functionality. First I brainstormed with the client on the requirements and mapped out the idea with a colleague.</p><p>The solution was to create a subdomain with an Express (Node.js) server that would handle the location of the user and redirect the user to the correct landingpage. And this server would communicate with the Drupal CMS in GraphQL to retrieve the correct redirect URL given the parameters. It was important that the redirects would be manageable in the CMS because in the future they will add and change these redirects to other pages.</p><p>When it was finished and tested I gave a talk or demo about it to my iO Campus Rotterdam colleagues, where I pitched the entire idea and explain the functionality.</p>",
             "nextProjectId": "7",
             "featured": true
         },
@@ -136,10 +148,22 @@
               "url": "/images/main/verno-main-image.png",
               "alt": "Verno Customized frames"
             },
+            "screenshots": [
+              {
+                "url": "/images/screenshots/verno/step-1.png",
+                "alt": "Where you start",
+                "description": "This is the starting point of the frame configuration."
+              },
+              {
+                "url": "/images/screenshots/verno/select-frame.png",
+                "alt": "Frame selection",
+                "description": "Once a frame is selected the sharebuttons I created will appear in the left corner and it now has URL which you can share with others."
+              }
+            ],
             "year": "2021",
             "madeAt": "Burst",
             "madeFor": "Verno",
-            "description": "Designed and developed a mobile-responsive website...",
+            "description": "<p>During my internship at Burst I've got the assignment to make the frame configuration of framemaker Verno shareable. At first the steps of the configuration were a set of static steps mapped in the code. But now at any time the steps should be retrieved from the URL, which was quite challenging to rewrite. So all the info of the step was encoded in an base64 string and then placed in the URL. Then the step with it's data was te be determined by the URL, which had a lot of room for error at the start. But after enough finetuning and testing different scenario's it worked.</p>",
             "nextProjectId": "8",
             "featured": true
         },
@@ -236,10 +260,27 @@
               "url": "/images/main/aviko-sprint-8-main-image.png",
               "alt": "Aviko Sprint 8"
             },
+            "screenshots": [
+              {
+                "url": "/images/screenshots/aviko/pardot-forms.png",
+                "alt": "Form fixes",
+                "description": "Some of the forms, mostly certain contact forms, within Aviko were created using pardot forms (from salesforce). But the styling do adjust these forms are difficult to change, but there were a few issues with the country flag from the telephone field and the checkboxes above the send button. These bugs I had to fix within the pardot forms and then use a script to load in the custom styling."
+              },
+              {
+                "url": "/images/screenshots/aviko/product-accordion.png",
+                "alt": "Product accordion",
+                "description": "My biggest ticket was creating the new product accordion. It had to open the first child by default and you can open multiple at the same time. Offcourse it had to be responsive so on mobile the layout would be different and also the styling of the accordion would change. But also the table content of some accordion tabs, such as nutritional info, needed new styling. All while the image needed to scale nicely."
+              },
+              {
+                "url": "/images/screenshots/aviko/spanish-rollout.png",
+                "alt": "Spanish translation rollout",
+                "description": "Aviko wanted to add Spanish translations to the internationale website. So I had to create the language switch button and rollout a new translation using the CLI. Also I needed to add the translations and communicate this well with the backend team so there wouldn't be any errors."
+              }
+            ],
             "year": "2023",
             "madeAt": "iO",
             "madeFor": "Aviko",
-            "description": "Developed a high-performance e-commerce platform...",
+            "description": "<p>I was lucky enough to participate in an Aviko sprint, a project that strictly follow the agile scrum method. Within iO this project was known for having everything in place and being mananged well. This was going to be the 8's sprint, with a duration of 2 weeks.</p><p>I've worked on a quit a few tickets during this sprint ranging from small content fixes to making the new product accordion. It's hard to remember all the things I've covered during this time. But for me personally the most interesting experience was the sprint itself, the communication and dedication of the team. No wonder Aviko had such a good reputation wihtin iO. Below I'll show a few screenshots of things I can remember working on.</p>",
             "nextProjectId": "2",
             "featured": false
         },
@@ -279,10 +320,32 @@
               "url": "/images/main/tinyhouse-main-image.png",
               "alt": "Tinyhouse Fullstack Masterclass"
             },
+            "screenshots": [
+              {
+                "url": "/images/screenshots/tinyhouse/listing-page.png",
+                "alt": "Listing page",
+                "description": "The overview listing page where you can search, filter and paginate the rentals."
+              },
+              {
+                "url": "/images/screenshots/tinyhouse/detail-page.png",
+                "alt": "Detail page",
+                "description": "This is where the details of the rental is shown."
+              },
+              {
+                "url": "/images/screenshots/tinyhouse/inside-course.png",
+                "alt": "Inside look of the course",
+                "description": "A well organized course with lots of modules and lessons with quality material."
+              },
+              {
+                "url": "/images/screenshots/tinyhouse/credits.png",
+                "alt": "Credits",
+                "description": "To Hassan Djirdeh and Jing Chen"
+              }
+            ],
             "year": "2020",
-            "madeAt": "",
-            "madeFor": "",
-            "description": "Developed a high-performance e-commerce platform...",
+            "madeAt": "-",
+            "madeFor": "-",
+            "description": "<p>While working for Burst they offered to give a discount on a course they recommend to all their developers. So offcourse I did so to.</p><p>The course was all about creating a website from scratch using at the moment a very modern tech stack. The backend was made in Express (Node.js), the frontend was built with React in TypeScript and the communication was done with GraphQL. The course featured a lot of practical functionalities used in modern websites, such as:  Google Sign-In & OAuth 2.0, Persist Login Sessions with Cookies, Geocoding API, payment with Stripe, Image Storage and deploying with Heroku.</p>",
             "nextProjectId": "1",
             "featured": false
         },
@@ -310,10 +373,47 @@
               "url": "/images/main/productivity-main-image.png",
               "alt": "Productivity application"
             },
+            "screenshots": [
+              {
+                "url": "/images/screenshots/graduation/graduation-cover.png",
+                "alt": "Graduation Essay Cover",
+                "description": "The cover of my essay, with my main question. If you wish to read it, send me a message and I'll consider it."
+              },
+              {
+                "url": "/images/screenshots/graduation/new-objective.png",
+                "alt": "Creating objectives with key results",
+                "description": "An important part is that employee can create their own goals and key results needed to achieve those goals. This way it will become insightfull how many and what sort of goals the employee can complete within a quarter."
+              },
+              {
+                "url": "/images/screenshots/graduation/team-goals-page.png",
+                "alt": "Team goals page",
+                "description": "It's important that team and company goals are insightfull so the employees can follow along and even create his own objectives bases on the team or company goals."
+              },
+              {
+                "url": "/images/screenshots/graduation/request-feedback-page.png",
+                "alt": "Request feedback page",
+                "description": "The other part of the application is the feedback part, where you can request feedback from colleagues so you know what other people think of certain skills."
+              },
+              {
+                "url": "/images/screenshots/graduation/give-feedback-page.png",
+                "alt": "Give feedback page",
+                "description": "Obviously it is than also important to give feedback to other employees."
+              },
+              {
+                "url": "/images/screenshots/graduation/insightfull-feedback.png",
+                "alt": "Feedback storage",
+                "description": "This would be a place where the feedback you received is stored so that you can revisit and reflect."
+              },
+              {
+                "url": "/images/screenshots/graduation/feedback-progression.png",
+                "alt": "Feedback progression",
+                "description": "Then in an attempt to measure improvement, you can see the feedback you received over certain skills and subjects over a period of time."
+              }
+            ],
             "year": "2022",
             "madeAt": "iO",
             "madeFor": "Hogeschool Rotterdam / iO",
-            "description": "Developed a high-performance e-commerce platform...",
+            "description": "<p>During my graduation project at iO, I researched how productivity could become insightful. After a lot of research and tests one of the bests ways to make productivity insightfull is via measuring results in terms of goals achieved and feedback from others. Though I did came to the conclusion that productivy is a very subjective subject that is difficult to measure in a way that every employee feels his productivity well represented. Even so I created an static application (for testing purposes) that displays a way to make productivity insightfull via goals and feedback.</p><p>The design of the application I built myself based on the colors and fonts used in the iO branding. Apart from that it was built with Next.js, but as mentioned it was static and not at all completed. But it does give an idea of what it could look like, an application that makes productivity insightfull.</p>",
             "nextProjectId": "3",
             "featured": false
         },
@@ -349,10 +449,27 @@
               "url": "/images/main/blog-main-image.png",
               "alt": "Next.js blog site"
             },
+            "screenshots": [
+              {
+                "url": "/images/screenshots/blog/blog-header.png",
+                "alt": "Homepage",
+                "description": "The design was from a template I used to kickstart the blog site."
+              },
+              {
+                "url": "/images/screenshots/blog/filter.png",
+                "alt": "Blog Filter",
+                "description": "With filtering buttons but also the URL the blogs could be filtered."
+              },
+              {
+                "url": "/images/screenshots/blog/.png",
+                "alt": "Blog Pagination",
+                "description": "Same as the filter, with pagination buttons but also via the URL the blogs could be paginated."
+              }
+            ],
             "year": "2021",
             "madeAt": "Burst",
-            "madeFor": "",
-            "description": "Developed a high-performance e-commerce platform...",
+            "madeFor": "-",
+            "description": "<p>This blog site was at the moment a great practise for my Full-stack developer skills. As I first started to build the Drupal CMS in PHP. The place where you can manage the blogs and they would be available on a custom API and a GraphQL API.</p><p>Then for the front-end I used Next.js, this was the first time I've ever used Next.js and it blew me away. It was so easy to configure routes and build components and all sorts of things. The filtering and pagination have great funcionality and animations that were at the time very new for me.</p>",
             "nextProjectId": "6",
             "featured": false
         }
