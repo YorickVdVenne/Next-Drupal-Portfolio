@@ -346,7 +346,7 @@
             "madeAt": "-",
             "madeFor": "-",
             "description": "<p>While working for Burst they offered to give a discount on a course they recommend to all their developers. So offcourse I did so to.</p><p>The course was all about creating a website from scratch using at the moment a very modern tech stack. The backend was made in Express (Node.js), the frontend was built with React in TypeScript and the communication was done with GraphQL. The course featured a lot of practical functionalities used in modern websites, such as:  Google Sign-In & OAuth 2.0, Persist Login Sessions with Cookies, Geocoding API, payment with Stripe, Image Storage and deploying with Heroku.</p>",
-            "nextProjectId": "1",
+            "nextProjectId": "4",
             "featured": false
         },
         {
@@ -461,7 +461,7 @@
                 "description": "With filtering buttons but also the URL the blogs could be filtered."
               },
               {
-                "url": "/images/screenshots/blog/.png",
+                "url": "/images/screenshots/blog/pagination.png",
                 "alt": "Blog Pagination",
                 "description": "Same as the filter, with pagination buttons but also via the URL the blogs could be paginated."
               }
