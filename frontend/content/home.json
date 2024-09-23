@@ -5,16 +5,16 @@
         "introText": "Hi, my name is",
         "name": "Yorick Van de Venne.",
         "punchline": "I build things for the web.",
-        "shortDescription": "I'm a web developer specializing in creating scalable and responsive websites. Currently, I'm focused on creating my own developer documentation, developing this very portfolio and finding a new employer.",
+        "shortDescription": "I'm a web developer specializing in creating scalable and responsive websites. Currently, I'm employed as Back-end Developer at Level Level. But feel free to contact me if you have any questions or if you're interested in working together.",
         "button": {
-          "text": "Check out my documentation",
+          "text": "Check Out My Developer Documentation",
           "link": "https://miro.com/app/board/uXjVMjoJJsQ=/?share_link_id=973204732941"
         }
       },
       "about": {
         "title": "About Me",
         "bookmark": "about",
-        "description": "<p>My name is Yorick and I am a young and ambitious web developer. I'm a true all-rounder, I like to learn new stuff and keep improving myself. It's also the reason why I love coding so much as there is always something new to learn.</p><p>My ambition is to become a lead full-stack developer. Though my interests for front-end development exceed my back-end interests, I want to have enough knowlegde of both to independently be able to develop websites.</p><p>When I'm not working you can find me in the gym, on the tennis court or playing the guitar! Also I enjoy cooking, but mostly the eating part.</p><p>Here are a few technologies I've been working with recently:</p>",
+        "description": "<p>My name is Yorick and I am a young and ambitious web developer. I'm a true all-rounder, I like to learn new stuff and keep improving myself. It's also the reason why I love coding so much as there is always something new to learn.</p><p>My ambition is to become a lead full-stack developer. Though my interests for front-end development exceed my back-end interests (by far), I want to have enough knowlegde of both to independently be able to develop websites.</p><p>When I'm not working you can find me in the gym, on the tennis court or playing the guitar! Also I enjoy cooking, but mostly the eating part!</p><p>Here are a few technologies I've been working with recently:</p>",
         "technologies": [
           {
             "id": "1",
@@ -34,11 +34,11 @@
           },
           {
             "id": "5",
-            "name": "Node.js"
+            "name": "PHP"
           },
           {
             "id": "6",
-            "name": "Drupal"
+            "name": "WordPress"
           }
         ],
         "profileImage": {
@@ -52,14 +52,38 @@
         "companies": [
           {
             "id": "1",
-            "name": "iO"
+            "name": "Level Level"
           },
           {
             "id": "2",
+            "name": "iO"
+          },
+          {
+            "id": "3",
             "name": "Burst"
           }
         ],
         "jobs": [
+          {
+            "role": "Backend Developer",
+            "companyName": "Level Level",
+            "link": "https://level-level.com",
+            "period": "November 23 - Present",
+            "jobDescription": [
+              {
+                "description": "Creating links in WordPress with external systems"
+              },
+              {
+                "description": "Object Oriented Programming (OOP) in PHP"
+              },
+              {
+                "description": "Writing unit tests"
+              },
+              {
+                "description": "Hardcore debugging with Xdebug"
+              }
+            ]
+          },
           {
             "role": "Frontend Developer",
             "companyName": "iO",
