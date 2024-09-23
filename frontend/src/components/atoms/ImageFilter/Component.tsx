@@ -1,15 +1,15 @@
-import React from 'react'
-import styles from './styles.module.css'
-import Image from 'next/image'
+import React from "react";
+import styles from "./styles.module.css";
+import Image from "next/image";
 
-import type { MediaImage } from '@graphql/media'
+import type { MediaImage } from "@graphql/media";
 
 interface ImageFilterProps {
-  image: MediaImage
+  image: MediaImage;
 }
 
-export default function ImageFilter (props: ImageFilterProps): JSX.Element {
-  const { image } = props
+export default function ImageFilter(props: ImageFilterProps): JSX.Element {
+  const { image } = props;
 
   return (
     <div className={styles.imageWrapper}>
@@ -21,5 +21,5 @@ export default function ImageFilter (props: ImageFilterProps): JSX.Element {
         height={1000}
       />
     </div>
-  )
-};
+  );
+}

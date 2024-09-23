@@ -1,24 +1,28 @@
-import React from 'react'
-import styles from './styles.module.css'
-import Image from 'next/image'
+import React from "react";
+import styles from "./styles.module.css";
+import Image from "next/image";
 
-import type { AboutSection } from '@graphql/sections'
+import type { AboutSection } from "@graphql/sections";
 
-import gridStyles from '@components/atoms/Grid/styles.module.css'
-import Section from '@components/atoms/Section/Component'
-import NumberedHeading from '@components/atoms/NumberedHeading/Component'
+import gridStyles from "@components/atoms/Grid/styles.module.css";
+import Section from "@components/atoms/Section/Component";
+import NumberedHeading from "@components/atoms/NumberedHeading/Component";
 
 interface AboutProps {
-  aboutData: AboutSection
+  aboutData: AboutSection;
 }
 
-export default function About (props: AboutProps): JSX.Element {
+export default function About(props: AboutProps): JSX.Element {
   return (
     <Section maxWidth={900}>
-      <NumberedHeading number={1} id={props.aboutData.bookmark}>{props.aboutData.title}</NumberedHeading>
+      <NumberedHeading number={1} id={props.aboutData.bookmark}>
+        {props.aboutData.title}
+      </NumberedHeading>
       <div className={gridStyles.grid}>
         <div className={styles.content}>
-          <div dangerouslySetInnerHTML={{ __html: props.aboutData.description }} />
+          <div
+            dangerouslySetInnerHTML={{ __html: props.aboutData.description }}
+          />
           <ul className={styles.techList}>
             {props.aboutData.technologies.map((tech, key) => (
               <li key={key}>{tech.name}</li>
@@ -39,5 +43,5 @@ export default function About (props: AboutProps): JSX.Element {
         </div>
       </div>
     </Section>
-  )
+  );
 }

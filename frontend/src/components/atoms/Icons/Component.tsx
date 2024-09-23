@@ -1,83 +1,80 @@
-import dynamic from 'next/dynamic'
-import React from 'react'
+import dynamic from "next/dynamic";
+import React from "react";
 
 export const Codepen = dynamic<{ className?: string }>(
-  async () => await import('@icons/codepen.svg'),
+  async () => await import("@icons/codepen.svg"),
   {
     loading: () => <span />,
-    ssr: false
+    ssr: false,
   }
-)
+);
 
 export const ExternalLink = dynamic<{ className?: string }>(
-  async () => await import('@icons/external-link.svg'),
+  async () => await import("@icons/external-link.svg"),
   {
     loading: () => <span />,
-    ssr: false
+    ssr: false,
   }
-)
+);
 
 export const Folder = dynamic<{ className?: string }>(
-  async () => await import('@icons/folder.svg'),
+  async () => await import("@icons/folder.svg"),
   {
     loading: () => <span />,
-    ssr: false
+    ssr: false,
   }
-)
+);
 
-export const Github = dynamic(
-  async () => await import('@icons/github.svg'),
-  {
-    loading: () => <span />,
-    ssr: false
-  }
-)
+export const Github = dynamic(async () => await import("@icons/github.svg"), {
+  loading: () => <span />,
+  ssr: false,
+});
 
 export const LinkedIn = dynamic<{ className?: string }>(
-  async () => await import('@icons/linkedin.svg'),
+  async () => await import("@icons/linkedin.svg"),
   {
     loading: () => <span />,
-    ssr: false
+    ssr: false,
   }
-)
+);
 
 export const Miro = dynamic<{ className?: string }>(
-  async () => await import('@icons/miro.svg'),
+  async () => await import("@icons/miro.svg"),
   {
     loading: () => <span />,
-    ssr: false
+    ssr: false,
   }
-)
+);
 
 export const Arrow = dynamic<{ className?: string }>(
-  async () => await import('@icons/arrow.svg'),
+  async () => await import("@icons/arrow.svg"),
   {
     loading: () => <span />,
-    ssr: false
+    ssr: false,
   }
-)
+);
 
-export function IconMapper (icon: string): React.ReactElement | null {
+export function IconMapper(icon: string): React.ReactElement | null {
   switch (icon) {
-    case 'codepen':
-      return <Codepen />
+    case "codepen":
+      return <Codepen />;
 
-    case 'external-link':
-      return <ExternalLink />
+    case "external-link":
+      return <ExternalLink />;
 
-    case 'folder':
-      return <Folder />
+    case "folder":
+      return <Folder />;
 
-    case 'github':
-      return <Github />
+    case "github":
+      return <Github />;
 
-    case 'linkedin':
-      return <LinkedIn />
+    case "linkedin":
+      return <LinkedIn />;
 
-    case 'miro':
-      return <Miro />
+    case "miro":
+      return <Miro />;
 
     default:
-      return null
+      return null;
   }
 }

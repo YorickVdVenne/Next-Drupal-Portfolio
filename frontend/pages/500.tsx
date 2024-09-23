@@ -1,49 +1,47 @@
-import { ALL_PROJECTS_QUERY } from '@graphql/all_projects'
-import { initializeApollo } from '../src/lib/apolloClient'
-import { ApolloError } from '@apollo/client'
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
-import siteMenus from '@content/siteMenus.json'
+import { ALL_PROJECTS_QUERY } from "@graphql/all_projects";
+import { initializeApollo } from "../src/lib/apolloClient";
+import { ApolloError } from "@apollo/client";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import siteMenus from "@content/siteMenus.json";
 
-import type { GetStaticProps } from 'next'
+import type { GetStaticProps } from "next";
 
-import ErrorPage from '@components/templates/ErrorPage/Component'
+import ErrorPage from "@components/templates/ErrorPage/Component";
 
-export default function Error500 (): JSX.Element {
-  return (
-    <ErrorPage />
-  )
+export default function Error500(): JSX.Element {
+  return <ErrorPage />;
 }
 
 export const getStaticProps: GetStaticProps = async (ctx) => {
-  const apolloClient = initializeApollo()
+  const apolloClient = initializeApollo();
 
   try {
     const result = await apolloClient.query({
-      query: ALL_PROJECTS_QUERY
-    })
+      query: ALL_PROJECTS_QUERY,
+    });
 
     return {
       props: {
-        ...(await serverSideTranslations(ctx.locale ?? 'en-US')),
+        ...(await serverSideTranslations(ctx.locale ?? "en-US")),
         initializeApolloState: apolloClient.cache.extract(),
-        menus: result.menus.data
+        menus: result.menus.data,
       },
-      revalidate: 1
-    }
+      revalidate: 1,
+    };
   } catch (error) {
     if (error instanceof ApolloError) {
-      console.error('Apollo Error:', error)
+      console.error("Apollo Error:", error);
     } else {
-      console.error('Error:', error)
+      console.error("Error:", error);
     }
 
     return {
       props: {
-        ...(await serverSideTranslations(ctx.locale ?? 'en-US')),
+        ...(await serverSideTranslations(ctx.locale ?? "en-US")),
         initialApolloState: apolloClient.cache.extract(),
-        menus: siteMenus.data
+        menus: siteMenus.data,
       },
-      revalidate: 1
-    }
+      revalidate: 1,
+    };
   }
-}
+};

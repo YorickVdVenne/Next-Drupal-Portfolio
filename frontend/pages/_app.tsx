@@ -1,33 +1,35 @@
-import '../theme/main.css'
-import { ApolloProvider } from '@apollo/client'
-import { useApollo } from '../src/lib/apolloClient'
-import { appWithTranslation } from 'next-i18next'
-import withTranslateRoutes from 'next-translate-routes'
-import { usePageVisibility } from '../misc/usePageVisibility'
+import "../theme/main.css";
+import { ApolloProvider } from "@apollo/client";
+import { useApollo } from "../src/lib/apolloClient";
+import { appWithTranslation } from "next-i18next";
+import withTranslateRoutes from "next-translate-routes";
+import { usePageVisibility } from "../misc/usePageVisibility";
 
-import type { AppProps } from 'next/app'
-import type { Menus } from '@graphql/menus'
+import type { AppProps } from "next/app";
+import type { Menus } from "@graphql/menus";
 
-import Navigation from '@components/organisms/Navigation/Component'
-import Footer from '@components/organisms/Footer/Component'
-import SideElement, { Orientation } from '@components/molecules/SideElement/Component'
-import Favicons from '@components/molecules/Favicons/Component'
-import DefaultMetatags from '@components/molecules/DefaultMetatags/Component'
+import Navigation from "@components/organisms/Navigation/Component";
+import Footer from "@components/organisms/Footer/Component";
+import SideElement, {
+  Orientation,
+} from "@components/molecules/SideElement/Component";
+import Favicons from "@components/molecules/Favicons/Component";
+import DefaultMetatags from "@components/molecules/DefaultMetatags/Component";
 
 export interface GlobalPageProps {
-  menus?: Menus
-  initialApolloState: any
+  menus?: Menus;
+  initialApolloState: any;
 }
 
 interface Props extends AppProps {
   pageProps: GlobalPageProps & {
-    children?: React.ReactNode
-  }
+    children?: React.ReactNode;
+  };
 }
 
-function App (props: Props): JSX.Element {
-  const apolloClient = useApollo(props.pageProps.initialApolloState)
-  usePageVisibility()
+function App(props: Props): JSX.Element {
+  const apolloClient = useApollo(props.pageProps.initialApolloState);
+  usePageVisibility();
 
   return (
     <>
@@ -35,17 +37,23 @@ function App (props: Props): JSX.Element {
       <Favicons />
       <ApolloProvider client={apolloClient}>
         <Navigation mainMenu={props.pageProps.menus?.mainMenu} />
-        <SideElement orientation={Orientation.left} content={props.pageProps.menus?.sideElement.socials} />
-        <SideElement orientation={Orientation.right} content={props.pageProps.menus?.sideElement.email} />
-        <div className='stack'>
-          <div className='content'>
+        <SideElement
+          orientation={Orientation.left}
+          content={props.pageProps.menus?.sideElement.socials}
+        />
+        <SideElement
+          orientation={Orientation.right}
+          content={props.pageProps.menus?.sideElement.email}
+        />
+        <div className="stack">
+          <div className="content">
             <props.Component {...props.pageProps} />
           </div>
           <Footer footer={props.pageProps.menus?.footer} />
         </div>
       </ApolloProvider>
     </>
-  )
+  );
 }
 
-export default withTranslateRoutes(appWithTranslation(App))
+export default withTranslateRoutes(appWithTranslation(App));
