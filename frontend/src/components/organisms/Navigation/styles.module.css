@@ -60,6 +60,7 @@
 
 .logo:hover svg {
     transform: translate(4px, -4px);
+    color: var(--color-green);
 }
 
 .logoText {
@@ -69,10 +70,6 @@
 
     @media (min-width: 480px) {
         display: block;
-    }
-
-    @media (min-width: 768px) {
-        display: none;
     }
 
     @media (min-width: 1024px) {
