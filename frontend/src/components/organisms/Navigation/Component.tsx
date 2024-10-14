@@ -22,28 +22,22 @@ export default function Navigation (props: NavigationProps): JSX.Element {
   const [scrollTop, setScrollTop] = useState(true)
 
   useEffect(() => {
-    let lastScrollY = 0
+    let lastScrollY = 0;
 
     const handleScroll = (): void => {
-      const currentScrollY = window.scrollY
+      const currentScrollY = window.scrollY;
 
-      if (currentScrollY !== 0) {
-        setScrollTop(false)
-      } else setScrollTop(true)
+      setScrollTop(currentScrollY === 0);
+      setScrolled(currentScrollY > lastScrollY && currentScrollY > 0);
 
-      if (window.scrollY > lastScrollY) {
-        setScrolled(true)
-      } else setScrolled(false)
+      lastScrollY = currentScrollY;
+    };
 
-      lastScrollY = currentScrollY
-    }
-
-    window.addEventListener('scroll', handleScroll)
-
+    window.addEventListener('scroll', handleScroll);
     return () => {
-      window.removeEventListener('scroll', handleScroll)
-    }
-  }, [])
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   return (
     <nav
