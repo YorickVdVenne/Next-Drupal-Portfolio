@@ -31,7 +31,7 @@ export default function Navigation (props: NavigationProps): JSX.Element {
       setScrolled(currentScrollY > lastScrollY && currentScrollY > 0)
 
       lastScrollY = currentScrollY
-    };
+    }
 
     window.addEventListener('scroll', handleScroll)
     return () => {
