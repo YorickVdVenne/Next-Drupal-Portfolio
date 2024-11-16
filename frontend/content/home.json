@@ -30,7 +30,7 @@
           },
           {
             "id": "4",
-            "name": "React"
+            "name": "Tailwind CSS"
           },
           {
             "id": "5",
@@ -71,16 +71,16 @@
             "period": "November 23 - Present",
             "jobDescription": [
               {
-                "description": "Creating links in WordPress with external systems"
+                "description": "<strong>Custom integrations:</strong> In various projects, I assisted clients in integrating their existing CRM systems with WordPress. For the Fietsersbond (Cyclists' Union), I developed a custom integration with Microsoft Dynamics, ensuring that new members who signed up via the website were automatically added to Dynamics' membership administration."
               },
               {
-                "description": "Object Oriented Programming (OOP) in PHP"
+                "description": "<strong>Automated unit tests:</strong> For various projects, I developed a series of unit tests. For The A11y Collective, I wrote tests for critical functions, such as the checkout process in WooCommerce and the course completion workflow."
               },
               {
-                "description": "Writing unit tests"
+                "description": "<strong>Web accessibility:</strong> Through courses and hands-on experience, I gained extensive knowledge about web accessibility. This enhanced my awareness of common pitfalls, enabling me to develop front-end solutions with a focus on improving accessibility for everyone."
               },
               {
-                "description": "Hardcore debugging with Xdebug"
+                "description": "<strong>API development:</strong> For MS Amlin, I developed a RESTful API that allowed users to find nearby brokers based on their postal code."
               }
             ]
           },
@@ -91,16 +91,16 @@
             "period": "September 2022 - April 2023",
             "jobDescription": [
               {
-                "description": "Website development based on delivered design"
+                "description": "<strong>Pixel-perfect implementation of designs:</strong> For the client portal of High Profile Locations (HPL), I was responsible for translating the design into a pixel-perfect implementation. I critically reviewed the designs, discussed improvements with the designers, and implemented the necessary enhancements."
               },
               {
-                "description": "Debugging & Quality Assurance (QA)"
+                "description": "<strong>Fully responsive development:</strong> For various projects, I ensured that the front-end performed optimally across all devices and screen sizes. For Aviko, for example, I developed a product accordion in Next.js that works seamlessly on desktop, tablet, and mobile."
               },
               {
-                "description": "Writing scalable code and optimizing the responsiveness was essential"
+                "description": "<strong>Handling data from APIs:</strong> For various projects, I retrieved necessary data from APIs. I used GraphQL for efficient data fetching and ensured type safety with TypeScript. With Next.js, I effectively loaded data and connected it to the appropriate components."
               },
               {
-                "description": "Using the Agile Scrum Method, I participated in multiple sprints mostly as front-end developer but also one project as back-end developer"
+                "description": "<strong>Scalability of components:</strong> Scalability was a central focus in every project. For HPL, I was responsible for developing various React components that could be easily reused and adapted for different use cases."
               }
             ]
           },
@@ -111,13 +111,16 @@
             "period": "Oktober 2019 - Februari 2022",
             "jobDescription": [
               {
-                "description": "Bug fixing, both front-end and back-end issues"
+                "description": "<strong>Support tickets:</strong> Resolving minor issues and communicating with clients."
               },
               {
-                "description": "Content migrations and CMS management"
+                "description": "<strong>Content migrations and CMS management</strong> (in Drupal)"
               },
               {
-                "description": "Client contact and service"
+                "description": "<strong>Graduation internship:</strong> About providing insights into productivity."
+              },
+              {
+                "description": "<strong>Note:</strong> In the two/three years I worked at Burst, I started as a trainee with a zero hour contract and did two internships. So during my studies I always kept working at Burst. In my last year at Burst, the company fused with other companies and became iO."
               }
             ]
           }
@@ -166,66 +169,62 @@
             "featured": true
           },
           {
-            "id": "2",
-            "title": "Aviko QR Code",
-            "summary": "The client Aviko wanted to add QR codes to their packages to attract more visitors. But their packages can be found all over the world and depending on where you scan the package the QR code should redirect you to the correct landingpage. This was the challange I had to deal with while creating a custom Drupal module to manage the redirects and setting up a Node.js server to handle all the redirecting and getting the users location.",
+            "id": "9",
+            "title": "MS Amlin - Find your broker",
+            "summary": "The client MS Amlin wanted to build a website where users could find a broker near them. I was responsible for the development of the front-end and the back-end. I used Next.js for the front-end and WordPress for the back-end. I also created a custom API to handle the data from the WordPress back-end.",
             "technologies": [
               {
                 "id": "1",
+                "name": "WordPress"
+              },
+              {
+                "id": "2",
                 "name": "PHP"
               },
               {
-                "id": "2",
-                "name": "JavaScript"
-              },
-              {
                 "id": "3",
-                "name": "Drupal"
-              },
-              {
-                "id": "4",
-                "name": "Node.js"
+                "name": "SQL"
               }
             ],
             "githubLink": "",
-            "externalLink": "https://qr.avikofoodservice.com/",
+            "externalLink": "https://msamlin-insurance.nl/",
             "mainImage": {
-              "url": "/images/main/aviko-qr-code-main-image.png",
-              "alt": "Aviko QR Code"
+              "url": "/images/main/ms-amlin-main-image.png",
+              "alt": "MS Amlin - Find your broker map"
             },
-            "year": "2022",
-            "madeAt": "iO",
-            "madeFor": "Aviko",
-            "description": "This is the long version of the description.",
+            "year": "2024",
+            "madeAt": "Level Level",
+            "madeFor": "MS Amlin",
+            "description": "Designed and developed a mobile-responsive website...",
             "featured": true
           },
           {
-            "id": "3",
-            "title": "Verno Customized frames",
-            "summary": "The Client Verno (framer) wanted users to be able to see what there art would look like with the frames Verno offered. That's why Burst created a subdomain where users could customize there frame. This was a very complex application which had predefined steps, but Verno wanted the users to be able to share their work with others during any part of this customize proces. So my task during my internship at Burst was to have the steps with it's content tracked within the URL as a Base64 string.",
+            "id": "10",
+            "title": "De Fietersbond",
+            "summary": "The client De Fietsersbond wanted to build a website where users could find a bike route near them. I was responsible for the development of the front-end and the back-end. I used Next.js for the front-end and WordPress for the back-end. I also created a custom API to handle the data from the WordPress back-end.",
             "technologies": [
               {
                 "id": "1",
-                "name": "TypeScript"
+                "name": "WordPress"
               },
               {
                 "id": "2",
-                "name": "React"
+                "name": "PHP"
               },
               {
                 "id": "3",
-                "name": "HTML & CSS"
+                "name": "Twig"
               }
             ],
             "githubLink": "",
-            "externalLink": "https://customize.verno.com/nl_NL/configure-frame?data=eyJmcmFtYWJsZU9iamVjdCI6InBvc3RlciJ9&step=framableObject",
+            "externalLink": "https://www.fietsersbond.nl/",
             "mainImage": {
-              "url": "/images/main/verno-main-image.png",
-              "alt": "Verno Customized frames"
+              "url": "/images/main/fietsersbond-main-image.png",
+              "alt": "De Fietsersbond"
             },
-            "year": "2021",
-            "madeAt": "Burst",
-            "madeFor": "Verno",
+            "year": "2024",
+            "madeAt": "Level Level",
+            "madeFor": "Fietsersbond",
             "description": "Designed and developed a mobile-responsive website...",
             "featured": true
           }
@@ -274,6 +273,40 @@
             "featured": false
           },
           {
+            "id": "2",
+            "title": "Aviko QR Code",
+            "summary": "The client Aviko wanted to add QR codes to their packages to attract more visitors. But their packages can be found all over the world and depending on where you scan the package the QR code should redirect you to the correct landingpage. This was the challange I had to deal with while creating a custom Drupal module to manage the redirects and setting up a Node.js server to handle all the redirecting and getting the users location.",
+            "technologies": [
+              {
+                "id": "1",
+                "name": "PHP"
+              },
+              {
+                "id": "2",
+                "name": "JavaScript"
+              },
+              {
+                "id": "3",
+                "name": "Drupal"
+              },
+              {
+                "id": "4",
+                "name": "Node.js"
+              }
+            ],
+            "githubLink": "",
+            "externalLink": "https://qr.avikofoodservice.com/",
+            "mainImage": {
+              "url": "/images/main/aviko-qr-code-main-image.png",
+              "alt": "Aviko QR Code"
+            },
+            "year": "2022",
+            "madeAt": "iO",
+            "madeFor": "Aviko",
+            "description": "This is the long version of the description.",
+            "featured": false
+          },
+          {
             "id": "5",
             "title": "Aviko Sprint 8",
             "summary": "During my employement at iO I participated in a sprint for the client Aviko, I was assigned multiple front-end tickets which I worked on during the 2 week sprint.",
@@ -305,6 +338,36 @@
             "madeAt": "iO",
             "madeFor": "Aviko",
             "description": "Developed a high-performance e-commerce platform...",
+            "featured": false
+          },
+          {
+            "id": "3",
+            "title": "Verno Customized frames",
+            "summary": "The Client Verno (framer) wanted users to be able to see what there art would look like with the frames Verno offered. That's why Burst created a subdomain where users could customize there frame. This was a very complex application which had predefined steps, but Verno wanted the users to be able to share their work with others during any part of this customize proces. So my task during my internship at Burst was to have the steps with it's content tracked within the URL as a Base64 string.",
+            "technologies": [
+              {
+                "id": "1",
+                "name": "TypeScript"
+              },
+              {
+                "id": "2",
+                "name": "React"
+              },
+              {
+                "id": "3",
+                "name": "HTML & CSS"
+              }
+            ],
+            "githubLink": "",
+            "externalLink": "https://customize.verno.com/nl_NL/configure-frame?data=eyJmcmFtYWJsZU9iamVjdCI6InBvc3RlciJ9&step=framableObject",
+            "mainImage": {
+              "url": "/images/main/verno-main-image.png",
+              "alt": "Verno Customized frames"
+            },
+            "year": "2021",
+            "madeAt": "Burst",
+            "madeFor": "Verno",
+            "description": "Designed and developed a mobile-responsive website...",
             "featured": false
           },
           {
