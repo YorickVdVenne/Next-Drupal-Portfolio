@@ -1,487 +1,563 @@
 {
-    "data": {
-      "projects": [
-        {
+  "data": {
+    "projects": [
+      {
+        "id": "10",
+        "title": "De Fietersbond",
+        "summary": "The client De Fietsersbond wanted to build a website where users could find a bike route near them. I was responsible for the development of the front-end and the back-end. I used Next.js for the front-end and WordPress for the back-end. I also created a custom API to handle the data from the WordPress back-end.",
+        "technologies": [
+          {
             "id": "1",
-            "title": "HPL Portal",
-            "summary": "The client High Profile Locaties (HPL) wanted to build a website where venue holders could offer there venue to be used for various occasions. I was later envolved in the development proces to work on the portal, where venue holders can create and manage their venues. I've worked on this project as front-end developer a few months and delivered all kinds of features, read more to find out.",
-            "technologies": [
-              {
-                "id": "1",
-                "name": "TypeScript"
-              },
-              {
-                "id": "2",
-                "name": "Next.js"
-              },
-              {
-                "id": "3",
-                "name": "Storybook"
-              },
-              {
-                "id": "4",
-                "name": "React"
-              },
-              {
-                "id": "5",
-                "name": "HTML & CSS"
-              }
-            ],
-            "githubLink": "",
-            "externalLink": "https://www.locaties.nl/",
-            "mainImage": {
-              "url": "/images/main/hpl-main-image.png",
-              "alt": "High Profile Locaties"
-            },
-            "screenshots": [
-              {
-                "url": "/images/screenshots/hpl/venue-data-page.png",
-                "alt": "Venue manage page",
-                "description": "This screenshot displays the venue manage page, where the most important information is manageable. You can see the anchor menu (below the title) which I've made and the little information button next to the title. Also clearly visible is the chat service in the right corner which I've implemented. And then the overal display of the data inside the card with the collapsible description which I've worked on."
-              },
-              {
-                "url": "/images/screenshots/hpl/indoor-spaces-overview-page.png",
-                "alt": "Indoor spaces overview page",
-                "description": "This is the indoor spaces overview page where the venueholder can create new spaces for it's venue. I've created this list display of spaces, with the create/edit dialog."
-              },
-              {
-                "url": "/images/screenshots/hpl/facilities-with-anchor-menu.png",
-                "alt": "Facilities page with anchor menu",
-                "description": "With this screenshot you can now see the anchor menu in action; it stays sticky under the black main navigation. Apart from that I created this page of facilities; all the messages, dialogs, forms, buttons and styling."
-              },
-              {
-                "url": "/images/screenshots/hpl/tutorial-dialog-1.png",
-                "alt": "Tutorial dialog step 1",
-                "description": "This tutorial dialog is the one created for venues, so it will only show when it's the first time a user creates a venue or when the users hits the help button. To know it's the first time opening the venue a variable is stored in the local storage of the users browser."
-              },
-              {
-                "url": "/images/screenshots/hpl/tutorial-dialog-2.png",
-                "alt": "Tutorial dialog step 2",
-                "description": "This is the next step within the venue tutorial, with an interactive image that changes automatically."
-              },
-              {
-                "url": "/images/screenshots/hpl/tutorial-dialog-3.png",
-                "alt": "Tutotrial dialog step 3",
-                "description": "For the last step, publishing is important so I added the sticky progress block (which is normally seen in the left corner) inside the dialog and made this interactive (not just a static image)."
-              },
-              {
-                "url": "/images/screenshots/hpl/progression-dialog.png",
-                "alt": "Progression dialog",
-                "description": "This shows the progression dialog that indicates how far the user is to publishing it's venue. If there is information missing it will show the percentage it needs to complete it. The edit buttons will then open the relavant edit dialog, which I remember was a pain because not all the data was always available on every page and the progress block was is visible on every page, so it needed the data from all the other forms."
-              },
-              {
-                "url": "/images/screenshots/hpl/category-page.png",
-                "alt": "Category Page",
-                "description": "Sometimes I would be asked to help the frontend (locaties.nl, so not the portal). For example I was asked to create the category page, so I worked on the layout of the venue cards and also the buttons for pagination, filtering and showing the map."
-              }
-            ],
-            "year": "2023",
-            "madeAt": "iO",
-            "madeFor": "HPL",
-            "description": "<p>During my time working at iO I spent a lot of time working for a client named High Profile Locaties (HPL). Who wanted to create a platform where users can find venues for all sort of occasions, somewhat similar to Airbnb.</p><p>Mostly worked on the venueholder portal, the place where the venueholders can create and manage their venues. So as you can imagine, this was all about data; making sure the venueholders whould fill in all the necessary data, helping the user to display his venue as complete and professional as possible.</p><p>I've worked on a lot of different features, that sadly at the moment I did not document well enough to showcase all in screenshots. Features such as: overview pages for rooms and spaces, a lot of different forms, different dialogs (tutorial dialog, progress dialog, create/edit dialog), in page anchor menu, mobile navigation, rich text editor from tinymce, live chat integration and to top it all of an confetti animation using GSAP. Apart from these awesome features I helped out with a lot of bug fixing and quality assurance (QA). Unfortunately I have no longer access to the portal so I was only permitted to showcase the following screenshots bellow. They will hopefully give a glimpse of all the work I did for HPL.</p>",
-            "nextProjectId": "5",
-            "featured": true
-        },
-        {
+            "name": "WordPress"
+          },
+          {
             "id": "2",
-            "title": "Aviko QR Code",
-            "summary": "The client Aviko wanted to add QR codes to their packages to attract more visitors. But their packages can be found all over the world and depending on where you scan the package the QR code should redirect you to the correct landingpage. This was the challange I had to deal with while creating a custom Drupal module to manage the redirects and setting up a Node.js server to handle all the redirecting and getting the users location.",
-            "technologies": [
-              {
-                "id": "1",
-                "name": "PHP"
-              },
-              {
-                "id": "2",
-                "name": "JavaScript"
-              },
-              {
-                "id": "3",
-                "name": "Drupal"
-              },
-              {
-                "id": "4",
-                "name": "Node.js"
-              }
-            ],
-            "githubLink": "",
-            "externalLink": "https://qr.avikofoodservice.com/churros",
-            "mainImage": {
-              "url": "/images/main/aviko-qr-code-main-image.png",
-              "alt": "Aviko QR Code"
-            },
-            "screenshots": [
-              {
-                "url": "/images/screenshots/aviko/qr-code-explanation.png",
-                "alt": "QR Code redirect functionality",
-                "description": "There is not much visual about this project, it was a back-end task. But I can show you in this sketch I made at the time how it was constructed and what the customer journey is."
-              }
-            ],
-            "year": "2022",
-            "madeAt": "iO",
-            "madeFor": "Aviko",
-            "description": "<p>The client Aviko wanted to add QR codes to their packages to attract more visitors. I brought onto the project to handle the functionality. First I brainstormed with the client on the requirements and mapped out the idea with a colleague.</p><p>The solution was to create a subdomain with an Express (Node.js) server that would handle the location of the user and redirect the user to the correct landingpage. And this server would communicate with the Drupal CMS in GraphQL to retrieve the correct redirect URL given the parameters. It was important that the redirects would be manageable in the CMS because in the future they will add and change these redirects to other pages.</p><p>When it was finished and tested I gave a talk or demo about it to my iO Campus Rotterdam colleagues, where I pitched the entire idea and explain the functionality.</p>",
-            "nextProjectId": "7",
-            "featured": true
-        },
-        {
+            "name": "PHP"
+          },
+          {
             "id": "3",
-            "title": "Verno Customized frames",
-            "summary": "The Client Verno (framer) wanted users to be able to see what there art would look like with the frames Verno offered. That's why Burst created a subdomain where users could customize there frame. This was a very complex application which had predefined steps, but Verno wanted the users to be able to share their work with others during any part of this customize proces. So my task during my internship at Burst was to have the steps with it's content tracked within the URL as a Base64 string.",
-            "technologies": [
-              {
-                "id": "1",
-                "name": "TypeScript"
-              },
-              {
-                "id": "2",
-                "name": "React"
-              },
-              {
-                "id": "3",
-                "name": "HTML & CSS"
-              }
-            ],
-            "githubLink": "",
-            "externalLink": "https://customize.verno.com/nl_NL/configure-frame?data=eyJmcmFtYWJsZU9iamVjdCI6InBvc3RlciJ9&step=framableObject",
-            "mainImage": {
-              "url": "/images/main/verno-main-image.png",
-              "alt": "Verno Customized frames"
-            },
-            "screenshots": [
-              {
-                "url": "/images/screenshots/verno/step-1.png",
-                "alt": "Where you start",
-                "description": "This is the starting point of the frame configuration."
-              },
-              {
-                "url": "/images/screenshots/verno/select-frame.png",
-                "alt": "Frame selection",
-                "description": "Once a frame is selected the sharebuttons I created will appear in the left corner and it now has URL which you can share with others."
-              }
-            ],
-            "year": "2021",
-            "madeAt": "Burst",
-            "madeFor": "Verno",
-            "description": "<p>During my internship at Burst I've got the assignment to make the frame configuration of framemaker Verno shareable. At first the steps of the configuration were a set of static steps mapped in the code. But now at any time the steps should be retrieved from the URL, which was quite challenging to rewrite. So all the info of the step was encoded in an base64 string and then placed in the URL. Then the step with it's data was te be determined by the URL, which had a lot of room for error at the start. But after enough finetuning and testing different scenario's it worked.</p>",
-            "nextProjectId": "8",
-            "featured": true
+            "name": "Twig"
+          }
+        ],
+        "githubLink": "",
+        "externalLink": "https://www.fietsersbond.nl/",
+        "mainImage": {
+          "url": "/images/main/fietsersbond-main-image.png",
+          "alt": "De Fietsersbond"
         },
-        {
-            "id": "4",
-            "title": "Portfolio Website",
-            "summary": "This very website is a great example of my skill. Using my favorite tech stack I built this portfolio to showcase my work experiences, projects and documentation to possible future employers.",
-            "technologies": [
-              {
-                "id": "1",
-                "name": "Next.js"
-              },
-              {
-                "id": "2",
-                "name": "TypeScript"
-              },
-              {
-                "id": "3",
-                "name": "HTML & CSS"
-              },
-              {
-                "id": "4",
-                "name": "Drupal"
-              },
-              {
-                "id": "5",
-                "name": "PHP"
-              },
-              {
-                "id": "6",
-                "name": "GraphQL"
-              }
-            ],
-            "githubLink": "https://github.com/YorickVdVenne/Nextjs-Drupal-Portfolio",
-            "externalLink": "/",
-            "mainImage": {
-              "url": "/images/main/portfolio-main-image.png",
-              "alt": "Portfolio Website"
+        "screenshots": [
+          {
+            "url": "/images/screenshots/fietsersbond/word-lid.png",
+            "alt": "Become a member page",
+            "description": "Become a member page"
+          }
+        ],
+        "year": "2024",
+        "madeAt": "Level Level",
+        "madeFor": "Fietsersbond",
+        "description": "Designed and developed a mobile-responsive website...",
+        "nextProjectId": "1",
+        "featured": true
+      },
+      {
+          "id": "9",
+          "title": "MS Amlin - Find your broker",
+          "summary": "The client MS Amlin wanted to create a website where users could find a broker to help them with their insurance. I was assigned to work on the front-end of this project, where I created the search functionality and the broker detail page.",
+          "technologies": [
+            {
+              "id": "1",
+              "name": "WordPress"
             },
-            "screenshots": [
-              {
-                "url": "/images/screenshots/portfolio/featured-projects.png",
-                "alt": "Featured Projects Layout",
-                "description": "To highlight some of my proudest work I built this featured project layout to alternatives the display from right to left with a nice image and a short summary."
-              },
-              {
-                "url": "/images/screenshots/portfolio/project-card-collection.png",
-                "alt": "Project Card Collection",
-                "description": "This showcases the nice card collection I built."
-              },
-              {
-                "url": "/images/screenshots/portfolio/archive-project-table.png",
-                "alt": "Project Archive Table",
-                "description": "In order to display a list of all my projects I created this Archive table, it also creates a timeline of my career which is interesting."
-              },
-              {
-                "url": "/images/screenshots/portfolio/project-detail-page.png",
-                "alt": "Project Detail Page",
-                "description": "As you are on right now, showcasing a specific project with a screenshot slider (made with Swiper.js) and some general info."
-              }
-            ],
-            "year": "2023",
-            "madeAt": "-",
-            "madeFor": "-",
-            "description": "<p>This Portfolio website was built with a few reasons in mind; to showcase my work and experiences to future employers and to document my career for myself. I enjoy reflecting on the things I've worked on and it motivates me to continue working on things I would be proud to showcase.</p><p>I feel like my Portfolio website itself should be a showcase of my abilities. Therefor I created this website from skretch in Next.js and Drupal 10. The design was inspired of portfolio's I could find online, I combined things I saw and liked to create my own version of it. Right now the back-end is not connected, meaning all the content is added statically. It became more urgent to have something online to showcase then to have it perfectly finished. I will continue developing this portfolio website as it is also a playground for me, I'll continue adding features to practise my skills.</p><p>The code of the website is accessible on my Github, so you can see every little detail of how I created it. If you do have any questions or suggestions about the code, feel free to ask me.</p>",
-            "nextProjectId": "1",
-            "featured": false
-        },
-        {
-            "id": "5",
-            "title": "Aviko Sprint 8",
-            "summary": "During my employement at iO I participated in a sprint for the client Aviko, I was assigned multiple front-end tickets which I worked on during the 2 week sprint.",
-            "technologies": [
-              {
-                "id": "1",
-                "name": "HTML & CSS"
-              },
-              {
-                "id": "2",
-                "name": "TypeScript"
-              },
-              {
-                "id": "3",
-                "name": "Next.js"
-              },
-              {
-                "id": "4",
-                "name": "Pardot forms"
-              }
-            ],
-            "githubLink": "",
-            "externalLink": "https://www.avikofoodservice.nl/producten/oerfriet-11mm",
-            "mainImage": {
-              "url": "/images/main/aviko-sprint-8-main-image.png",
-              "alt": "Aviko Sprint 8"
+            {
+              "id": "2",
+              "name": "PHP"
             },
-            "screenshots": [
-              {
-                "url": "/images/screenshots/aviko/pardot-forms.png",
-                "alt": "Form fixes",
-                "description": "Some of the forms, mostly certain contact forms, within Aviko were created using pardot forms (from salesforce). But the styling do adjust these forms are difficult to change, but there were a few issues with the country flag from the telephone field and the checkboxes above the send button. These bugs I had to fix within the pardot forms and then use a script to load in the custom styling."
-              },
-              {
-                "url": "/images/screenshots/aviko/product-accordion.png",
-                "alt": "Product accordion",
-                "description": "My biggest ticket was creating the new product accordion. It had to open the first child by default and you can open multiple at the same time. Offcourse it had to be responsive so on mobile the layout would be different and also the styling of the accordion would change. But also the table content of some accordion tabs, such as nutritional info, needed new styling. All while the image needed to scale nicely."
-              },
-              {
-                "url": "/images/screenshots/aviko/spanish-rollout.png",
-                "alt": "Spanish translation rollout",
-                "description": "Aviko wanted to add Spanish translations to the internationale website. So I had to create the language switch button and rollout a new translation using the CLI. Also I needed to add the translations and communicate this well with the backend team so there wouldn't be any errors."
-              }
-            ],
-            "year": "2023",
-            "madeAt": "iO",
-            "madeFor": "Aviko",
-            "description": "<p>I was lucky enough to participate in an Aviko sprint, a project that strictly follow the agile scrum method. Within iO this project was known for having everything in place and being mananged well. This was going to be the 8's sprint, with a duration of 2 weeks.</p><p>I've worked on a quit a few tickets during this sprint ranging from small content fixes to making the new product accordion. It's hard to remember all the things I've covered during this time. But for me personally the most interesting experience was the sprint itself, the communication and dedication of the team. No wonder Aviko had such a good reputation wihtin iO. Below I'll show a few screenshots of things I can remember working on.</p>",
-            "nextProjectId": "2",
-            "featured": false
-        },
-        {
-            "id": "6",
-            "title": "Tinyhouse: Fullstack React Masterclass",
-            "summary": "During my time working at Burst I was offered to follow the Tinyhouse: Fullstack React Masterclass. Where I learned how to create an entire website (the tinyhouse application) from skretch.",
-            "technologies": [
-              {
-                "id": "1",
-                "name": "HTML & CSS"
-              },
-              {
-                "id": "2",
-                "name": "TypeScript"
-              },
-              {
-                "id": "3",
-                "name": "JavaScript"
-              },
-              {
-                "id": "4",
-                "name": "GraphQL"
-              },
-              {
-                "id": "5",
-                "name": "React"
-              },
-              {
-                "id": "6",
-                "name": "MongoDB"
-              }
-            ],
-            "githubLink": "https://github.com/YorickVdVenne/TinyHouse-Fullstack-Application",
-            "externalLink": "https://www.tinyhouse.app/",
-            "mainImage": {
-              "url": "/images/main/tinyhouse-main-image.png",
-              "alt": "Tinyhouse Fullstack Masterclass"
+            {
+              "id": "3",
+              "name": "SQL"
+            }
+          ],
+          "githubLink": "",
+          "externalLink": "https://msamlin-insurance.nl/",
+          "mainImage": {
+            "url": "/images/main/ms-amlin-main-image.png",
+            "alt": "MS Amlin - Find your broker map"
+          },
+          "screenshots": [
+            {
+              "url": "/images/screenshots/ms-amlin/csv-import.png",
+              "alt": "CSV Import page",
+              "description": "CSV import page"
+            }
+          ],
+          "year": "2024",
+          "madeAt": "Level Level",
+          "madeFor": "MS Amlin",
+          "description": "<p>Yo</p>",
+          "nextProjectId": "10",
+          "featured": true
+      },
+      {
+          "id": "1",
+          "title": "HPL Portal",
+          "summary": "The client High Profile Locaties (HPL) wanted to build a website where venue holders could offer there venue to be used for various occasions. I was later envolved in the development proces to work on the portal, where venue holders can create and manage their venues. I've worked on this project as front-end developer a few months and delivered all kinds of features, read more to find out.",
+          "technologies": [
+            {
+              "id": "1",
+              "name": "TypeScript"
             },
-            "screenshots": [
-              {
-                "url": "/images/screenshots/tinyhouse/listing-page.png",
-                "alt": "Listing page",
-                "description": "The overview listing page where you can search, filter and paginate the rentals."
-              },
-              {
-                "url": "/images/screenshots/tinyhouse/detail-page.png",
-                "alt": "Detail page",
-                "description": "This is where the details of the rental is shown."
-              },
-              {
-                "url": "/images/screenshots/tinyhouse/inside-course.png",
-                "alt": "Inside look of the course",
-                "description": "A well organized course with lots of modules and lessons with quality material."
-              },
-              {
-                "url": "/images/screenshots/tinyhouse/credits.png",
-                "alt": "Credits",
-                "description": "To Hassan Djirdeh and Jing Chen"
-              }
-            ],
-            "year": "2020",
-            "madeAt": "-",
-            "madeFor": "-",
-            "description": "<p>While working for Burst they offered to give a discount on a course they recommend to all their developers. So offcourse I did so to.</p><p>The course was all about creating a website from scratch using at the moment a very modern tech stack. The backend was made in Express (Node.js), the frontend was built with React in TypeScript and the communication was done with GraphQL. The course featured a lot of practical functionalities used in modern websites, such as:  Google Sign-In & OAuth 2.0, Persist Login Sessions with Cookies, Geocoding API, payment with Stripe, Image Storage and deploying with Heroku.</p>",
-            "nextProjectId": "4",
-            "featured": false
-        },
-        {
-            "id": "7",
-            "title": "Graduation project: Productivity",
-            "summary": "During my graduation project at iO, I researched how productivity could become insightful. I experimented with some ideas and created this static application based on my findings, note this was created for testing purposes.",
-            "technologies": [
-              {
-                "id": "1",
-                "name": "HTML & CSS"
-              },
-              {
-                "id": "2",
-                "name": "JavaScript"
-              },
-              {
-                "id": "3",
-                "name": "Next.js"
-              }
-            ],
-            "githubLink": "https://github.com/YorickVdVenne/Productivity-Nextjs",
-            "externalLink": "https://productivity-phi.vercel.app/",
-            "mainImage": {
-              "url": "/images/main/productivity-main-image.png",
-              "alt": "Productivity application"
+            {
+              "id": "2",
+              "name": "Next.js"
             },
-            "screenshots": [
-              {
-                "url": "/images/screenshots/graduation/graduation-cover.png",
-                "alt": "Graduation Essay Cover",
-                "description": "The cover of my essay, with my main question. If you wish to read it, send me a message and I'll consider it."
-              },
-              {
-                "url": "/images/screenshots/graduation/new-objective.png",
-                "alt": "Creating objectives with key results",
-                "description": "An important part is that employee can create their own goals and key results needed to achieve those goals. This way it will become insightfull how many and what sort of goals the employee can complete within a quarter."
-              },
-              {
-                "url": "/images/screenshots/graduation/team-goals-page.png",
-                "alt": "Team goals page",
-                "description": "It's important that team and company goals are insightfull so the employees can follow along and even create his own objectives bases on the team or company goals."
-              },
-              {
-                "url": "/images/screenshots/graduation/request-feedback-page.png",
-                "alt": "Request feedback page",
-                "description": "The other part of the application is the feedback part, where you can request feedback from colleagues so you know what other people think of certain skills."
-              },
-              {
-                "url": "/images/screenshots/graduation/give-feedback-page.png",
-                "alt": "Give feedback page",
-                "description": "Obviously it is than also important to give feedback to other employees."
-              },
-              {
-                "url": "/images/screenshots/graduation/insightfull-feedback.png",
-                "alt": "Feedback storage",
-                "description": "This would be a place where the feedback you received is stored so that you can revisit and reflect."
-              },
-              {
-                "url": "/images/screenshots/graduation/feedback-progression.png",
-                "alt": "Feedback progression",
-                "description": "Then in an attempt to measure improvement, you can see the feedback you received over certain skills and subjects over a period of time."
-              }
-            ],
-            "year": "2022",
-            "madeAt": "iO",
-            "madeFor": "Hogeschool Rotterdam / iO",
-            "description": "<p>During my graduation project at iO, I researched how productivity could become insightful. After a lot of research and tests one of the bests ways to make productivity insightfull is via measuring results in terms of goals achieved and feedback from others. Though I did came to the conclusion that productivy is a very subjective subject that is difficult to measure in a way that every employee feels his productivity well represented. Even so I created an static application (for testing purposes) that displays a way to make productivity insightfull via goals and feedback.</p><p>The design of the application I built myself based on the colors and fonts used in the iO branding. Apart from that it was built with Next.js, but as mentioned it was static and not at all completed. But it does give an idea of what it could look like, an application that makes productivity insightfull.</p>",
-            "nextProjectId": "3",
-            "featured": false
-        },
-        {
-            "id": "8",
-            "title": "Internship: Next.js blog",
-            "summary": "During to internship at Burst I created a blog website using Drupal and Next.js to expirement with the different rendering methods of Next.js.",
-            "technologies": [
-              {
-                "id": "1",
-                "name": "HTML & CSS"
-              },
-              {
-                "id": "2",
-                "name": "JavaScript"
-              },
-              {
-                "id": "3",
-                "name": "Next.js"
-              },
-              {
-                "id": "4",
-                "name": "PHP"
-              },
-              {
-                "id": "5",
-                "name": "Drupal"
-              }
-            ],
-            "githubLink": "https://github.com/YorickVdVenne/SSR-Nextjs-Blog/tree/master/src",
-            "externalLink": "",
-            "mainImage": {
-              "url": "/images/main/blog-main-image.png",
-              "alt": "Next.js blog site"
+            {
+              "id": "3",
+              "name": "Storybook"
             },
-            "screenshots": [
-              {
-                "url": "/images/screenshots/blog/blog-header.png",
-                "alt": "Homepage",
-                "description": "The design was from a template I used to kickstart the blog site."
-              },
-              {
-                "url": "/images/screenshots/blog/filter.png",
-                "alt": "Blog Filter",
-                "description": "With filtering buttons but also the URL the blogs could be filtered."
-              },
-              {
-                "url": "/images/screenshots/blog/pagination.png",
-                "alt": "Blog Pagination",
-                "description": "Same as the filter, with pagination buttons but also via the URL the blogs could be paginated."
-              }
-            ],
-            "year": "2021",
-            "madeAt": "Burst",
-            "madeFor": "-",
-            "description": "<p>This blog site was at the moment a great practise for my Full-stack developer skills. As I first started to build the Drupal CMS in PHP. The place where you can manage the blogs and they would be available on a custom API and a GraphQL API.</p><p>Then for the front-end I used Next.js, this was the first time I've ever used Next.js and it blew me away. It was so easy to configure routes and build components and all sorts of things. The filtering and pagination have great funcionality and animations that were at the time very new for me.</p>",
-            "nextProjectId": "6",
-            "featured": false
-        }
-      ],
-      "metatags": {
+            {
+              "id": "4",
+              "name": "React"
+            },
+            {
+              "id": "5",
+              "name": "HTML & CSS"
+            }
+          ],
+          "githubLink": "",
+          "externalLink": "https://www.locaties.nl/",
+          "mainImage": {
+            "url": "/images/main/hpl-main-image.png",
+            "alt": "High Profile Locaties"
+          },
+          "screenshots": [
+            {
+              "url": "/images/screenshots/hpl/venue-data-page.png",
+              "alt": "Venue manage page",
+              "description": "This screenshot displays the venue manage page, where the most important information is manageable. You can see the anchor menu (below the title) which I've made and the little information button next to the title. Also clearly visible is the chat service in the right corner which I've implemented. And then the overal display of the data inside the card with the collapsible description which I've worked on."
+            },
+            {
+              "url": "/images/screenshots/hpl/indoor-spaces-overview-page.png",
+              "alt": "Indoor spaces overview page",
+              "description": "This is the indoor spaces overview page where the venueholder can create new spaces for it's venue. I've created this list display of spaces, with the create/edit dialog."
+            },
+            {
+              "url": "/images/screenshots/hpl/facilities-with-anchor-menu.png",
+              "alt": "Facilities page with anchor menu",
+              "description": "With this screenshot you can now see the anchor menu in action; it stays sticky under the black main navigation. Apart from that I created this page of facilities; all the messages, dialogs, forms, buttons and styling."
+            },
+            {
+              "url": "/images/screenshots/hpl/tutorial-dialog-1.png",
+              "alt": "Tutorial dialog step 1",
+              "description": "This tutorial dialog is the one created for venues, so it will only show when it's the first time a user creates a venue or when the users hits the help button. To know it's the first time opening the venue a variable is stored in the local storage of the users browser."
+            },
+            {
+              "url": "/images/screenshots/hpl/tutorial-dialog-2.png",
+              "alt": "Tutorial dialog step 2",
+              "description": "This is the next step within the venue tutorial, with an interactive image that changes automatically."
+            },
+            {
+              "url": "/images/screenshots/hpl/tutorial-dialog-3.png",
+              "alt": "Tutotrial dialog step 3",
+              "description": "For the last step, publishing is important so I added the sticky progress block (which is normally seen in the left corner) inside the dialog and made this interactive (not just a static image)."
+            },
+            {
+              "url": "/images/screenshots/hpl/progression-dialog.png",
+              "alt": "Progression dialog",
+              "description": "This shows the progression dialog that indicates how far the user is to publishing it's venue. If there is information missing it will show the percentage it needs to complete it. The edit buttons will then open the relavant edit dialog, which I remember was a pain because not all the data was always available on every page and the progress block was is visible on every page, so it needed the data from all the other forms."
+            },
+            {
+              "url": "/images/screenshots/hpl/category-page.png",
+              "alt": "Category Page",
+              "description": "Sometimes I would be asked to help the frontend (locaties.nl, so not the portal). For example I was asked to create the category page, so I worked on the layout of the venue cards and also the buttons for pagination, filtering and showing the map."
+            }
+          ],
+          "year": "2023",
+          "madeAt": "iO",
+          "madeFor": "HPL",
+          "description": "<p>During my time working at iO I spent a lot of time working for a client named High Profile Locaties (HPL). Who wanted to create a platform where users can find venues for all sort of occasions, somewhat similar to Airbnb.</p><p>Mostly worked on the venueholder portal, the place where the venueholders can create and manage their venues. So as you can imagine, this was all about data; making sure the venueholders whould fill in all the necessary data, helping the user to display his venue as complete and professional as possible.</p><p>I've worked on a lot of different features, that sadly at the moment I did not document well enough to showcase all in screenshots. Features such as: overview pages for rooms and spaces, a lot of different forms, different dialogs (tutorial dialog, progress dialog, create/edit dialog), in page anchor menu, mobile navigation, rich text editor from tinymce, live chat integration and to top it all of an confetti animation using GSAP. Apart from these awesome features I helped out with a lot of bug fixing and quality assurance (QA). Unfortunately I have no longer access to the portal so I was only permitted to showcase the following screenshots bellow. They will hopefully give a glimpse of all the work I did for HPL.</p>",
+          "nextProjectId": "5",
+          "featured": true
+      },
+      {
+          "id": "2",
+          "title": "Aviko QR Code",
+          "summary": "The client Aviko wanted to add QR codes to their packages to attract more visitors. But their packages can be found all over the world and depending on where you scan the package the QR code should redirect you to the correct landingpage. This was the challange I had to deal with while creating a custom Drupal module to manage the redirects and setting up a Node.js server to handle all the redirecting and getting the users location.",
+          "technologies": [
+            {
+              "id": "1",
+              "name": "PHP"
+            },
+            {
+              "id": "2",
+              "name": "JavaScript"
+            },
+            {
+              "id": "3",
+              "name": "Drupal"
+            },
+            {
+              "id": "4",
+              "name": "Node.js"
+            }
+          ],
+          "githubLink": "",
+          "externalLink": "https://qr.avikofoodservice.com/churros",
+          "mainImage": {
+            "url": "/images/main/aviko-qr-code-main-image.png",
+            "alt": "Aviko QR Code"
+          },
+          "screenshots": [
+            {
+              "url": "/images/screenshots/aviko/qr-code-explanation.png",
+              "alt": "QR Code redirect functionality",
+              "description": "There is not much visual about this project, it was a back-end task. But I can show you in this sketch I made at the time how it was constructed and what the customer journey is."
+            }
+          ],
+          "year": "2022",
+          "madeAt": "iO",
+          "madeFor": "Aviko",
+          "description": "<p>The client Aviko wanted to add QR codes to their packages to attract more visitors. I brought onto the project to handle the functionality. First I brainstormed with the client on the requirements and mapped out the idea with a colleague.</p><p>The solution was to create a subdomain with an Express (Node.js) server that would handle the location of the user and redirect the user to the correct landingpage. And this server would communicate with the Drupal CMS in GraphQL to retrieve the correct redirect URL given the parameters. It was important that the redirects would be manageable in the CMS because in the future they will add and change these redirects to other pages.</p><p>When it was finished and tested I gave a talk or demo about it to my iO Campus Rotterdam colleagues, where I pitched the entire idea and explain the functionality.</p>",
+          "nextProjectId": "7",
+          "featured": true
+      },
+      {
+          "id": "3",
+          "title": "Verno Customized frames",
+          "summary": "The Client Verno (framer) wanted users to be able to see what there art would look like with the frames Verno offered. That's why Burst created a subdomain where users could customize there frame. This was a very complex application which had predefined steps, but Verno wanted the users to be able to share their work with others during any part of this customize proces. So my task during my internship at Burst was to have the steps with it's content tracked within the URL as a Base64 string.",
+          "technologies": [
+            {
+              "id": "1",
+              "name": "TypeScript"
+            },
+            {
+              "id": "2",
+              "name": "React"
+            },
+            {
+              "id": "3",
+              "name": "HTML & CSS"
+            }
+          ],
+          "githubLink": "",
+          "externalLink": "https://customize.verno.com/nl_NL/configure-frame?data=eyJmcmFtYWJsZU9iamVjdCI6InBvc3RlciJ9&step=framableObject",
+          "mainImage": {
+            "url": "/images/main/verno-main-image.png",
+            "alt": "Verno Customized frames"
+          },
+          "screenshots": [
+            {
+              "url": "/images/screenshots/verno/step-1.png",
+              "alt": "Where you start",
+              "description": "This is the starting point of the frame configuration."
+            },
+            {
+              "url": "/images/screenshots/verno/select-frame.png",
+              "alt": "Frame selection",
+              "description": "Once a frame is selected the sharebuttons I created will appear in the left corner and it now has URL which you can share with others."
+            }
+          ],
+          "year": "2021",
+          "madeAt": "Burst",
+          "madeFor": "Verno",
+          "description": "<p>During my internship at Burst I've got the assignment to make the frame configuration of framemaker Verno shareable. At first the steps of the configuration were a set of static steps mapped in the code. But now at any time the steps should be retrieved from the URL, which was quite challenging to rewrite. So all the info of the step was encoded in an base64 string and then placed in the URL. Then the step with it's data was te be determined by the URL, which had a lot of room for error at the start. But after enough finetuning and testing different scenario's it worked.</p>",
+          "nextProjectId": "8",
+          "featured": false
+      },
+      {
+          "id": "4",
+          "title": "Portfolio Website",
+          "summary": "This very website is a great example of my skill. Using my favorite tech stack I built this portfolio to showcase my work experiences, projects and documentation to possible future employers.",
+          "technologies": [
+            {
+              "id": "1",
+              "name": "Next.js"
+            },
+            {
+              "id": "2",
+              "name": "TypeScript"
+            },
+            {
+              "id": "3",
+              "name": "HTML & CSS"
+            },
+            {
+              "id": "4",
+              "name": "Drupal"
+            },
+            {
+              "id": "5",
+              "name": "PHP"
+            },
+            {
+              "id": "6",
+              "name": "GraphQL"
+            }
+          ],
+          "githubLink": "https://github.com/YorickVdVenne/Nextjs-Drupal-Portfolio",
+          "externalLink": "/",
+          "mainImage": {
+            "url": "/images/main/portfolio-main-image.png",
+            "alt": "Portfolio Website"
+          },
+          "screenshots": [
+            {
+              "url": "/images/screenshots/portfolio/featured-projects.png",
+              "alt": "Featured Projects Layout",
+              "description": "To highlight some of my proudest work I built this featured project layout to alternatives the display from right to left with a nice image and a short summary."
+            },
+            {
+              "url": "/images/screenshots/portfolio/project-card-collection.png",
+              "alt": "Project Card Collection",
+              "description": "This showcases the nice card collection I built."
+            },
+            {
+              "url": "/images/screenshots/portfolio/archive-project-table.png",
+              "alt": "Project Archive Table",
+              "description": "In order to display a list of all my projects I created this Archive table, it also creates a timeline of my career which is interesting."
+            },
+            {
+              "url": "/images/screenshots/portfolio/project-detail-page.png",
+              "alt": "Project Detail Page",
+              "description": "As you are on right now, showcasing a specific project with a screenshot slider (made with Swiper.js) and some general info."
+            }
+          ],
+          "year": "2023",
+          "madeAt": "-",
+          "madeFor": "-",
+          "description": "<p>This Portfolio website was built with a few reasons in mind; to showcase my work and experiences to future employers and to document my career for myself. I enjoy reflecting on the things I've worked on and it motivates me to continue working on things I would be proud to showcase.</p><p>I feel like my Portfolio website itself should be a showcase of my abilities. Therefor I created this website from skretch in Next.js and Drupal 10. The design was inspired of portfolio's I could find online, I combined things I saw and liked to create my own version of it. Right now the back-end is not connected, meaning all the content is added statically. It became more urgent to have something online to showcase then to have it perfectly finished. I will continue developing this portfolio website as it is also a playground for me, I'll continue adding features to practise my skills.</p><p>The code of the website is accessible on my Github, so you can see every little detail of how I created it. If you do have any questions or suggestions about the code, feel free to ask me.</p>",
+          "nextProjectId": "1",
+          "featured": false
+      },
+      {
+          "id": "5",
+          "title": "Aviko Sprint 8",
+          "summary": "During my employement at iO I participated in a sprint for the client Aviko, I was assigned multiple front-end tickets which I worked on during the 2 week sprint.",
+          "technologies": [
+            {
+              "id": "1",
+              "name": "HTML & CSS"
+            },
+            {
+              "id": "2",
+              "name": "TypeScript"
+            },
+            {
+              "id": "3",
+              "name": "Next.js"
+            },
+            {
+              "id": "4",
+              "name": "Pardot forms"
+            }
+          ],
+          "githubLink": "",
+          "externalLink": "https://www.avikofoodservice.nl/producten/oerfriet-11mm",
+          "mainImage": {
+            "url": "/images/main/aviko-sprint-8-main-image.png",
+            "alt": "Aviko Sprint 8"
+          },
+          "screenshots": [
+            {
+              "url": "/images/screenshots/aviko/pardot-forms.png",
+              "alt": "Form fixes",
+              "description": "Some of the forms, mostly certain contact forms, within Aviko were created using pardot forms (from salesforce). But the styling do adjust these forms are difficult to change, but there were a few issues with the country flag from the telephone field and the checkboxes above the send button. These bugs I had to fix within the pardot forms and then use a script to load in the custom styling."
+            },
+            {
+              "url": "/images/screenshots/aviko/product-accordion.png",
+              "alt": "Product accordion",
+              "description": "My biggest ticket was creating the new product accordion. It had to open the first child by default and you can open multiple at the same time. Offcourse it had to be responsive so on mobile the layout would be different and also the styling of the accordion would change. But also the table content of some accordion tabs, such as nutritional info, needed new styling. All while the image needed to scale nicely."
+            },
+            {
+              "url": "/images/screenshots/aviko/spanish-rollout.png",
+              "alt": "Spanish translation rollout",
+              "description": "Aviko wanted to add Spanish translations to the internationale website. So I had to create the language switch button and rollout a new translation using the CLI. Also I needed to add the translations and communicate this well with the backend team so there wouldn't be any errors."
+            }
+          ],
+          "year": "2023",
+          "madeAt": "iO",
+          "madeFor": "Aviko",
+          "description": "<p>I was lucky enough to participate in an Aviko sprint, a project that strictly follow the agile scrum method. Within iO this project was known for having everything in place and being mananged well. This was going to be the 8's sprint, with a duration of 2 weeks.</p><p>I've worked on a quit a few tickets during this sprint ranging from small content fixes to making the new product accordion. It's hard to remember all the things I've covered during this time. But for me personally the most interesting experience was the sprint itself, the communication and dedication of the team. No wonder Aviko had such a good reputation wihtin iO. Below I'll show a few screenshots of things I can remember working on.</p>",
+          "nextProjectId": "2",
+          "featured": false
+      },
+      {
+          "id": "6",
+          "title": "Tinyhouse: Fullstack React Masterclass",
+          "summary": "During my time working at Burst I was offered to follow the Tinyhouse: Fullstack React Masterclass. Where I learned how to create an entire website (the tinyhouse application) from skretch.",
+          "technologies": [
+            {
+              "id": "1",
+              "name": "HTML & CSS"
+            },
+            {
+              "id": "2",
+              "name": "TypeScript"
+            },
+            {
+              "id": "3",
+              "name": "JavaScript"
+            },
+            {
+              "id": "4",
+              "name": "GraphQL"
+            },
+            {
+              "id": "5",
+              "name": "React"
+            },
+            {
+              "id": "6",
+              "name": "MongoDB"
+            }
+          ],
+          "githubLink": "https://github.com/YorickVdVenne/TinyHouse-Fullstack-Application",
+          "externalLink": "https://www.tinyhouse.app/",
+          "mainImage": {
+            "url": "/images/main/tinyhouse-main-image.png",
+            "alt": "Tinyhouse Fullstack Masterclass"
+          },
+          "screenshots": [
+            {
+              "url": "/images/screenshots/tinyhouse/listing-page.png",
+              "alt": "Listing page",
+              "description": "The overview listing page where you can search, filter and paginate the rentals."
+            },
+            {
+              "url": "/images/screenshots/tinyhouse/detail-page.png",
+              "alt": "Detail page",
+              "description": "This is where the details of the rental is shown."
+            },
+            {
+              "url": "/images/screenshots/tinyhouse/inside-course.png",
+              "alt": "Inside look of the course",
+              "description": "A well organized course with lots of modules and lessons with quality material."
+            },
+            {
+              "url": "/images/screenshots/tinyhouse/credits.png",
+              "alt": "Credits",
+              "description": "To Hassan Djirdeh and Jing Chen"
+            }
+          ],
+          "year": "2020",
+          "madeAt": "-",
+          "madeFor": "-",
+          "description": "<p>While working for Burst they offered to give a discount on a course they recommend to all their developers. So offcourse I did so to.</p><p>The course was all about creating a website from scratch using at the moment a very modern tech stack. The backend was made in Express (Node.js), the frontend was built with React in TypeScript and the communication was done with GraphQL. The course featured a lot of practical functionalities used in modern websites, such as:  Google Sign-In & OAuth 2.0, Persist Login Sessions with Cookies, Geocoding API, payment with Stripe, Image Storage and deploying with Heroku.</p>",
+          "nextProjectId": "4",
+          "featured": false
+      },
+      {
+          "id": "7",
+          "title": "Graduation project: Productivity",
+          "summary": "During my graduation project at iO, I researched how productivity could become insightful. I experimented with some ideas and created this static application based on my findings, note this was created for testing purposes.",
+          "technologies": [
+            {
+              "id": "1",
+              "name": "HTML & CSS"
+            },
+            {
+              "id": "2",
+              "name": "JavaScript"
+            },
+            {
+              "id": "3",
+              "name": "Next.js"
+            }
+          ],
+          "githubLink": "https://github.com/YorickVdVenne/Productivity-Nextjs",
+          "externalLink": "https://productivity-phi.vercel.app/",
+          "mainImage": {
+            "url": "/images/main/productivity-main-image.png",
+            "alt": "Productivity application"
+          },
+          "screenshots": [
+            {
+              "url": "/images/screenshots/graduation/graduation-cover.png",
+              "alt": "Graduation Essay Cover",
+              "description": "The cover of my essay, with my main question. If you wish to read it, send me a message and I'll consider it."
+            },
+            {
+              "url": "/images/screenshots/graduation/new-objective.png",
+              "alt": "Creating objectives with key results",
+              "description": "An important part is that employee can create their own goals and key results needed to achieve those goals. This way it will become insightfull how many and what sort of goals the employee can complete within a quarter."
+            },
+            {
+              "url": "/images/screenshots/graduation/team-goals-page.png",
+              "alt": "Team goals page",
+              "description": "It's important that team and company goals are insightfull so the employees can follow along and even create his own objectives bases on the team or company goals."
+            },
+            {
+              "url": "/images/screenshots/graduation/request-feedback-page.png",
+              "alt": "Request feedback page",
+              "description": "The other part of the application is the feedback part, where you can request feedback from colleagues so you know what other people think of certain skills."
+            },
+            {
+              "url": "/images/screenshots/graduation/give-feedback-page.png",
+              "alt": "Give feedback page",
+              "description": "Obviously it is than also important to give feedback to other employees."
+            },
+            {
+              "url": "/images/screenshots/graduation/insightfull-feedback.png",
+              "alt": "Feedback storage",
+              "description": "This would be a place where the feedback you received is stored so that you can revisit and reflect."
+            },
+            {
+              "url": "/images/screenshots/graduation/feedback-progression.png",
+              "alt": "Feedback progression",
+              "description": "Then in an attempt to measure improvement, you can see the feedback you received over certain skills and subjects over a period of time."
+            }
+          ],
+          "year": "2022",
+          "madeAt": "iO",
+          "madeFor": "Hogeschool Rotterdam / iO",
+          "description": "<p>During my graduation project at iO, I researched how productivity could become insightful. After a lot of research and tests one of the bests ways to make productivity insightfull is via measuring results in terms of goals achieved and feedback from others. Though I did came to the conclusion that productivy is a very subjective subject that is difficult to measure in a way that every employee feels his productivity well represented. Even so I created an static application (for testing purposes) that displays a way to make productivity insightfull via goals and feedback.</p><p>The design of the application I built myself based on the colors and fonts used in the iO branding. Apart from that it was built with Next.js, but as mentioned it was static and not at all completed. But it does give an idea of what it could look like, an application that makes productivity insightfull.</p>",
+          "nextProjectId": "3",
+          "featured": false
+      },
+      {
+          "id": "8",
+          "title": "Internship: Next.js blog",
+          "summary": "During to internship at Burst I created a blog website using Drupal and Next.js to expirement with the different rendering methods of Next.js.",
+          "technologies": [
+            {
+              "id": "1",
+              "name": "HTML & CSS"
+            },
+            {
+              "id": "2",
+              "name": "JavaScript"
+            },
+            {
+              "id": "3",
+              "name": "Next.js"
+            },
+            {
+              "id": "4",
+              "name": "PHP"
+            },
+            {
+              "id": "5",
+              "name": "Drupal"
+            }
+          ],
+          "githubLink": "https://github.com/YorickVdVenne/SSR-Nextjs-Blog/tree/master/src",
+          "externalLink": "",
+          "mainImage": {
+            "url": "/images/main/blog-main-image.png",
+            "alt": "Next.js blog site"
+          },
+          "screenshots": [
+            {
+              "url": "/images/screenshots/blog/blog-header.png",
+              "alt": "Homepage",
+              "description": "The design was from a template I used to kickstart the blog site."
+            },
+            {
+              "url": "/images/screenshots/blog/filter.png",
+              "alt": "Blog Filter",
+              "description": "With filtering buttons but also the URL the blogs could be filtered."
+            },
+            {
+              "url": "/images/screenshots/blog/pagination.png",
+              "alt": "Blog Pagination",
+              "description": "Same as the filter, with pagination buttons but also via the URL the blogs could be paginated."
+            }
+          ],
+          "year": "2021",
+          "madeAt": "Burst",
+          "madeFor": "-",
+          "description": "<p>This blog site was at the moment a great practise for my Full-stack developer skills. As I first started to build the Drupal CMS in PHP. The place where you can manage the blogs and they would be available on a custom API and a GraphQL API.</p><p>Then for the front-end I used Next.js, this was the first time I've ever used Next.js and it blew me away. It was so easy to configure routes and build components and all sorts of things. The filtering and pagination have great funcionality and animations that were at the time very new for me.</p>",
+          "nextProjectId": "6",
+          "featured": false
+      }
+    ],
+    "metatags": {
+      "title": "Yorick's Portfolio",
+      "description": "Explore a diverse collection of my creative works. This portfolio showcases my skills in web development through projects that reflect my passion for creating awesome website!",
+      "og": {
         "title": "Yorick's Portfolio",
         "description": "Explore a diverse collection of my creative works. This portfolio showcases my skills in web development through projects that reflect my passion for creating awesome website!",
-        "og": {
-          "title": "Yorick's Portfolio",
-          "description": "Explore a diverse collection of my creative works. This portfolio showcases my skills in web development through projects that reflect my passion for creating awesome website!",
-          "image": "https://media.licdn.com/dms/image/v2/D4E03AQF4sJs1yArDSw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1679233326186?e=1734566400&v=beta&t=MKdhFTz58CkQ8CJg39jN881qS6CO5Sc4ajJAcPbqzj4"
-        }
+        "image": "https://media.licdn.com/dms/image/v2/D4E03AQF4sJs1yArDSw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1679233326186?e=1734566400&v=beta&t=MKdhFTz58CkQ8CJg39jN881qS6CO5Sc4ajJAcPbqzj4"
       }
     }
+  }
 }
