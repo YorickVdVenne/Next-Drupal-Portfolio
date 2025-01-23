@@ -25,7 +25,7 @@ export default function TabPanel (props: TabPanelProps): JSX.Element {
           <p className={styles.range}>{content.period}</p>
           <ul>
             {content.jobDescription.map((description, key) => (
-              <li key={key} dangerouslySetInnerHTML={{ __html: description.description}} />
+              <li key={key} dangerouslySetInnerHTML={{ __html: description.description }} />
             ))}
           </ul>
         </div>
